@@ -371,38 +371,65 @@ body, html {
   .shadow-inner-bottom-bottom+right { box-shadow: inset -1px -1px 0 0; }
   
   /* Primary color classes */
-.primary-800 { background-color: var(--primary-800); }
-.primary-700 { background-color: var(--primary-700); }
-.primary-600 { background-color: var(--primary-600); }
-.primary-500 { background-color: var(--primary-500); }
-.primary-400 { background-color: var(--primary-400); }
-.primary-300 { background-color: var(--primary-300); }
-.primary-200 { background-color: var(--primary-200); }
-.primary-100 { background-color: var(--primary-100); }
-.primary-50  { background-color: var(--primary-50); }
+.bg-primary-800 { background-color: var(--primary-800); }
+.bg-primary-700 { background-color: var(--primary-700); }
+.bg-primary-600 { background-color: var(--primary-600); }
+.bg-primary-500 { background-color: var(--primary-500); }
+.bg-primary-400 { background-color: var(--primary-400); }
+.bg-primary-300 { background-color: var(--primary-300); }
+.bg-primary-200 { background-color: var(--primary-200); }
+.bg-primary-100 { background-color: var(--primary-100); }
+.bg-primary-50  { background-color: var(--primary-50); }
 
 /* Gray color classes */
-.color-900 { background-color: var(--color-900); }
-.color-800 { background-color: var(--color-800); }
-.color-700 { background-color: var(--color-700); }
-.color-600 { background-color: var(--color-600); }
-.color-500 { background-color: var(--color-500); }
-.color-400 { background-color: var(--color-400); }
-.color-300 { background-color: var(--color-300); }
-.color-100 { background-color: var(--color-100); }
-.color-50  { background-color: var(--color-50); }
-.color-0   { background-color: var(--color-0); }
+.bg-color-900 { background-color: var(--color-900); }
+.bg-color-800 { background-color: var(--color-800); }
+.bg-color-700 { background-color: var(--color-700); }
+.bg-color-600 { background-color: var(--color-600); }
+.bg-color-500 { background-color: var(--color-500); }
+.bg-color-400 { background-color: var(--color-400); }
+.bg-color-300 { background-color: var(--color-300); }
+.bg-color-100 { background-color: var(--color-100); }
+.bg-color-50  { background-color: var(--color-50); }
+.bg-color-0   { background-color: var(--color-0); }
 
 /* Status color classes */
-.error    { background-color: var(--error-500); }
-.pending  { background-color: var(--pending-500); }
-.success  { background-color: var(--success-500); }
+.bg-error    { background-color: var(--error-500); }
+.bg-pending  { background-color: var(--pending-500); }
+.bg-success  { background-color: var(--success-500); }
 
 /* Yellow color classes */
-.yellow-800 { background-color: var(--yellow-800); }
-.yellow-700 { background-color: var(--yellow-700); }
+.bg-yellow-800 { background-color: var(--yellow-800); }
+.bg-yellow-700 { background-color: var(--yellow-700); }
 
-/* Example for text color if needed */
+/* Primary text colors */
 .text-primary-800 { color: var(--primary-800); }
-.text-color-900   { color: var(--color-900); }
-.text-error       { color: var(--error-500); }
+.text-primary-700 { color: var(--primary-700); }
+.text-primary-600 { color: var(--primary-600); }
+.text-primary-500 { color: var(--primary-500); }
+.text-primary-400 { color: var(--primary-400); }
+.text-primary-300 { color: var(--primary-300); }
+.text-primary-200 { color: var(--primary-200); }
+.text-primary-100 { color: var(--primary-100); }
+.text-primary-50  { color: var(--primary-50); }
+
+/* Gray text colors */
+.text-color-900 { color: var(--color-900); }
+.text-color-800 { color: var(--color-800); }
+.text-color-700 { color: var(--color-700); }
+.text-color-600 { color: var(--color-600); }
+.text-color-500 { color: var(--color-500); }
+.text-color-400 { color: var(--color-400); }
+.text-color-300 { color: var(--color-300); }
+.text-color-100 { color: var(--color-100); }
+.text-color-50  { color: var(--color-50); }
+.text-color-0   { color: var(--color-0); }
+
+/* Status text colors */
+.text-error    { color: var(--error-500); }
+.text-pending  { color: var(--pending-500); }
+.text-success  { color: var(--success-500); }
+
+/* Yellow text colors */
+.text-yellow-800 { color: var(--yellow-800); }
+.text-yellow-700 { color: var(--yellow-700); }
