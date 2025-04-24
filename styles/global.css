@@ -1,0 +1,267 @@
+/* Base reset */
+body, html {
+    position: relative;
+  }
+  
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+  
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    background: rgb(252, 252, 253); /* --color-50 */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: rgb(167, 167, 167); /* --color-400 */
+  }
+  
+  /* Root variables */
+  :root {
+    font-family: 'Inter', sans-serif;
+  
+    /* Primary color palette */
+    --primary-800: #008EC4; /* Màu xanh lam đậm nhất */
+    --primary-700: #0078A7; /* Màu xanh lam đậm vừa */
+    --primary-600: #006B8A; /* Màu xanh lam đậm dần */
+    --primary-500: #005C6D; /* Màu xanh lam trung bình */
+    --primary-400: #004E5A; /* Màu xanh lam nhẹ hơn */
+    --primary-300: #00414D; /* Màu xanh lam rất nhẹ */
+    --primary-200: #003634; /* Màu xanh lam nhạt dần */
+    --primary-100: #00272B; /* Màu xanh lam nhạt nhất */
+    --primary-50:  #001A1F; /* Màu xanh lam rất nhạt */
+    
+  
+    /* Gray color palette */
+    --color-900: #1A1A1A;
+    --color-800: #292D32;
+    --color-700: #191919;
+    --color-600: #404040;
+    --color-500: #666666;
+    --color-400: #808080;
+    --color-300: #BFBFBF;    
+    --color-400: #D9D9D9;
+    --color-100: #F3F3F3;
+    --color-50:  #F6F6F6;
+    --color-0:   #FCFCFD;
+  
+    /* Status colors */
+    --error-500:   #FF2B2B;
+    --pending-500: #FF9E00;
+    --success-500: #08CB66;
+      
+    /* Common colors */
+    --yellow-800: #FFC452;
+    --yellow-700: #FFDA18;
+    /*Cách dùng: color: rgb(var(--primary-500))*/
+  }
+  
+  /* Headings */
+  .h1 {
+    font-size: 48px;
+    line-height: 64px;
+    font-weight: 600;
+  }
+  .h2 {
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 700;
+  }
+  .h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+  }
+  .h4 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+  .title1 {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  .title2 {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  /* Body text styles */
+  .body-text,
+  .body-text-semibold,
+  .body-text-medium,
+  .body-text-24-bold,
+  .body-text-24-semibold,
+  .body-text-24-medium,
+  .body-text-24-regular,
+  .body-text-18-bold,
+  .body-text-18-semibold,
+  .body-text-18-medium,
+  .body-text-18-regular,
+  .body-text-16-bold,
+  .body-text-16-semibold,
+  .body-text-16-medium,
+  .body-text-16-regular,
+  .body-text-14-bold,
+  .body-text-14-semibold,
+  .body-text-14-medium,
+  .body-text-14-regular,
+  .body-text-12-bold,
+  .body-text-12-semibold,
+  .body-text-12-medium,
+  .body-text-12-regular,
+  .body-text-10-bold,
+  .body-text-10-semibold,
+  .body-text-10-medium,
+  .body-text-10-regular {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Individual font styles */
+  .body-text {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  .body-text-semibold {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .body-text-medium {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+  .body-text-24-bold {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .body-text-24-semibold {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .body-text-24-medium {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+  }
+  .body-text-24-regular {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+  }
+  .body-text-18-bold {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .body-text-18-semibold {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+  .body-text-18-medium {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  .body-text-18-regular {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  .body-text-16-bold {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  .body-text-16-semibold {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .body-text-16-medium {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .body-text-16-regular {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+  .body-text-14-bold {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+  }
+  .body-text-14-semibold {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
+  }
+  .body-text-14-medium {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .body-text-14-regular {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .body-text-12-bold {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+  }
+  .body-text-12-semibold {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+  }
+  .body-text-12-medium {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  .body-text-12-regular {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+  .body-text-10-bold {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 700;
+  }
+  .body-text-10-semibold {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 600;
+  }
+  .body-text-10-medium {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+  .body-text-10-regular {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+  }
+  
