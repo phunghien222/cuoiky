@@ -1,0 +1,143 @@
+
+  header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+  }
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.4); /* Màu nền đen mờ */
+    backdrop-filter: blur(8px); /* Làm mờ nền phía sau */
+    -webkit-backdrop-filter: blur(8px); /* Hỗ trợ cho Safari */
+    border-radius: 50px; /* Bo tròn như ảnh */
+    align-items: center;
+}
+
+.box-select{
+  margin: 0 auto;
+  background-color: var(--color-0);
+  border-radius: 32px;
+  box-shadow: 0 4px 16px rgba(0,142,196,0.3);
+
+  position: relative;
+  top: -180px;
+  z-index: 10;
+  margin: 0px 160px;
+  margin-bottom: -180px; /* bù lại khoảng chiếm dụng */
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 khối ngang */
+  /* gap: 24px; */
+}
+
+.grid-item {
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.border-box {
+  border: 1px var(--color-300) solid;
+  border-radius: 72px;
+}
+.spacing-border {
+  width: 0.5px;
+  height: 100%;
+  background-color: var(--color-300);
+}
+.ct_about {
+  padding: 96px 160px;
+}
+.grid-about{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 khối ngang */
+  gap: 104px;
+}
+.item-about{
+  padding:32px 0px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .box-select {
+    margin: 0px 84px;
+    padding: 16px;
+    top: -80px;
+    margin-bottom: -80px;
+  }
+  .table-p{
+    margin: 16px;
+  }
+  .ct_about {
+    padding: 64px;
+  }
+  .spacing-border {
+    display:none
+  }
+  .border-box{
+    border: none;
+  }
+  .grid-item {
+    border-bottom: 1px var(--color-300) solid;
+  }
+  header {
+    height: 50vh;
+  }
+  .contain-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .box-select {
+    margin: 0px 32px;
+    padding: 16px;
+    top: -80px;
+    margin-bottom: -80px;
+  }
+  .mobile-p{
+    margin: 16px
+  }
+  .ct_about {
+    padding: 32px;
+  }
+  .spacing-border {
+    display:none
+  }
+  .border-box{
+    border: none;
+  }
+  .grid-item {
+    border-bottom: 1px var(--color-300) solid;
+  }
+  .contain-nav {
+    display: none;
+  }
+}
+

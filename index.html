@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vietra-Mọi điểm đến tại Việt Nam</title>
-    <link rel="stylesheet" href="./styles/global.css">
-</head>
-<body>
-    <h1>Trang chủ</h1>
-</body>
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+  </head>
+  <body>
+    <header>
+      <video autoplay muted loop playsinline>
+        <source src="video/vietnam.mp4" type="video/mp4" />
+        Trình duyệt không hỗ trợ video.
+      </video>
+
+      <div class="overlay-content">
+        <div class="flex items-center justify-around m-32 contain-header">
+          <div>
+            <a class="body-text-24-bold text-color-0">VIETRA</a>
+          </div>
+          <nav class="contain-nav container py-12 px-32">
+            <a
+              class="body-text-16-regular text-color-0 mr-32"
+              href="index.html"
+              target="_blank"
+              >Trang Chủ</a
+            >
+            <a
+              class="body-text-16-regular text-color-0 mr-32"
+              href="danhmuc.html"
+              target="_blank"
+              >Về chúng tôi</a
+            >
+            <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+            <a class="body-text-16-regular text-color-0 mr-32">Blog</a>
+            <a class="body-text-16-regular text-color-0">Liên hệ</a>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+    <main class="root">
+      <div id="xinchao-vietra">
+        <div class="p-32 box-select">
+<div class="mb-32">
+  <h1 class="text-primary-700">Xin chào!</h2>
+    <h3 class="body-text-24-regular mt-16">Khám phá những nơi đẹp nhất tại Việt Nam cùng Vietra</h4>
+</div>
+<div class="grid-container border-box">
+  <div class="grid-item flex items-center">
+    <img src="svg/location.svg" alt="Icon" width="24" height="24" />
+    <div class="flex items-start flex-col ml-16">
+      <div class="body-text-16-bold text-color-800">Địa điểm</div>
+      <div class="body-text-16-regular text-color-500">Thêm địa điểm</div>
+    </div>
+  </div>
+  <div class="grid-item flex items-center">
+    <div class="spacing-border mr-12"></div>
+    <img src="svg/calendar.svg" alt="Icon" width="24" height="24" />
+    <div class="flex items-start flex-col ml-16">
+      <div class="body-text-16-bold text-color-800">Check in</div>
+      <div class="body-text-16-regular text-color-500">Ngày đến</div>
+    </div>
+  </div>
+  <div class="grid-item flex items-center">
+    <div class="spacing-border mr-12"></div>
+    <img src="svg/calendar.svg" alt="Icon" width="24" height="24" />
+    <div class="flex items-start flex-col ml-16">
+      <div class="body-text-16-bold text-color-800">Check out</div>
+      <div class="body-text-16-regular text-color-500">Ngày đi</div>
+    </div>
+  </div>
+  <div class="grid-item flex items-center">
+    <div class="spacing-border mr-12"></div>
+    <img src="svg/guest.svg" alt="Icon" width="24" height="24" />
+    <div class="flex items-start flex-col ml-16">
+      <div class="body-text-16-bold text-color-800">Khách</div>
+      <div class="body-text-16-regular text-color-500">Số lượng</div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div id="vechungtoi-vietra" class="ct_about flex flex-col items-center">
+        <h2 class="txt_about mb-32">Về chúng tôi</h2>
+        <div class="grid-about">
+          <div class="item-about flex flex-col items-center">
+            <div class="bg-primary-50 p-16 rounded-radius-xl">
+              <img src="svg/ic-money.svg" alt="Icon" width="32" height="32" />
+            </div>
+            <div class="mt-32 mb-8 body-text-18-bold">Giá tốt - nhiều ưu đãi</div>
+            <div class="body-text-16-regular">Ưu đãi và quà tặng hấp dẫn khi mua tour online</div>
+          </div>
+
+          <div class="item-about flex flex-col items-center">
+            <div class="bg-primary-50 p-16 rounded-radius-xl">
+              <img src="svg/ic-money.svg" alt="Icon" width="32" height="32" />
+            </div>
+            <div class="mt-32 mb-8 body-text-18-bold">Thanh toán an toàn</div>
+            <div class="body-text-16-regular">Được bảo mật bởi tổ chức quốc tế, bảo mật thông tin khách hàng tuyệt đối</div>
+          </div>
+
+          <div class="item-about flex flex-col items-center">
+            <div class="bg-primary-50 p-16 rounded-radius-xl">
+              <img src="svg/ic-money.svg" alt="Icon" width="32" height="32" />
+            </div>
+            <div class="mt-32 mb-8 body-text-18-bold">Thương hiệu uy tín</div>
+            <div class="body-text-16-regular">Thương hiệu lữ hành hàng đầu Việt Nam</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
