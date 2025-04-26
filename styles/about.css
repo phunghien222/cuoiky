@@ -1,0 +1,120 @@
+/* Hero Section */
+.about-hero {
+    padding: 32px 0;
+    color: var(--color-900);
+    text-align: center;
+  }
+  
+  .about-hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .about-hero-subtitle {
+    font-size: 20px;
+    color: var(--color-900);
+  }
+  
+  /* Values Section */
+  .about-values {
+    background: #f9fafb;
+    padding: 80px 20px;
+  }
+  
+  .about-values-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .about-value-item {
+    background: #fff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    width: 300px;
+    transition: transform 0.3s;
+  }
+  
+  .about-value-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .about-value-item img {
+    height: 64px;
+    margin-bottom: 24px;
+  }
+  
+  .about-value-item h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .about-value-item p {
+    color: #6b7280;
+  }
+  
+  /* Team Section */
+  .about-team {
+    padding: 80px 20px;
+    background: #fff;
+  }
+  
+  .about-team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .about-team-text {
+    flex: 1;
+  }
+  
+  .about-team-text h2 {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  
+  .about-team-text p {
+    font-size: 18px;
+    color: #4b5563;
+  }
+  
+  .about-team-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-team-image img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-hero-title {
+      font-size: 36px;
+    }
+    .about-hero-subtitle {
+      font-size: 18px;
+    }
+    .about-values-container, .about-team-container {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+  
