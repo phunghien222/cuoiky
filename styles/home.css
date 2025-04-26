@@ -102,7 +102,7 @@ a {
 }
 
 .ct_tour{
-  margin: 64px 160px;
+  padding: 64px 160px;
 }
 
 .txt_tour{
@@ -111,7 +111,8 @@ a {
 .grid-card{
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 khối ngang */
-  gap: 32px
+  gap: 32px;
+  margin-bottom: 64px;
 }
 .square-image {
   aspect-ratio: 1 / 1;
@@ -133,6 +134,182 @@ a {
   right: 16px;
   background: rgba(0, 0, 0, 0.5); /* ví dụ nền đen mờ */
 }
+.btn-more{
+  border: 1px var(--color-300) solid;
+}
+.ct-highlight{
+  width: 100%;
+  height: auto;
+}
+
+#highlight-vietra {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9; /* Tỉ lệ khung hình bạn muốn (có thể là 4/3, 1/1, v.v.) */
+  overflow: hidden;
+}
+.img_cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.txt_date{
+  border-bottom: 1px var(--color-0) solid;
+  padding-bottom: 36px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 48px;
+}
+.txt_highlight{
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.ct_highlight_des {
+  position: absolute;
+  top: 0; /* hoặc 0 để nằm sát viền */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* nền mờ dễ đọc hơn */
+  width: 100%;
+  height: 100%;
+  padding: 160px;
+}
+.btn_view{
+  margin-top: 42px;
+}
+.btn_view_ic {
+  width: 20px; /* hoặc 20px tùy thiết kế */
+  height: 20px;
+  object-fit: contain; /* đảm bảo ảnh không bị méo */
+}
+.detail_highlight{
+  width: 50%;
+}
+.grid_inner_highlight {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-left: 100px;
+  width: 50%;
+}
+.item_highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+
+.item_highlight img {
+  width: 100%;
+  aspect-ratio: 3/4; /* giữ hình chữ nhật */
+  object-fit: cover;
+  border-radius: 16px;
+}
+#news-vietra{
+  padding: 80px 160px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Carousel*/
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+  height: 100%;
+}
+
+.img-card {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev { margin-right: 12px; border: 1px var(--color-300) solid; padding: 8px; }
+.next { border: 1px var(--color-300) solid; padding: 8px; }
+
+
+.readmore {
+  display: flex;
+  flex:content;
+  height: 100%;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-top: 32px;
+}
+
+.txt_news{
+  margin-bottom: 64px;
+}
+.text_news_des{
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* số dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 @media (max-width: 1200px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
@@ -143,7 +320,8 @@ a {
   }
   .grid-card{
     grid-template-columns: repeat(2, 1fr); /* 4 khối ngang */
-    gap: 16px
+    gap: 16px;
+    margin-bottom: 16px;
   }
   .box-select {
     margin: 0px 84px;
@@ -172,11 +350,44 @@ a {
   .contain-nav {
     display: none;
   }
+  .ct_tour{
+    padding: 32px;
+  }
+  .flex_highlight {
+   display: flex;
+   flex-direction: column; 
+  }
+  .ct_highlight_des{
+    padding: 32px;
+  }
+
+  .detail_highlight{
+    width: 100%;
+  }
+  .txt_highlight{
+    font-size: 36px;
+  }
+  .txt_date{
+    font-size: 16px;
+    padding-bottom: 16px;
+  }
+  .grid_inner_highlight{
+    margin-left: 0;
+    margin-top: 32px;
+  }
+  .txt_news{
+    margin-bottom: 32px;
+  }
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr;
+  }
+  .grid-card{
+    grid-template-columns:  1fr; /* 4 khối ngang */
+    gap: 16px;
+    margin-bottom: 16px;
   }
   .box-select {
     margin: 0px 32px;
@@ -201,6 +412,25 @@ a {
   }
   .contain-nav {
     display: none;
+  }
+  .grid_inner_highlight{
+    display: none;
+  }
+  .detail_highlight{
+    width: 100%;
+  }
+  #highlight-vietra{
+    aspect-ratio: 1/1;
+  }
+  .carousel-slide {
+    flex-direction: column;
+  }
+
+  .card {
+    min-width: 100%;
+  }
+  .txt_news{
+    margin-bottom: 16px;
   }
 }
 
