@@ -440,6 +440,33 @@ body, html {
 .text-yellow-800 { color: var(--yellow-800); }
 .text-yellow-700 { color: var(--yellow-700); }
 
+  /* Primary color classes */
+  .bd-primary-800 { border-color: var(--primary-800); }
+  .bd-primary-700 { border-color: var(--primary-700); }
+  .bd-primary-600 { border-color: var(--primary-600); }
+  .bd-primary-500 { border-color: var(--primary-500); }
+  .bd-primary-400 { border-color: var(--primary-400); }
+  .bd-primary-300 { border-color: var(--primary-300); }
+  .bd-primary-200 { border-color: var(--primary-200); }
+  .bd-primary-100 { border-color: var(--primary-100); }
+  .bd-primary-50  { border-color: var(--primary-50); }
+  
+  /* Gray color classes */
+  .bd-color-900 { border-color: var(--color-900); }
+  .bd-color-800 { border-color: var(--color-800); }
+  .bd-color-700 { border-color: var(--color-700); }
+  .bd-color-600 { border-color: var(--color-600); }
+  .bd-color-500 { border-color: var(--color-500); }
+  .bd-color-400 { border-color: var(--color-400); }
+  .bd-color-300 { border-color: var(--color-300); }
+  .bd-color-100 { border-color: var(--color-100); }
+  .bd-color-50  { border-color: var(--color-50); }
+  .bd-color-0   { border-color: var(--color-0); }
+  
+  /* Status color classes */
+  .bd-error    { border-color: var(--error-500); }
+  .bd-pending  { border-color: var(--pending-500); }
+  .bd-success  { border-color: var(--success-500); }
 /* Display */
 .flex { display: flex; }
 .inline-flex { display: inline-flex; }
