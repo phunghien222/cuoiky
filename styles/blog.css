@@ -2,7 +2,7 @@
     display: grid; /* Sử dụng CSS Grid cho container */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tạo các cột có kích thước tối thiểu 300px và tự động điều chỉnh */
     gap: 20px; /* Khoảng cách giữa các bài viết */
-    width: 66.66%; /* Chiếm 2/3 trang */
+    width: 78%; /* Chiếm 78% trang */
     margin: 20px auto; /* Căn giữa trang */
   }
   
