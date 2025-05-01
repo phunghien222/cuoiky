@@ -1,0 +1,117 @@
+.container-detail-blog {
+    display: flex;
+    gap: 30px; /* Khoảng cách giữa main content và sidebar */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff; /* Nền trắng cho container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng nhẹ */
+}
+
+.main-content {
+    flex: 7; /* Chiếm 7/10 không gian */
+}
+
+.sidebar {
+    flex: 3; /* Chiếm 3/10 không gian */
+}
+
+.post {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee; /* Đường kẻ phân cách các bài viết */
+}
+
+.post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.post-image {
+    margin-bottom: 15px;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Bo tròn góc ảnh */
+}
+
+.post-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-content h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+.related-news {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.related-news h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    text-transform: uppercase; /* Chuyển tiêu đề thành chữ in hoa */
+}
+
+.related-item {
+    display: flex;
+    flex-direction: column; /* Thay đổi hướng flex thành cột */
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.related-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.related-item img {
+    width: 100%; /* Ảnh chiếm toàn bộ chiều rộng */
+    height: auto; /* Chiều cao tự động để giữ tỷ lệ */
+    display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+    border-radius: 3px;
+    margin-bottom: 8px; /* Thêm khoảng cách giữa ảnh và tiêu đề */
+    object-fit: cover; /* Đảm bảo ảnh bao phủ vùng chứa mà không bị méo */
+}
+
+.related-item a {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #333;
+    display: block;
+}
+
+.related-item a:hover {
+    color: #00B3DC;
+}
+
