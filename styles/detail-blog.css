@@ -16,12 +16,6 @@
     flex: 3; /* Chiếm 3/10 không gian */
 }
 
-.post {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee; /* Đường kẻ phân cách các bài viết */
-}
-
 .post:last-child {
     border-bottom: none;
     margin-bottom: 0;
