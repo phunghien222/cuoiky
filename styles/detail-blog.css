@@ -145,6 +145,7 @@
     color: #555;
     resize: vertical; /*thanh kéo xuống*/
     min-height: 150px;
+    font-family: 'Inter', sans-serif;
 }
 
 .comment-button {
