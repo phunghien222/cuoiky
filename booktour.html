@@ -4,8 +4,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đặt tour</title>
+    <link rel="stylesheet" href="styles/booktour.css">
+    <link rel="stylesheet" href="styles/home.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
-    <h1>Trang đặt tour</h1>
+    <header>
+        <video autoplay muted loop playsinline>
+          <source src="video/vietnam.mp4" type="video/mp4" />
+          Trình duyệt không hỗ trợ video.
+        </video>
+  
+        <div class="overlay-content">
+          <div class="flex items-center justify-around m-32 contain-header">
+            <div>
+              <a class="body-text-24-bold text-color-0">VIETRA</a>
+            </div>
+            <nav class="contain-nav container py-12 px-32">
+              <a
+                class="body-text-16-regular text-color-0 mr-32"
+                href="index.html"
+                >Trang Chủ</a
+              >
+              <a
+                class="body-text-16-regular text-color-0 mr-32"
+                href="about.html"
+                >Về chúng tôi</a
+              >
+              <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+              <a class="body-text-16-regular text-color-0 mr-32"
+                 href="blog.html">Blog</a>
+              <a href="contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+            </nav>
+  
+          </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="form-section">
+            <h2><span class="icon"></span> Đặt tour</h2>
+            <div class="form-group">
+                <label for="loai-tour">* Chọn loại tour</label>
+                <select id="loai-tour" class="select2-control">
+                    <option></option> </select>
+            </div>
+            <div class="form-group">
+                <label for="chon-tour">* Chọn tour</label>
+                <select id="chon-tour" class="select2-control">
+                    <option></option> </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nguoi-lon">* Người lớn</label>
+                    <input type="number" id="nguoi-lon" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="tre-em">Trẻ em</label>
+                    <input type="number" id="tre-em" value="0">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tre-nho">Trẻ nhỏ (2 - 5 tuổi)</label>
+                    <input type="number" id="tre-nho" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="em-be">Em bé</label>
+                    <input type="number" id="em-be" value="0">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ngay-khoi-hanh">* Ngày khởi hành</label>
+                <input type="text" id="ngay-khoi-hanh">
+            </div>
+
+            <h2><span class="icon"></span> Thông tin khách hàng</h2>
+            <div class="form-group">
+                <label for="ho-ten">* Họ và tên</label>
+                <input type="text" id="ho-ten">
+            </div>
+            <div class="form-group">
+                <label for="email">* Email</label>
+                <input type="email" id="email">
+            </div>
+            <div class="form-group">
+                <label for="dien-thoai">* Điện thoại</label>
+                <input type="tel" id="dien-thoai">
+            </div>
+            <div class="form-group">
+                <label for="dia-chi">* Địa chỉ</label>
+                <input type="text" id="dia-chi">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tinh-thanh">* Chọn tỉnh/thành</label>
+                    <select id="tinh-thanh" class="select2-control">
+                        <option></option> </select>
+                </div>
+                <div class="form-group">
+                    <label for="quan-huyen">* Chọn quận/huyện</label>
+                    <select id="quan-huyen" class="select2-control">
+                        <option></option> </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phuong-xa">* Chọn phường/xã</label>
+                <select id="phuong-xa" class="select2-control">
+                    <option></option> </select>
+            </div>
+            <div class="form-group">
+                <label for="ghi-chu">Ghi chú</label>
+                <textarea id="ghi-chu"></textarea>
+            </div>
+        </div>
+
+        <div class="payment-section">
+            <h2><span class="icon"></span> Hình thức thanh toán</h2>
+            <div class="payment-buttons">
+                <button class="payment-button company-payment">
+                    <span class="icon"></span> Thanh toán tại công ty
+                    <div class="company-info">
+                        <p>55 Đỗ Quang Đẩu, P. Phạm Ngũ Lão, Quận 1, Thành Phố Hồ Chí Minh, Vietnam</p>
+                    </div>
+                </button>
+                <button class="payment-button online-payment">
+                    <span class="icon"></span> Thanh toán trực tuyến
+                    <div class="bank-info">
+                        <p><b>Thông tin chuyển khoản:</b></p>
+                        <p>Chủ Tài khoản: PHẠM HOÀNG ANH</p>
+                        <p>Số Tài khoản: 0071001899415</p>
+                        <p>Ngân Hàng: VIETCOMBANK</p>
+                        <p>Quý khách thực hiện thanh toán vui lòng gửi theo...</p>
+                    </div>
+                </button>
+            </div>
+            <div class="total-payment">
+                <div class="total-amount">
+                    <p>Tổng tiền</p>
+                    <p class="amount">2.590.000 vnd</p>
+                </div>
+                <button class="payment-button thanh-toan-button">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h4>Hỗ trợ</h4>
+            <ul>
+              <li><a href="#">Trung tâm hỗ trợ</a></li>
+              <li><a href="#">Bảo mật thông tin</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Vietra</h4>
+            <ul>
+              <li><a href="#">Về chúng tôi</a></li>
+              <li><a href="#">Chính sách</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Tour</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Liên hệ</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Đối tác</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Mạng xã hội</h4>
+            <div class="social-icons">
+              <a href="#"><img src="assets/svg/ic-fb.svg" alt="Facebook"></a>
+              <a href="#"><img src="assets/svg/ic-tw.svg" alt="Twitter"></a>
+              <a href="#"><img src="assets/svg/ic-tt.svg" alt="TikTok"></a>
+              <a href="#"><img src="assets/svg/ic-yt.svg" alt="YouTube"></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© Copyright Acenda 2024</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
 </body>
 </html>
