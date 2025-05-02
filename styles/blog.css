@@ -71,6 +71,12 @@
   height: auto;
   object-fit: cover;
   border-radius: 5px; /* Bo tròn góc ảnh */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.post img:hover {
+  transform: scale(1.03);   /* Zoom 105% */
+  opacity: 0.7;            /* Mờ đi một chút */
 }
 
 .post-title {
