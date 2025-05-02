@@ -1,78 +1,122 @@
-.container-blog {
-    display: grid; /* Sử dụng CSS Grid cho container */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tạo các cột có kích thước tối thiểu 300px và tự động điều chỉnh */
-    gap: 20px; /* Khoảng cách giữa các bài viết */
-    width: 78%; /* Chiếm 78% trang */
-    margin: 20px auto; /* Căn giữa trang */
-  }
-  
-  .post {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước phần tử */
-  }
-  
-  .post img {
-    width: 100%;
-    height: 200px; /* Đặt chiều cao cho tất cả các ảnh */
-    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung và không bị méo, phần thừa sẽ bị cắt */
-    border-radius: 6px;
-    margin-bottom: 10px;
-  }
-  
-  .post .flex {
-    display: flex; 
-    align-items: center; 
-    margin-top: 8px; /* Đảm bảo có khoảng cách phía trên */
-    margin-bottom: 8px; /* Thêm một chút khoảng cách phía dưới*/
-  }
-  
-  .post .flex img[alt="Icon"] {
-    width: 16px;
-    height: 16px;
-    margin-right: 2px; /* Thêm khoảng cách bên phải icon để tách biệt với date */
-  }
+.main-layout {
+  display: flex;
+  padding: 20px;
+  gap: 30px; /* Khoảng cách giữa main content và sidebar */
+  max-width: 1200px;
+  margin: 20px auto;
+}
 
-  .post-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
+.container-blog {
+  flex: 7; /* Chiếm 7/10 không gian */
+}
+
+.sidebar {
+  flex: 3; /* Chiếm 3/10 không gian */
+}
+
+.hot {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.hot h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.hot-item {
+  display: flex;
+  flex-direction: column; /* Thay đổi hướng flex thành cột */
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.hot-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.hot-item img {
+  width: 100%; /* Ảnh chiếm toàn bộ chiều rộng */
+  height: 180px; /* auto Chiều cao tự động để giữ tỷ lệ */ /*Chiều cao mặc định*/
+  display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+  border-radius: 3px;
+  margin-bottom: 8px; /* Thêm khoảng cách giữa ảnh và tiêu đề */
+  object-fit: cover; /* Đảm bảo ảnh bao phủ vùng chứa mà không bị méo */
+}
+
+.hot-item a {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.4;
+  color: #333;
+  display: block;
+}
+
+.hot-item a:hover {
+  color: #007C9C;
+}
+
+.post img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px; /* Bo tròn góc ảnh */
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 12px 16px 8px 25px;
+  color: #333;
+}
+
+.post-summary {
+  font-size: 14px;
+  margin: 0 16px 16px 25px;
+  color: #555;
+  line-height: 1.6;
+}
   
-  .post-summary {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  .read-more-btn {
+.read-more-btn {
     background-color: #00B3DC;
     color: white;
     border: none;
     padding: 10px 20px;
+    margin-bottom: 60px;
+    margin-left: 25px;
     border-radius: 72px;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
-  }
+}
   
-  .read-more-btn:hover {
-    background-color: #00667F;
-  }
+.read-more-btn:hover {
+    background-color: #007C9C;
+}
 
-  .pagination-container {
+.pagination-container {
     display: flex;
     justify-content: center; /* Căn giữa các nút */
     align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
-  }
+}
 
-  .pagination-container button:hover {
+.pagination-container button:hover {
     background-color: #e0e0e0;
-  }
+}
+
+
+
 
   
