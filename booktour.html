@@ -43,7 +43,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container-booktour">
         <div class="form-section">
             <h2><span class="icon"></span> Đặt tour</h2>
             <div class="form-group">
@@ -78,7 +78,12 @@
             </div>
             <div class="form-group">
                 <label for="ngay-khoi-hanh">* Ngày khởi hành</label>
-                <input type="text" id="ngay-khoi-hanh">
+                <div class="flatpickr-wrapper">
+                    <input type="text" id="ngay-khoi-hanh">
+                    <span class="flatpickr-icon">
+                        <i class="fa fa-calendar"></i>
+                    </span>
+                </div>
             </div>
 
             <h2><span class="icon"></span> Thông tin khách hàng</h2>
@@ -190,6 +195,15 @@
             <p>© Copyright Acenda 2024</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#ngay-khoi-hanh", {
+                dateFormat: "d/m/Y", // định dạng ngày
+            });
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>

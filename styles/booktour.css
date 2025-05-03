@@ -1,22 +1,22 @@
-
-.container {
+.container-booktour {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    max-width: 1200px;
+    width: 80%; /* Điều chỉnh chiều rộng container cho phù hợp */
+    margin: 42px auto;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    max-width: 960px;
-    padding: 20px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
 }
 
 .form-section {
-    flex: 1;
-    padding: 20px;
-    border-right: 1px solid #ddd;
+    flex: 7;
 }
 
 .payment-section {
-    flex: 1;
-    padding: 20px;
+    flex: 3;
 }
 
 h2 {
@@ -62,6 +62,12 @@ textarea {
 
 select.select2-control {
     width: 100% !important;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    height: auto;
+    line-height: 1.5;
 }
 
 textarea {
@@ -79,8 +85,8 @@ textarea {
 }
 
 .payment-methods h2 {
-    margin-top: 0; /* Điều chỉnh margin top */
-    margin-bottom: 15px; /* Thêm margin bottom cho tiêu đề */
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
 .payment-buttons {
@@ -152,3 +158,62 @@ textarea {
 .thanh-toan-button:hover {
     background-color: #0056b3;
 }
+
+/* Сhỉnh Select2 để giống input */
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px;
+    height: auto;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #555;
+    line-height: inherit;
+    padding-left: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 20px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    width: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex; /* Thử sử dụng flex để căn chỉnh kích thước */
+    flex-direction: column; /* Các label và input/select xếp theo cột */
+}
+
+.form-group label {
+    width: 100%; /* Label chiếm toàn bộ chiều rộng */
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select.select2-control {
+    width: 100%; /* Các input và select chiếm toàn bộ chiều rộng form-group */
+    box-sizing: border-box;
+}
+
