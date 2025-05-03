@@ -141,6 +141,9 @@ textarea {
     background-color: #007C9C;
 }
 
+label strong {
+    color: red;
+}
 
 
 
