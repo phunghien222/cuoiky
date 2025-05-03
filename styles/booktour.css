@@ -27,15 +27,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-h2 .icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    background-color: #5cb85c;
-    border-radius: 50%;
-}
-
 .form-group {
     margin-bottom: 15px;
 }
@@ -43,8 +34,7 @@ h2 .icon {
 label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
+    color: #333;
 }
 
 input[type="text"],
@@ -146,7 +136,7 @@ textarea {
 }
 
 .thanh-toan-button {
-    background-color: #007bff;
+    background-color: #00B3DC;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -156,7 +146,7 @@ textarea {
 }
 
 .thanh-toan-button:hover {
-    background-color: #0056b3;
+    background-color: #007C9C;
 }
 
 /* Сhỉnh Select2 để giống input */

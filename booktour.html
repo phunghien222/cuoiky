@@ -45,7 +45,7 @@
 
     <div class="container-booktour">
         <div class="form-section">
-            <h2><span class="icon"></span> Đặt tour</h2>
+            <h2>Đặt tour</h2>
             <div class="form-group">
                 <label for="loai-tour">* Chọn loại tour</label>
                 <select id="loai-tour" class="select2-control">
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <h2><span class="icon"></span> Thông tin khách hàng</h2>
+            <h2>Thông tin khách hàng</h2>
             <div class="form-group">
                 <label for="ho-ten">* Họ và tên</label>
                 <input type="text" id="ho-ten">
@@ -127,24 +127,34 @@
         </div>
 
         <div class="payment-section">
-            <h2><span class="icon"></span> Hình thức thanh toán</h2>
+            <h2>Hình thức thanh toán</h2>
             <div class="payment-buttons">
-                <button class="payment-button company-payment">
-                    <span class="icon"></span> Thanh toán tại công ty
-                    <div class="company-info">
-                        <p>55 Đỗ Quang Đẩu, P. Phạm Ngũ Lão, Quận 1, Thành Phố Hồ Chí Minh, Vietnam</p>
-                    </div>
-                </button>
-                <button class="payment-button online-payment">
-                    <span class="icon"></span> Thanh toán trực tuyến
-                    <div class="bank-info">
-                        <p><b>Thông tin chuyển khoản:</b></p>
-                        <p>Chủ Tài khoản: PHẠM HOÀNG ANH</p>
-                        <p>Số Tài khoản: 0071001899415</p>
-                        <p>Ngân Hàng: VIETCOMBANK</p>
-                        <p>Quý khách thực hiện thanh toán vui lòng gửi theo...</p>
-                    </div>
-                </button>
+                <div class="payment-button company-payment">
+                    <label>
+                        <span class="payment-info">
+                            <h3>Thanh toán tại công ty</h3>
+                            <div class="company-info">
+                                <p>55 Đỗ Quang Đẩu, P. Phạm Ngũ Lão, Quận 1, Thành Phố Hồ Chí Minh, Vietnam</p>
+                            </div>
+                        </span>
+                        <input type="radio" name="payment-method" value="company" style="display: none;">
+                    </label>
+                </div>
+                <div class="payment-button online-payment">
+                    <label>
+                        <span class="payment-info">
+                            <h3>Thanh toán trực tuyến</h3>
+                            <div class="bank-info">
+                                <p><b>Thông tin chuyển khoản:</b></p>
+                                <p>Chủ Tài khoản: PHẠM HOÀNG ANH</p>
+                                <p>Số Tài khoản: 0071001899415</p>
+                                <p>Ngân Hàng: VIETCOMBANK</p>
+                                <p>Quý khách thực hiện thanh toán vui lòng gửi theo thông tin: "Họ và tên - vietra.vn"</p>
+                            </div>
+                        </span>
+                        <input type="radio" name="payment-method" value="online" style="display: none;">
+                    </label>
+                </div>
             </div>
             <div class="total-payment">
                 <div class="total-amount">
