@@ -1,291 +1,219 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tour Du Lịch | Vietra</title>
-  <link rel="stylesheet" href="./styles/global.css">
-  <style>
-    /* CSS chung */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-
-    /* Header */
-    header {
-      background-color: #0a1128;
-      padding: 20px 0;
-    }
-    .contain-header {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-    }
-    .contain-nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 24px;
-      font-weight: 500;
-    }
-    .contain-nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Dropdown */
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    .dropdown-toggle {
-      cursor: pointer;
-    }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      background-color: #0a0909;
-      min-width: 160px;
-      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
-      z-index: 1;
-      border-radius: 8px;
-      padding: 8px 0;
-      top: 100%;
-      left: 0;
-    }
-    .dropdown-item {
-      display: block;
-      padding: 12px 16px;
-      color: #0a1128;
-      text-decoration: none;
-      font-size: 14px;
-    }
-    .dropdown-item:hover {
-      background-color: #060606;
-    }
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    /* Main */
-    main.container {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .txt-homepage {
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 40px;
-      color: #0a1128;
-    }
-
-    /* Tour cards */
-    .tour-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .tour-card {
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .tour-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    .card-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 20px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .card-title {
-      font-size: 20px;
-      color: #0a1128;
-      margin-bottom: 16px;
-      min-height: 60px;
-    }
-    .card-info p {
-      font-size: 14px;
-      color: #555;
-      margin: 4px 0;
-    }
-    .card-price-group {
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-    .card-price {
-      font-size: 20px;
-      color: #e63946;
-      font-weight: bold;
-    }
-    .card-old-price {
-      font-size: 14px;
-      color: #999;
-    }
-    .card-btn {
-      background-color: #0a1128;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    .card-btn:hover {
-      background-color: #003366;
-    }
-    .more-link {
-      margin-top: 12px;
-      font-size: 14px;
-      color: #0a1128;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-    .no-tour {
-      display: none;
-      text-align: center;
-      font-size: 18px;
-      color: #888;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <div class="overlay-content">
-      <div class="flex items-center justify-around m-32 contain-header">
-        <div>
-          <a class="body-text-24-bold text-color-0">VIETRA</a>
-        </div>
-        <nav class="contain-nav container py-12 px-32">
-          <a class="body-text-16-regular text-color-0 mr-32" href="index.html">Trang Chủ</a>
-          <a class="body-text-16-regular text-color-0 mr-32" href="danhmuc.html">Về chúng tôi</a>
-
-          <div class="dropdown mr-32">
-            <a class="body-text-16-regular text-color-0 dropdown-toggle" href="tour.html">Tour ▼</a>
-            <div class="dropdown-menu">
-              <a href="tourmienbac.html" class="dropdown-item">Tour miền Bắc</a>
-              <a href="tourtaynguyen.html" class="dropdown-item">Tour Tây Nguyên</a>
-            </div>
-          </div>
-
-          <a class="body-text-16-regular text-color-0 mr-32" href="#">Blog</a>
-          <a class="body-text-16-regular text-color-0" href="#">Liên hệ</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <h1 class="txt-homepage">Tour Du Lịch Miền Bắc</h1>
-
-    <section>
-      <div class="tour-list">
-
-        <div class="tour-card" data-region="mienbac">
-          <img src="assets/img/sapa.jpg" alt="Sapa" class="card-img">
-          <div class="card-content">
-            <h2 class="card-title">HÀ NỘI - SAPA 4 NGÀY 3 ĐÊM</h2>
-            <div class="card-info">
-              <p>🕒 4 Ngày 3 Đêm</p>
-              <p>📅 Hàng tuần</p>
-              <p>🚌 Ô tô/✈️ Máy bay</p>
-              <p>🏨 Khách sạn 2-5 sao</p>
-              <p>🎤 10</p>
-            </div>
-            <div class="card-price-group">
-              <span class="card-price">4.390.000 vnd</span><br>
-              <span class="card-old-price"><del>4.500.000 vnd</del></span>
-            </div>
-            <button class="card-btn">Đặt Ngay</button>
-            <a href="#" class="more-link">» Xem thêm</a>
-          </div>
-        </div>
-
-        <div class="tour-card" data-region="mienbac">
-          <img src="assets/img/halong.jpg" alt="Hạ Long" class="card-img">
-          <div class="card-content">
-            <h2 class="card-title">HÀ NỘI - HẠ LONG 3 NGÀY 2 ĐÊM</h2>
-            <div class="card-info">
-              <p>🕒 3 Ngày 2 Đêm</p>
-              <p>📅 Hàng tuần</p>
-              <p>🚌 Ô tô/✈️ Máy bay</p>
-              <p>🏨 Khách sạn 2-5 sao</p>
-              <p>🎤 10</p>
-            </div>
-            <div class="card-price-group">
-              <span class="card-price">3.390.000 vnd</span><br>
-              <span class="card-old-price"><del>4.390.000 vnd</del></span>
-            </div>
-            <button class="card-btn">Đặt Ngay</button>
-            <a href="#" class="more-link">» Xem thêm</a>
-          </div>
-        </div>
-
-        <div class="tour-card" data-region="mienbac">
-          <img src="assets/img/ninhbinh.jpg" alt="Ninh Bình" class="card-img">
-          <div class="card-content">
-            <h2 class="card-title">HÀ NỘI - NINH BÌNH - HẠ LONG 3 NGÀY 2 ĐÊM</h2>
-            <div class="card-info">
-              <p>🕒 3 Ngày 2 Đêm</p>
-              <p>📅 Hàng tuần</p>
-              <p>🚌 Ô tô/✈️ Máy bay</p>
-              <p>🏨 Khách sạn 2-5 sao</p>
-              <p>🎤 10</p>
-            </div>
-            <div class="card-price-group">
-              <span class="card-price">5.000.000 vnd</span><br>
-              <span class="card-old-price"><del>5.500.000 vnd</del></span>
-            </div>
-            <button class="card-btn">Đặt Ngay</button>
-            <a href="#" class="more-link">» Xem thêm</a>
-          </div>
-        </div>
-
-        <div class="tour-card" data-region="mienbac">
-          <img src="assets/img/hagiang.jpg" alt="Hà Giang" class="card-img">
-          <div class="card-content">
-            <h2 class="card-title">HÀ NỘI - HÀ GIANG 5 NGÀY 4 ĐÊM</h2>
-            <div class="card-info">
-              <p>🕒 5 Ngày 4 Đêm</p>
-              <p>📅 Hàng tuần</p>
-              <p>🚌 Ô tô/✈️ Máy bay</p>
-              <p>🏨 Khách sạn 2-5 sao</p>
-              <p>🎤 10</p>
-            </div>
-            <div class="card-price-group">
-              <span class="card-price">5.400.000 vnd</span><br>
-              <span class="card-old-price"><del>6.000.000 vnd</del></span>
-            </div>
-            <button class="card-btn">Đặt Ngay</button>
-            <a href="#" class="more-link">» Xem thêm</a>
-          </div>
-        </div>
-
-        <div class="no-tour">Không tìm thấy tour phù hợp.</div>
-
-      </div>
-    </section>
-  </main>
-
-</body>
-</html>
+ <html lang="vi">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tour Du Lịch | Vietra</title>
+   <link rel="stylesheet" href="./styles/tour.css" />
+   <link rel="stylesheet" href="./styles/home.css" />
+   <link rel="stylesheet" href="./styles/global.css" />
+ </head>
+ 
+ <body>
+     <header>
+       <video autoplay muted loop playsinline>
+         <source src="video/vietnam.mp4" type="video/mp4" />
+       </video>
+       
+       <div class="overlay-content">
+         <div class="flex items-center justify-around m-32 contain-header">
+           <div>
+             <a class="body-text-24-bold text-color-0">VIETRA</a>
+           </div>
+           <nav class="contain-nav container py-12 px-32">
+             <a class="body-text-16-regular text-color-0 mr-32" href="index.html" target="_blank">Trang Chủ</a>
+             <a class="body-text-16-regular text-color-0 mr-32" href="danhmuc.html" target="_blank">Về chúng tôi</a>
+     
+             <div class="dropdown">
+               <a class="dropdown-toggle body-text-16-regular text-color-0 mr-32">Tour</a>
+               <div class="dropdown-menu">
+                 <a href="tourmienbac.html" class="dropdown-item">Tour miền Bắc</a>
+                 <a href="tourtaynguyen.html" class="dropdown-item">Tour Tây Nguyên</a>
+               </div>
+             </div>
+     
+             <a class="body-text-16-regular text-color-0 mr-32" href="#">Blog</a>
+             <a class="body-text-16-regular text-color-0" href="#">Liên hệ</a>
+           </nav>
+         </div>
+       </div>
+     </header>
+   <main class="container">
+     <h1 class="txt-homepage">Tour Du Lịch Miền Bắc</h1>
+     <section>
+       <div class="tour-list">
+       <a href="chitiet_sapa.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac" data-id="sapa" >
+           <img src="images/sapa.jpg" alt="Sapa" class="card-img">
+           <div class="card-content">
+               <h2 class="card-title">HÀ NỘI - SAPA 4 NGÀY 3 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 4 Ngày 3 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô/✈️ Máy bay</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">4.390.000 vnd</span><br>
+               <span class="card-old-price"><del>4.500.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+ 
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac" data-id="halong">
+           <img src="images/ninhbinh.jpg" alt="Ninh Bình" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - NINH BÌNH - HẠ LONG 3 NGÀY 2 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 3 Ngày 2 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô/✈️ Máy bay</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">5.390.000 vnd</span><br>
+               <span class="card-old-price"><del>6.390.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+       
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/halong.jpg" alt="Hạ Long" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - HẠ LONG 3 NGÀY 2 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 3 Ngày 2 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô/✈️ Máy bay</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">5.000.000 vnd</span><br>
+               <span class="card-old-price"><del>5.500.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+ 
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/hagiang.jpg" alt="Hà Giang" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - HÀ GIANG 5 NGÀY 4 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 5 Ngày 4 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô/✈️ Máy bay</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">5.400.000 vnd</span><br>
+               <span class="card-old-price"><del>6.000.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+ 
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/mocchau.jpg" alt="Mộc Châu" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - MỘC CHÂU - ĐIỆN BIÊN  3 NGÀY 2 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 3 Ngày 2 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô/✈️ Máy bay</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">2.690.000 vnd</span><br>
+               <span class="card-old-price"><del>3.690.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+ 
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/taxua.jpg" alt="Tà Xùa" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - MÙ CANG CHẢI - TÀ XÙA  3 NGÀY 2 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 3 Ngày 2 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô/✈️ Máy bay</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">2.590.000 vnd</span><br>
+               <span class="card-old-price"><del>2.990.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+     
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/caobang.jpg" alt="Cao Bằng" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - CAO BẰNG - BẮC KẠN  4 NGÀY 3 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 4 Ngày 3 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">4.590.000 vnd</span><br>
+               <span class="card-old-price"><del>4.990.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+       </a>
+ 
+       <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/yentu.jpg" alt="Yên Tử" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - NINH BÌNH - HẠ LONG - YÊN TỬ  4 NGÀY 3 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 4 Ngày 3 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">6.990.000 vnd</span><br>
+               <span class="card-old-price"><del>7.990.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+         </a>
+ 
+         <a href="chitiet_ninhbinh.html" class="tour-card-link">
+         <div class="tour-card" data-region="mienbac">
+           <img src="images/catba.jpg" alt="Cát Bà" class="card-img">
+           <div class="card-content">
+             <h2 class="card-title">HÀ NỘI - CÁT BÀ - VỊNH LAN HẠ  3 NGÀY 2 ĐÊM</h2>
+             <div class="card-info">
+               <p>🕒 3 Ngày 2 Đêm</p>
+               <p>📅 Hàng tuần</p>
+               <p>🚌 Ô tô</p>
+               <p>🏨 Khách sạn 2-5 sao</p>
+             </div>
+             <div class="card-price-group">
+               <span class="card-price">3.490.000 vnd</span><br>
+               <span class="card-old-price"><del>4.490.000 vnd</del></span>
+             </div>
+           </div>
+         </div>
+         </a>
+       </div>
+     </section>
+   </main>
+ </body>
+ </html>
