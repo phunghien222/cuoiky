@@ -104,7 +104,7 @@ textarea {
 
 .company-info, .bank-info {
     margin-top: 8px;
-    font-size: 0.9em;
+    font-size: 16px;
     color: #333;
 }
 
@@ -116,14 +116,15 @@ textarea {
     align-items: center;
 }
 
-.total-amount p {
+.total-amount h2 {
     margin: 5px 0;
-    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .total-amount .amount {
     color: #007C9C;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .thanh-toan-button {
