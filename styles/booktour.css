@@ -41,6 +41,7 @@ label {
 .form-section .form-group input[type="email"],
 .form-section .form-group input[type="tel"],
 .form-section .form-group input[type="number"],
+.form-section .form-group input[type="date"],
 .form-section .form-group textarea,
 .form-section .form-group .select2-control,
 .form-section .form-group .flatpickr-wrapper input[type="text"] { /* Thêm selector này */
@@ -51,11 +52,7 @@ label {
     box-sizing: border-box;
     font-size: 16px;
     color: #666666;
-}
-
-.form-section .form-group .flatpickr-wrapper {
-    width: 100%;
-    display: block; /* Thử thêm display: block nếu width: 100% không đủ */
+    font-family: 'Inter', sans-serif;
 }
 
 select.select2-control {
@@ -92,14 +89,15 @@ textarea {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 10px;
+    padding: 15px;
     text-align: left;
     cursor: pointer;
     transition: border 0.3s, background-color 0.3s;
 }
-.payment-button.active {
-    border-color: #007C9C; 
-    background-color: #BFEAF7;
+
+.payment-button.selected {
+    border-color: #007bff;
+    background-color: #e0f0ff;
 }
 
 .company-info, .bank-info {
@@ -143,6 +141,11 @@ textarea {
 
 label strong {
     color: red;
+}
+
+.invalid-input {
+    border: 1px solid #FF2B2B !important;
+    outline: none;
 }
 
 
