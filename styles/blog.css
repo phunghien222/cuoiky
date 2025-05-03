@@ -7,11 +7,11 @@
 }
 
 .container-blog {
-  flex: 7; /* Chiếm 7/10 không gian */
+  flex: 7; /* Chiếm 7/10 main-layout */
 }
 
 .sidebar {
-  flex: 3; /* Chiếm 3/10 không gian */
+  flex: 3; /* Chiếm 3/10 main-layout */
 }
 
 .hot {
@@ -39,7 +39,7 @@
   border-bottom: 1px solid #eee;
 }
 
-.hot-item:last-child {
+.hot-item:last-child { /* Bỏ dấu gạch ngang ở hot-item cuối */
   margin-bottom: 0;
   border-bottom: none;
   padding-bottom: 0;
@@ -75,7 +75,7 @@
 }
 
 .post img:hover {
-  transform: scale(1.03);   /* Zoom 105% */
+  transform: scale(1.03);   /* Zoom 103% */
   opacity: 0.7;            /* Mờ đi một chút */
 }
 
@@ -101,7 +101,7 @@
     margin-bottom: 60px;
     margin-left: 25px;
     border-radius: 72px;
-    cursor: pointer;
+    cursor: pointer; /* Đổi kiểu con trỏ chuột thành biểu tượng bàn tay khi di chuyển qua */
     font-size: 16px;
     transition: background-color 0.3s ease;
 }

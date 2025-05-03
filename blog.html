@@ -294,37 +294,64 @@
         </div>
       </footer>
 
-      <script>
+      <script> //Sang trang
+        /* Lấy hai nút bấm chuyển trang theo id*/
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
+
+        /* Lấy phần chứa danh sách bài viết*/
         const blogContainer = document.querySelector('.container-blog');
+
+        /* Lấy tất cả các bài viết trong blog (class .post) và chuyển thành mảng*/
         const allPosts = Array.from(document.querySelectorAll('.container-blog .post'));
+
+        /* Số lượng bài viết hiển thị trên một trang*/
         const postsPerPage = 6;
+
+        /* Đọc số trang hiện tại từ localStorage. Nếu không có, mặc định là 1*/
         let currentPage = parseInt(localStorage.getItem('currentPage')) || 1;
     
+        /* Hàm hiển thị bài viết tương ứng*/
         const renderPage = (page) => {
-            blogContainer.innerHTML = '';
+            blogContainer.innerHTML = ''; // Xóa nội dung cũ
+
+            /* Tính chỉ số bắt đầu và kết thúc bài viết cho trang hiện tại*/
             const start = (page - 1) * postsPerPage;
             const end = start + postsPerPage;
+
+            /* Dùng .slice() để lấy đúng các bài viết của trang đó*/
+            /* .cloneNode(true) tạo bản sao bài viết để thêm vào container mới*/
             allPosts.slice(start, end).forEach(post => blogContainer.appendChild(post.cloneNode(true)));
     
+            /* Vô hiệu hóa nút Previous nếu đang ở trang đầu, nút Next nếu hết bài*/
             prevBtn.disabled = page === 1;
             nextBtn.disabled = end >= allPosts.length;
     
+            /* Ghi lại trang hiện tại vào localStorage*/
             localStorage.setItem('currentPage', page);
+
+            /* Cuộn lên đầu trang sau khi đổi trang*/
             window.scrollTo(0, 0);
+            /* window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });*/
         };
     
+        /* Gán sự kiện click cho nút*/
+        /* Khi bấm nút, nếu hợp lệ (không ở đầu hoặc cuối), sẽ chuyển trang và hiển thị bài viết tương ứng*/
         prevBtn.onclick = () => {
             if (currentPage > 1) renderPage(--currentPage);
+            /* thì giảm trang htai xuống 1 rồi gọi hàm renderPage để hiển thị trang trước đó*/
         };
     
         nextBtn.onclick = () => {
             if ((currentPage * postsPerPage) < allPosts.length) renderPage(++currentPage);
-        };
+        };     /* ví dụ trang hiện tại là trang 2 x 6(số bài viết mỗi trang) mà nhỏ hơn tổng toàn bộ bài viết*/
+               /* thì tăng trang htai lên 1 rồi gọi hàm renderPage để hiển thị trang kế tiếp*/
     
-        renderPage(currentPage);
-    </script>
+        renderPage(currentPage); /* Khi tải trang xong, hiển thị đúng trang đã lưu trước đó*/
+      </script>
 
 </body>
 </html>

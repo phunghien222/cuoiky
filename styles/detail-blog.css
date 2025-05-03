@@ -7,17 +7,11 @@
 }
 
 .main-content {
-    flex: 7; /* Chiếm 7/10 không gian */
+    flex: 7; /* Chiếm 7/10  container-detail-blog */
 }
 
 .sidebar {
-    flex: 3; /* Chiếm 3/10 không gian */
-}
-
-.post:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    flex: 3; /* Chiếm 3/10 container-detail-blog */
 }
 
 .post-image {
@@ -123,9 +117,10 @@
 
 .comment-form {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    margin-bottom: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /*Xác định số và kích thước cột */
+    gap: 10px;                    /*tự động lặp lại số lượng cột phù hợp nhất*/                             
+                                  /*Mỗi cột sẽ có kích thước tối thiểu là 200px và tối đa là 1fr */
+    margin-bottom: 15px;          /* 1fr (fraction-phần)là 1 phần của không gian trống còn lại sau khi tính hết các kích thước cố định*/
 }
 
 .comment-input {
