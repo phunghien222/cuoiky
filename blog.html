@@ -298,55 +298,32 @@
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         const blogContainer = document.querySelector('.container-blog');
-        const allPosts = Array.from(blogContainer.querySelectorAll('.post'));
-        const postsPerPageFirstPage = 6;
-        const postsPerPageSecondPage = 6;
-        let currentPage = parseInt(localStorage.getItem('currentPage')) || 1; // Lấy trang từ localStorage hoặc mặc định là 1
-
-        function displayPosts(page) {
+        const allPosts = Array.from(document.querySelectorAll('.container-blog .post'));
+        const postsPerPage = 6;
+        let currentPage = parseInt(localStorage.getItem('currentPage')) || 1;
+    
+        const renderPage = (page) => {
             blogContainer.innerHTML = '';
-            let postsToShow = [];
-
-            if (page === 1) {
-                postsToShow = allPosts.slice(0, postsPerPageFirstPage);
-            } else if (page === 2) {
-                postsToShow = allPosts.slice(postsPerPageFirstPage);
-            }
-
-            postsToShow.forEach(post => {
-                blogContainer.appendChild(post.cloneNode(true));
-            });
-
-            // Cập nhật trạng thái nút Previous
-            prevBtn.disabled = (page === 1);
-
-            // Cập nhật trạng thái nút Next
-            nextBtn.disabled = (page === 2);
-
-            // Lưu trang hiện tại vào localStorage
+            const start = (page - 1) * postsPerPage;
+            const end = start + postsPerPage;
+            allPosts.slice(start, end).forEach(post => blogContainer.appendChild(post.cloneNode(true)));
+    
+            prevBtn.disabled = page === 1;
+            nextBtn.disabled = end >= allPosts.length;
+    
             localStorage.setItem('currentPage', page);
-        }
-
-        function nextPage() {
-            if (currentPage === 1) {
-                currentPage++;
-                displayPosts(currentPage);
-            }
-        }
-
-        function prevPage() {
-            if (currentPage === 2) {
-                currentPage--;
-                displayPosts(currentPage);
-            }
-        }
-
-        // Sự kiện click cho các nút
-        nextBtn.addEventListener('click', nextPage);
-        prevBtn.addEventListener('click', prevPage);
-
-        // Hiển thị trang hiện tại khi tải trang
-        displayPosts(currentPage);
+            window.scrollTo(0, 0);
+        };
+    
+        prevBtn.onclick = () => {
+            if (currentPage > 1) renderPage(--currentPage);
+        };
+    
+        nextBtn.onclick = () => {
+            if ((currentPage * postsPerPage) < allPosts.length) renderPage(++currentPage);
+        };
+    
+        renderPage(currentPage);
     </script>
 
 </body>
