@@ -37,21 +37,29 @@ label {
     color: #333;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-textarea {
-    width: calc(100% - 12px);
+.form-section .form-group input[type="text"],
+.form-section .form-group input[type="email"],
+.form-section .form-group input[type="tel"],
+.form-section .form-group input[type="number"],
+.form-section .form-group textarea,
+.form-section .form-group .select2-control,
+.form-section .form-group .flatpickr-wrapper input[type="text"] { /* Thêm selector này */
+    width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
+    color: #666666;
+}
+
+.form-section .form-group .flatpickr-wrapper {
+    width: 100%;
+    display: block; /* Thử thêm display: block nếu width: 100% không đủ */
 }
 
 select.select2-control {
-    width: 100% !important;
+    width: 100% ;
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -61,22 +69,16 @@ select.select2-control {
 }
 
 textarea {
-    resize: vertical;
     min-height: 80px;
 }
 
-.form-row {
+.form-section .form-row {
     display: flex;
     gap: 10px;
 }
 
-.form-row .form-group {
+.form-section .form-row .form-group {
     flex: 1;
-}
-
-.payment-methods h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
 }
 
 .payment-buttons {
@@ -93,28 +95,17 @@ textarea {
     padding: 10px;
     text-align: left;
     cursor: pointer;
+    transition: border 0.3s, background-color 0.3s;
 }
-
-.payment-button .icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    background-color: #007bff;
-    border-radius: 4px;
-    color: white;
-    text-align: center;
-    line-height: 20px;
-}
-
-.payment-button.company-payment .icon {
-    background-color: #d9534f;
+.payment-button.active {
+    border-color: #007C9C; 
+    background-color: #BFEAF7;
 }
 
 .company-info, .bank-info {
     margin-top: 8px;
     font-size: 0.9em;
-    color: #777;
+    color: #333;
 }
 
 .total-payment {
@@ -131,7 +122,7 @@ textarea {
 }
 
 .total-amount .amount {
-    color: red;
+    color: #007C9C;
     font-weight: bold;
 }
 
@@ -149,61 +140,7 @@ textarea {
     background-color: #007C9C;
 }
 
-/* Сhỉnh Select2 để giống input */
-.select2-container--default .select2-selection--single {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-    height: auto;
-    line-height: 1.5;
-    box-sizing: border-box;
-}
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #555;
-    line-height: inherit;
-    padding-left: 0;
-}
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: 26px;
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    transform: translateY(-50%);
-    width: 20px;
-}
 
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-    border-color: #888 transparent transparent transparent;
-    border-style: solid;
-    border-width: 5px 4px 0 4px;
-    height: 0;
-    left: 0;
-    position: absolute;
-    top: 50%;
-    margin-top: -2px;
-    width: 0;
-}
-
-.form-group {
-    margin-bottom: 15px;
-    display: flex; /* Thử sử dụng flex để căn chỉnh kích thước */
-    flex-direction: column; /* Các label và input/select xếp theo cột */
-}
-
-.form-group label {
-    width: 100%; /* Label chiếm toàn bộ chiều rộng */
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="tel"],
-.form-group input[type="number"],
-.form-group select.select2-control {
-    width: 100%; /* Các input và select chiếm toàn bộ chiều rộng form-group */
-    box-sizing: border-box;
-}
 

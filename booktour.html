@@ -49,80 +49,78 @@
             <div class="form-group">
                 <label for="loai-tour">* Chọn loại tour</label>
                 <select id="loai-tour" class="select2-control">
-                    <option></option> </select>
+                    <option value="">-- Chọn loại tour --</option>
+                    <option value="trong-nuoc">Tour trong nước</option>
+                    <option value="nuoc-ngoai">Tour nước ngoài</option>
+                    <option value="dac-biet">Tour đặc biệt</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="chon-tour">* Chọn tour</label>
                 <select id="chon-tour" class="select2-control">
-                    <option></option> </select>
+                    <option value="">-- Chọn tour --</option>
+                    <option value="ha-noi-3n2d" data-price="2590000">Tour Hà Nội 3 ngày 2 đêm</option>
+                    <option value="sapa-2n1d" data-price="1850000">Tour Sapa 2 ngày 1 đêm</option>
+                    <option value="da-nang-4n3d" data-price="3200000">Tour Đà Nẵng 4 ngày 3 đêm</option>
+                </select>
             </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="nguoi-lon">* Người lớn</label>
-                    <input type="number" id="nguoi-lon" value="0">
-                </div>
-                <div class="form-group">
-                    <label for="tre-em">Trẻ em</label>
-                    <input type="number" id="tre-em" value="0">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="tre-nho">Trẻ nhỏ (2 - 5 tuổi)</label>
-                    <input type="number" id="tre-nho" value="0">
-                </div>
-                <div class="form-group">
-                    <label for="em-be">Em bé</label>
-                    <input type="number" id="em-be" value="0">
-                </div>
+            <div class="form-group">
+                <label for="so-nguoi-tham-gia">* Số người tham gia</label>
+                <input type="number" id="so-nguoi-tham-gia" value="1" min="1" placeholder="Số người tham gia">
             </div>
             <div class="form-group">
                 <label for="ngay-khoi-hanh">* Ngày khởi hành</label>
                 <div class="flatpickr-wrapper">
-                    <input type="text" id="ngay-khoi-hanh">
-                    <span class="flatpickr-icon">
-                        <i class="fa fa-calendar"></i>
-                    </span>
+                    <input type="text" id="ngay-khoi-hanh" placeholder="Ngày khởi hành">
                 </div>
             </div>
 
             <h2>Thông tin khách hàng</h2>
             <div class="form-group">
                 <label for="ho-ten">* Họ và tên</label>
-                <input type="text" id="ho-ten">
+                <input type="text" id="ho-ten" placeholder="Họ và tên">
             </div>
             <div class="form-group">
                 <label for="email">* Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" placeholder="Email">
             </div>
             <div class="form-group">
                 <label for="dien-thoai">* Điện thoại</label>
-                <input type="tel" id="dien-thoai">
+                <input type="tel" id="dien-thoai" placeholder="Điện thoại">
             </div>
             <div class="form-group">
                 <label for="dia-chi">* Địa chỉ</label>
-                <input type="text" id="dia-chi">
+                <input type="text" id="dia-chi" placeholder="Địa chỉ">
             </div>
             <div class="form-row">
                 <div class="form-group">
                     <label for="tinh-thanh">* Chọn tỉnh/thành</label>
                     <select id="tinh-thanh" class="select2-control">
-                        <option></option> </select>
+                        <option value="">-- Chọn tỉnh/thành --</option>
+                        <option value="nuoc-ngoai">Tour nước ngoài</option>
+                        <option value="dac-biet">Tour đặc biệt</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="quan-huyen">* Chọn quận/huyện</label>
                     <select id="quan-huyen" class="select2-control">
-                        <option></option> </select>
+                        <option value="">-- Chọn quận/huyện --</option>
+                        <option value="nuoc-ngoai">Tour nước ngoài</option>
+                        <option value="dac-biet">Tour đặc biệt</option>
+                    </select>
                 </div>
             </div>
             <div class="form-group">
                 <label for="phuong-xa">* Chọn phường/xã</label>
                 <select id="phuong-xa" class="select2-control">
-                    <option></option> </select>
+                    <option value="">-- Chọn phường/xã --</option>
+                    <option value="nuoc-ngoai">Tour nước ngoài</option>
+                    <option value="dac-biet">Tour đặc biệt</option> 
+                </select>
             </div>
             <div class="form-group">
                 <label for="ghi-chu">Ghi chú</label>
-                <textarea id="ghi-chu"></textarea>
+                <textarea id="ghi-chu" placeholder="Ghi chú"></textarea>
             </div>
         </div>
 
@@ -134,10 +132,9 @@
                         <span class="payment-info">
                             <h3>Thanh toán tại công ty</h3>
                             <div class="company-info">
-                                <p>55 Đỗ Quang Đẩu, P. Phạm Ngũ Lão, Quận 1, Thành Phố Hồ Chí Minh, Vietnam</p>
+                                <p>12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</p>
                             </div>
                         </span>
-                        <input type="radio" name="payment-method" value="company" style="display: none;">
                     </label>
                 </div>
                 <div class="payment-button online-payment">
@@ -146,13 +143,12 @@
                             <h3>Thanh toán trực tuyến</h3>
                             <div class="bank-info">
                                 <p><b>Thông tin chuyển khoản:</b></p>
-                                <p>Chủ Tài khoản: PHẠM HOÀNG ANH</p>
-                                <p>Số Tài khoản: 0071001899415</p>
-                                <p>Ngân Hàng: VIETCOMBANK</p>
-                                <p>Quý khách thực hiện thanh toán vui lòng gửi theo thông tin: "Họ và tên - vietra.vn"</p>
+                                <p>Chủ Tài khoản: <b>PHUNG THUY HIEN</b></p>
+                                <p>Số Tài khoản: <b>0071001899415</b></p>
+                                <p>Ngân Hàng: <b>VIETCOMBANK</b></p>
+                                <p>Quý khách thực hiện thanh toán vui lòng gửi theo thông tin: <b>"Họ và tên - vietra.vn"</b></p>
                             </div>
                         </span>
-                        <input type="radio" name="payment-method" value="online" style="display: none;">
                     </label>
                 </div>
             </div>
@@ -161,7 +157,7 @@
                     <p>Tổng tiền</p>
                     <p class="amount">2.590.000 vnd</p>
                 </div>
-                <button class="payment-button thanh-toan-button">Thanh toán</button>
+                <button class="thanh-toan-button">Thanh toán</button>
             </div>
         </div>
     </div>
@@ -215,9 +211,19 @@
         });
     </script>
 
+    <script> /* Xử lý chọn ô thanh toán */
+        const paymentButtons = document.querySelectorAll('.payment-button');
+
+        paymentButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                paymentButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="script.js"></script>
 </body>
 </html>
