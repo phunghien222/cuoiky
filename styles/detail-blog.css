@@ -62,7 +62,7 @@
 }
 
 .related-news h2 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 10px;
@@ -95,7 +95,7 @@
 }
 
 .related-item a {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 1.4;
     color: #333;
