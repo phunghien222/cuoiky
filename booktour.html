@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <header>
@@ -65,15 +66,16 @@
                     <option value="taynguyen" data-region="taynguyen" data-price="3590000">HÀNH TRÌNH KHÁM PHÁ TÂY NGUYÊN 4 NGÀY 3 ĐÊM</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="people"><strong>*</strong> Số người tham gia</label>
-                <input type="number" id="people" value="1" min="1" placeholder="Số người tham gia">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="people"><strong>*</strong> Số người tham gia</label>
+                    <input type="number" id="people" value="1" min="1" placeholder="Số người tham gia">
+                </div>
+                <div class="form-group">
+                    <label for="ngay-khoi-hanh"><strong>*</strong> Ngày khởi hành</label>
+                    <input type="date" id="date" placeholder="dd/mm/yyyy" />
+                </div>
             </div>
-            <div class="form-group">
-                <label for="ngay-khoi-hanh"><strong>*</strong> Ngày khởi hành</label>
-                <input type="date" id="date" />
-            </div>
-
             <h2>👤 Thông tin khách hàng</h2>
             <div class="form-group">
                 <label for="ho-ten"><strong>*</strong> Họ và tên</label>
@@ -135,7 +137,8 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-row">
+            <div class="form-group" style="flex: 1; max-width: 49.2%;">
                 <label for="phuong-xa"><strong>*</strong> Chọn phường/xã</label>
                 <select id="phuong-xa" class="select2-control">
                     <option value="">-- Chọn phường/xã --</option>
@@ -168,6 +171,7 @@
                     <option value="bich-dao" data-parent="ninhbinh">Phường Bích Đào</option>
                     <option value="ttme" data-parent="gia-vien">Thị trấn Me</option> 
                 </select>
+            </div>
             </div>
             <div class="form-group">
                 <label for="ghi-chu">Ghi chú</label>
@@ -255,6 +259,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
         document.getElementById('loai-tour').addEventListener('change', function () {
@@ -276,6 +281,12 @@
 
             // Reset lại chọn tour
             tourSelect.value = "";
+        });
+    </script>
+
+    <script>
+        flatpickr("#date", {
+            dateFormat: "d/m/Y"
         });
     </script>
 

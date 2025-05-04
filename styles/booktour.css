@@ -71,7 +71,7 @@ textarea {
 
 .form-section .form-row {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .form-section .form-row .form-group {
