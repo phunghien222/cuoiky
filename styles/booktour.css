@@ -53,9 +53,9 @@ label {
     font-size: 16px;
     color: #666666;
     font-family: 'Inter', sans-serif;
-}
+} /* Thay đổi css các ô so với jquery mặc định*/
 
-select.select2-control {
+select.select2-control { /* chọn phần tử <select> và có class là select2-control*/
     width: 100% ;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -75,8 +75,8 @@ textarea {
 }
 
 .form-section .form-row .form-group {
-    flex: 1;
-}
+    flex: 1;  /* gán flex: 1 giúp ptu có chiều rộng bằng nhau và*/
+}             /* tự động điều chỉnh kích thước khi kích thước màn hình thay đổi*/
 
 .payment-buttons {
     display: flex;
@@ -143,7 +143,7 @@ label strong {
     color: red;
 }
 
-.invalid-input {
+.invalid-input { /* Khi điền sai viền ô thay đổi*/
     border: 1px solid #FF2B2B !important;
     outline: none;
 }

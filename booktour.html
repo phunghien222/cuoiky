@@ -263,7 +263,7 @@
 
     <script>
         document.getElementById('loai-tour').addEventListener('change', function () {
-            const selectedRegion = this.value;
+            const selectedRegion = this.value; //giá trị loại tour ng dùng vừa chọn
             const tourSelect = document.getElementById('chon-tour');
             const options = tourSelect.querySelectorAll('option');
 
@@ -280,12 +280,13 @@
             });
 
             // Reset lại chọn tour
-            tourSelect.value = "";
+            tourSelect.value = ""; /* sau khi người dùng chọn một vùng miền,  
+                                    dropdown chọn tour sẽ được reset về trạng thái chưa chọn*/
         });
     </script>
 
     <script>
-        flatpickr("#date", {
+        flatpickr("#date", { /* đổi định dạng mặc định của flatpickr*/
             dateFormat: "d/m/Y"
         });
     </script>
@@ -297,13 +298,14 @@
 
         function updateTotalAmount() {
             const tourSelect = document.getElementById('chon-tour');
-            const selectedOption = tourSelect.options[tourSelect.selectedIndex];
-            const pricePerPerson = parseInt(selectedOption.getAttribute('data-price')) || 0;
+            const selectedOption = tourSelect.options[tourSelect.selectedIndex]; /* <option> đang được chọn*/
+            const pricePerPerson = parseInt(selectedOption.getAttribute('data-price')) || 0; /* Nếu parseInt không thành công thì mặc định là 0*/
 
-            const numberOfPeople = parseInt(document.getElementById('people').value) || 0;
+            const numberOfPeople = parseInt(document.getElementById('people').value) || 0; /* .value lấy giá trị (chuỗi) mà người dùng đã nhập */
 
             const total = pricePerPerson * numberOfPeople;
             document.querySelector('.amount').textContent = formatCurrency(total);
+            /* nội dung văn bản của phần tử có class 'amount' sẽ được cập nhật thành tổng số tiền đã được định dạng*/
         }
 
         // Cập nhật khi người dùng chọn tour hoặc nhập số người
@@ -313,7 +315,7 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function () { /* Trang tải xong toàn bộ HTML, đoạn mã bên trong bắt đầu chạy*/
-      // Lấy các phần tử <select> từ DOM, Gán các biến đại diện cho 3 dropdown
+      // Lấy các phần tử <select>, gán các biến đại diện cho 3 dropdown
       const tinhSelect = document.getElementById('tinh-thanh');
       const quanSelect = document.getElementById('quan-huyen');
       const phuongSelect = document.getElementById('phuong-xa');
