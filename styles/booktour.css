@@ -96,8 +96,8 @@ textarea {
 }
 
 .payment-button.selected {
-    border-color: #007bff;
-    background-color: #e0f0ff;
+    border-color: #007C9C;
+    background-color: #E6F7FC;
 }
 
 .company-info, .bank-info {
