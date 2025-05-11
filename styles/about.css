@@ -25,6 +25,7 @@
   .about-values {
     background: #f9fafb;
     padding: 80px 20px;
+
   }
   
   .about-values-container {
@@ -35,6 +36,7 @@
     gap: 40px;
     flex-wrap: wrap;
     text-align: center;
+    align-items: center;
   }
   
   .about-value-item {
@@ -103,12 +105,44 @@
     border-radius: 20px;
     object-fit: cover;
   }
+  .porter-team {
+    padding: 80px 120px;
+    background-color: #f8f8f8;
+  }
+
+  .porter-team-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .porter-team-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    max-width: 360px;
+    flex-shrink: 0;
+  }
+
+  .porter-team-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #ccc;
+  }
   
   /* Responsive */
   @media (max-width: 768px) {
     .about-hero-title {
       font-size: 36px;
     }
+    .about-hero-container {
+      width: 100%;
+      padding: 32px;
+    }
+    
     .about-hero-subtitle {
       font-size: 18px;
     }
@@ -116,5 +150,21 @@
       flex-direction: column;
       gap: 32px;
     }
+    .porter-team{
+      padding: 16px
+    }
+      .porter-team-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-team-text {
+        max-width: 100%;
+      }
+
+      .porter-team-image {
+        justify-content: center;
+        max-width: 100%;
+      }
   }
   

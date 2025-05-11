@@ -1,135 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vietra-Mọi điểm đến tại Việt Nam</title>
-    <link rel="stylesheet" href="./styles/home.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/about.css" />
-  </head>
-  <body>
-    <header>
-      <video autoplay muted loop playsinline>
-        <source src="video/vietnam.mp4" type="video/mp4" />
-        Trình duyệt không hỗ trợ video.
-      </video>
 
-      <div class="overlay-content">
-        <div class="flex items-center justify-around m-32 contain-header">
-          <div>
-            <a class="body-text-24-bold text-color-0">VIETRA</a>
-          </div>
-          <nav class="contain-nav container py-12 px-32">
-            <a
-              class="body-text-16-regular text-color-0 mr-32"
-              href="index.html"
-              target="_blank"
-              >Trang Chủ</a
-            >
-            <a
-              class="body-text-16-regular text-color-0 mr-32"
-              href="about.html"
-              target="_blank"
-              >Về chúng tôi</a
-            >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vietra-Mọi điểm đến tại Việt Nam</title>
+  <link rel="stylesheet" href="../../styles/home.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="../../styles/about.css" />
+</head>
+
+<body>
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="../../video/vietnam.mp4" type="video/mp4" />
+      Trình duyệt không hỗ trợ video.
+    </video>
+
+    <div class="overlay-content">
+      <div class="flex items-center justify-around m-32 contain-header">
+        <div>
+          <a class="body-text-24-bold text-color-0">VIETRA</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+          <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+        <!-- Drawer Menu -->
+        <div id="drawer" class="drawer">
+          <a href="../../index.html">Trang chủ</a>
+          <a href="../../pages/about/about.html">Giới thiệu</a>
+          <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+          <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+          <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+          <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+          <a href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html">Liên hệ</a>
+        </div>
+        <nav class="contain-nav container py-12 px-32">
+          <a class="body-text-16-regular text-color-0 mr-32" href="index.html">Trang Chủ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/about/about.html">Về chúng tôi</a>
+          <div class="dropdown">
             <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
-            <a class="body-text-16-regular text-color-0 mr-32">Blog</a>
-            <a href="contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
-          </nav>
+            <div class="dropdown-content">
+              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+            </div>
+          </div>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+        </nav>
 
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about-hero">
+      <div class="about-hero-container">
+        <h1 class="about-hero-title">Chúng Tôi Là Ai?</h1>
+        <p class="about-hero-subtitle">
+          Với sứ mệnh mang đến cho khách hàng những trải nghiệm tuyệt vời nhất trong chuyến đi, Vietra luôn luôn lắng
+          nghe mọi ý kiến đóng góp và không ngừng cải tiến dịch vụ để đáp ứng cho khách hàng chất lượng dịch vụ tốt
+          nhất.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-values">
+      <div class="about-values-container">
+        <div class="about-value-item">
+          <img src="../../assets/svg/ic-quality.svg" alt="Chất lượng">
+          <h2>Chất lượng</h2>
+          <p>Cam kết mang đến sản phẩm và dịch vụ tốt nhất tới khách hàng.</p>
+        </div>
+        <div class="about-value-item">
+          <img src="../../assets/svg/ic-vision.svg" alt="Tầm nhìn">
+          <h2>Tầm nhìn</h2>
+          <p>Trở thành biểu tượng tin cậy trong ngành trong ngành du lịch</p>
+        </div>
+        <div class="about-value-item">
+          <img src="../../assets/svg/ic-mission.svg" alt="Sứ mệnh">
+          <h2>Sứ mệnh</h2>
+          <p>Kiến tạo giải pháp đột phá và phát triển bền vững cho cộng đồng.</p>
         </div>
       </div>
-    </header>
-    <main>
-      <section class="about-hero">
-        <div class="about-hero-container">
-          <h1 class="about-hero-title">Chúng Tôi Là Ai?</h1>
-          <p class="about-hero-subtitle">
-            Với sứ mệnh mang đến cho khách hàng những trải nghiệm tuyệt vời nhất trong chuyến đi, Viettrekking luôn luôn lắng nghe mọi ý kiến đóng góp và không ngừng cải tiến dịch vụ để đáp ứng cho khách hàng chất lượng dịch vụ tốt nhất.
-          </p>
+    </section>
+
+    <section class="about-team">
+      <div class="about-team-container">
+        <div class="about-team-text">
+          <h2>Đội ngũ của chúng tôi</h2>
+          <p>Với những con người giàu đam mê, sáng tạo và kinh nghiệm, chúng tôi tự hào xây dựng nên thương hiệu uy tín,
+            chinh phục mọi thử thách.</p>
         </div>
-      </section>
-      
-      <section class="about-values">
-        <div class="about-values-container">
-          <div class="about-value-item">
-            <img src="assets/svg/ic-quality.svg" alt="Chất lượng">
-            <h2>Chất lượng</h2>
-            <p>Cam kết mang đến sản phẩm và dịch vụ tốt nhất tới khách hàng.</p>
-          </div>
-          <div class="about-value-item">
-            <img src="assets/svg/ic-vision.svg" alt="Tầm nhìn">
-            <h2>Tầm nhìn</h2>
-            <p>Trở thành biểu tượng tin cậy trong ngành [ngành nghề của bạn].</p>
-          </div>
-          <div class="about-value-item">
-            <img src="assets/svg/ic-mission.svg" alt="Sứ mệnh">
-            <h2>Sứ mệnh</h2>
-            <p>Kiến tạo giải pháp đột phá và phát triển bền vững cho cộng đồng.</p>
-          </div>
-        </div>
-      </section>
-      
-      <section class="about-team">
-        <div class="about-team-container">
-          <div class="about-team-text">
-            <h2>Đội ngũ của chúng tôi</h2>
-            <p>Với những con người giàu đam mê, sáng tạo và kinh nghiệm, chúng tôi tự hào xây dựng nên thương hiệu uy tín, chinh phục mọi thử thách.</p>
-          </div>
-          <div class="about-team-image">
-            <img src="assets/img/team.png" alt="Đội ngũ công ty">
-          </div>
-        </div>
-      </section>
-            
-    </main>
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-column">
-          <h4>Hỗ trợ</h4>
-          <ul>
-            <li><a href="#">Trung tâm hỗ trợ</a></li>
-            <li><a href="#">Bảo mật thông tin</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Vietra</h4>
-          <ul>
-            <li><a href="#">Về chúng tôi</a></li>
-            <li><a href="#">Chính sách</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Tour</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Liên hệ</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Đối tác</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Mạng xã hội</h4>
-          <div class="social-icons">
-            <a href="#"><img src="assets/svg/ic-fb.svg" alt="Facebook"></a>
-            <a href="#"><img src="assets/svg/ic-tw.svg" alt="Twitter"></a>
-            <a href="#"><img src="assets/svg/ic-tt.svg" alt="TikTok"></a>
-            <a href="#"><img src="assets/svg/ic-yt.svg" alt="YouTube"></a>
-          </div>
+        <div class="about-team-image">
+          <img src="../../assets/img/team.png" alt="Đội ngũ công ty">
         </div>
       </div>
-    
-      <div class="footer-bottom">
-        <p>© Copyright Acenda 2024</p>
-        <!-- <div class="payment-icons">
+    </section>
+
+    <section class="porter-team">
+      <div class="porter-team-container">
+        <div class="porter-team-image">
+          <img src="../../assets/img/team/team1.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team2.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team3.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team4.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team5.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team6.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team7.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team8.png" alt="Đội ngũ công ty">
+          <img src="../../assets/img/team/team9.png" alt="Đội ngũ công ty">
+        </div>
+        <div class="about-team-text">
+          <h2>Vietra Porter Team</h2>
+          <p>Porter – một thành phần rất quan trọng, không thể thiếu và luôn có số lượng rất rất đông trong các tour leo
+            núi của Vietra. Porter dịch ra tiếng Việt là Người khuân vác, và là cách gọi chung cho những thành viên tham
+            gia hỗ trợ trong hành trình chinh phục của Vietra. Ngoài nhiệm vụ chính là mang đồ đoàn, mang hành lý cho
+            khách, đội ngũ Porter của Vietra còn nấu ăn ngon, tháo vát trong mọi công việc ở trên núi, luôn luôn giúp đỡ
+            mọi hành khách ở những điểm địa hình khó khăn, đặc biệt là với những hành khách có thể lực yếu và kĩ năng
+            chưa cao.
+
+            Ngoài ra, với đặc thù các tour trekking đều ở những ngọn núi cao ở khu vực Tây Bắc, nên đa số các Porter đều
+            là đồng bào người dân tộc Mông hoặc dân tộc Dao, do đó các bạn sẽ còn được lắng nghe rất nhiều câu chuyện về
+            đời sống và văn hóa của các Porter trong chuyến đi.
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Trung tâm hỗ trợ</a></li>
+          <li><a href="#">Bảo mật thông tin</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Vietra</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Chính sách</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Đối tác</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Mạng xã hội</h4>
+        <div class="social-icons">
+          <a href="#"><img src="../../assets/svg/ic-fb.svg" alt="Facebook"></a>
+          <a href="#"><img src="../../assets/svg/ic-tw.svg" alt="Twitter"></a>
+          <a href="#"><img src="../../assets/svg/ic-tt.svg" alt="TikTok"></a>
+          <a href="#"><img src="../../assets/svg/ic-yt.svg" alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright Acenda 2024</p>
+      <!-- <div class="payment-icons">
           <img src="visa.png" alt="Visa">
           <img src="mastercard.png" alt="Mastercard">
           <img src="discover.png" alt="Discover">
           <img src="paypal.png" alt="Paypal">
           <img src="jcb.png" alt="JCB">
         </div> -->
-      </div>
-    </footer>    
-  </body>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
+</body>
+
 </html>

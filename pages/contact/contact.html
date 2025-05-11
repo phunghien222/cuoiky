@@ -1,174 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vietra-Mọi điểm đến tại Việt Nam</title>
-    <link rel="stylesheet" href="./styles/home.css" />
-    <link rel="stylesheet" href="./styles/global.css" />
-  
-  </head>
-  <body>
-    <header>
-      <video autoplay muted loop playsinline>
-        <source src="video/vietnam.mp4" type="video/mp4" />
-        Trình duyệt không hỗ trợ video.
-      </video>
 
-      <div class="overlay-content">
-        <div class="flex items-center justify-around m-32 contain-header">
-          <div>
-            <a class="body-text-24-bold text-color-0">VIETRA</a>
-          </div>
-          <nav class="contain-nav container py-12 px-32">
-            <a
-              class="body-text-16-regular text-color-0 mr-32"
-              href="index.html"
-              target="_blank"
-              >Trang Chủ</a
-            >
-            <a
-              class="body-text-16-regular text-color-0 mr-32"
-              href="about.html"
-              target="_blank"
-              >Về chúng tôi</a
-            >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vietra-Mọi điểm đến tại Việt Nam</title>
+  <link rel="stylesheet" href="../../styles/home.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+
+</head>
+
+<body>
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="../../video/vietnam.mp4" type="video/mp4" />
+      Trình duyệt không hỗ trợ video.
+    </video>
+
+    <div class="overlay-content">
+      <div class="flex items-center justify-around m-32 contain-header">
+        <div>
+          <a class="body-text-24-bold text-color-0">VIETRA</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+          <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+        <!-- Drawer Menu -->
+        <div id="drawer" class="drawer">
+          <a href="../../index.html">Trang chủ</a>
+          <a href="../../pages/about/about.html">Giới thiệu</a>
+          <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+          <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+          <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+          <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+          <a href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html">Liên hệ</a>
+        </div>
+        <nav class="contain-nav container py-12 px-32">
+          <a class="body-text-16-regular text-color-0 mr-32" href="index.html">Trang Chủ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/about/about.html">Về chúng tôi</a>
+          <div class="dropdown">
             <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
-            <a class="body-text-16-regular text-color-0 mr-32">Blog</a>
-            <a href="contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
-          </nav>
+            <div class="dropdown-content">
+              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+            </div>
+          </div>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+        </nav>
 
+      </div>
+    </div>
+  </header>
+  <main class="root">
+    <section class="promo-section">
+      <div class="promo-container">
+        <div class="promo-image">
+          <img src="../../assets/img/tour-17.png" alt="Promo Image">
+        </div>
+        <div class="promo-content">
+          <h2>Nhận ưu đãi đặc biệt và nhiều hơn nữa cùng Vietra!</h2>
+          <form class="promo-form">
+            <input type="email" placeholder="Email của bạn" required>
+            <button type="submit">Gửi đi</button>
+          </form>
         </div>
       </div>
-    </header>
-    <main class="root">      
-      <section class="promo-section">
-        <div class="promo-container">
-          <div class="promo-image">
-            <img src="assets/img/tour-17.png" alt="Promo Image">
-          </div>
-          <div class="promo-content">
-            <h2>Nhận ưu đãi đặc biệt và nhiều hơn nữa cùng Vietra!</h2>
-            <form class="promo-form">
-              <input type="email" placeholder="Email của bạn" required>
-              <button type="submit">Gửi đi</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-column">
-          <h4>Hỗ trợ</h4>
-          <ul>
-            <li><a href="#">Trung tâm hỗ trợ</a></li>
-            <li><a href="#">Bảo mật thông tin</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Vietra</h4>
-          <ul>
-            <li><a href="#">Về chúng tôi</a></li>
-            <li><a href="#">Chính sách</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Tour</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Liên hệ</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Đối tác</a></li>
-          </ul>
-        </div>
-        <div class="footer-column">
-          <h4>Mạng xã hội</h4>
-          <div class="social-icons">
-            <a href="#"><img src="assets/svg/ic-fb.svg" alt="Facebook"></a>
-            <a href="#"><img src="assets/svg/ic-tw.svg" alt="Twitter"></a>
-            <a href="#"><img src="assets/svg/ic-tt.svg" alt="TikTok"></a>
-            <a href="#"><img src="assets/svg/ic-yt.svg" alt="YouTube"></a>
-          </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="#">Trung tâm hỗ trợ</a></li>
+          <li><a href="#">Bảo mật thông tin</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Vietra</h4>
+        <ul>
+          <li><a href="#">Về chúng tôi</a></li>
+          <li><a href="#">Chính sách</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Đối tác</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Mạng xã hội</h4>
+        <div class="social-icons">
+          <a href="#"><img src="../../assets/svg/ic-fb.svg" alt="Facebook"></a>
+          <a href="#"><img src="../../assets/svg/ic-tw.svg" alt="Twitter"></a>
+          <a href="#"><img src="../../assets/svg/ic-tt.svg" alt="TikTok"></a>
+          <a href="#"><img src="../../assets/svg/ic-yt.svg" alt="YouTube"></a>
         </div>
       </div>
-    
-      <div class="footer-bottom">
-        <p>© Copyright Acenda 2024</p>
-        <!-- <div class="payment-icons">
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright Acenda 2024</p>
+      <!-- <div class="payment-icons">
           <img src="visa.png" alt="Visa">
           <img src="mastercard.png" alt="Mastercard">
           <img src="discover.png" alt="Discover">
           <img src="paypal.png" alt="Paypal">
           <img src="jcb.png" alt="JCB">
         </div> -->
-      </div>
-    </footer>
-    
-    <script>
-      const track = document.getElementById("carouselTrack");
-      const trackRate = document.getElementById("carouselRate");
-      const dots = document.querySelectorAll(".dot");
-      const _dotsRate = document.querySelectorAll(".dot-rate")
-      
-      const slides = document.querySelectorAll(".carousel-slide");
-      const slidesRate = document.querySelectorAll(".slide-rate");
+    </div>
+  </footer>
 
-      const prevBtn = document.getElementById("prevBtn");
-      const nextBtn = document.getElementById("nextBtn");
+  <script>
+    function toggleMenu() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
 
-      const prevRate = document.getElementById("prevRate");
-      const nextRate = document.getElementById("nextRate")
-    
-      let currentIndex = 0;
-    
-      function goToSlide(index, isRate = false) {
-        const dotArr = isRate ? _dotsRate : dots
-        const trackSelect = isRate ? trackRate : track
+  </script>
 
-        
-        trackSelect.style.transform = `translateX(-${index * 100}%)`;
-        dotArr.forEach(dot => dot.classList.remove("active"));
-        dotArr[index].classList.add("active");
-        currentIndex = index;
-      }
-    
-      dots.forEach(dot => {
-        dot.addEventListener("click", () => {
-          goToSlide(Number(dot.dataset.index));
-        });
-      });
+</body>
 
-      _dotsRate.forEach(dotRate => {
-        dotRate.addEventListener("click", () => {
-          goToSlide(Number(dot.dataset.index), true);
-        });
-      });
-    
-      prevBtn.addEventListener("click", () => {
-        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(newIndex);
-      });
-    
-      nextBtn.addEventListener("click", () => {
-        const newIndex = (currentIndex + 1) % slides.length;
-        goToSlide(newIndex);
-      });
-
-      prevRate.addEventListener("click", () => {
-        console.log('click')
-        const newIndex = (currentIndex - 1 + slidesRate.length) % slidesRate.length;
-        goToSlide(newIndex, true);
-      });
-
-      nextRate.addEventListener("click", () => {
-        const newIndex = (currentIndex + 1) % slidesRate.length;
-        goToSlide(newIndex, true);
-      });
-    
-      // Init
-      goToSlide(0);
-    </script>
-    
-  </body>
 </html>
