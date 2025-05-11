@@ -122,6 +122,84 @@
     background-color: #e0e0e0;
 }
 
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column; /* Chuyển hướng các phần tử con sang cột */
+    padding: 10px; /* Giảm padding tổng thể */
+    margin: 10px auto; /* Giảm margin tổng thể */
+    gap: 20px; /* Giảm khoảng cách giữa các phần */
+  }
+
+  .container-blog {
+    flex: 1; /* Chiếm toàn bộ chiều rộng khả dụng */
+  }
+
+  .sidebar {
+    flex: 1; /* Chiếm toàn bộ chiều rộng khả dụng */
+  }
+
+  .hot {
+    padding: 10px; /* Giảm padding sidebar */
+  }
+
+  .hot h2 {
+    font-size: 18px; /* Giảm kích thước tiêu đề sidebar */
+    margin-bottom: 8px; /* Giảm margin dưới tiêu đề sidebar */
+    padding-bottom: 3px; /* Giảm padding dưới tiêu đề sidebar */
+  }
+
+  .hot-item {
+    flex-direction: row; /* Hiển thị ảnh và tiêu đề trên cùng một hàng */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-bottom: 10px; /* Giảm margin giữa các mục hot */
+    padding-bottom: 10px; /* Giảm padding dưới các mục hot */
+  }
+
+  .hot-item img {
+    width: 80px; /* Giảm kích thước ảnh hot item */
+    height: 60px; /* Giảm chiều cao ảnh hot item */
+    margin-right: 10px; /* Thêm khoảng cách bên phải ảnh */
+    margin-bottom: 0; /* Loại bỏ margin dưới ảnh */
+  }
+
+  .hot-item a {
+    font-size: 14px; /* Giảm kích thước chữ tiêu đề hot item */
+    font-weight: normal; /* Bỏ in đậm để dễ đọc hơn */
+  }
+
+  .post {
+    margin-bottom: 20px; /* Tăng khoảng cách giữa các bài viết */
+  }
+
+  .post-title {
+    font-size: 20px; /* Giảm kích thước tiêu đề bài viết */
+    margin: 10px 10px 5px 10px; /* Giảm margin tiêu đề bài viết */
+  }
+
+  .post-summary {
+    font-size: 14px; /* Giảm kích thước tóm tắt bài viết */
+    margin: 0 10px 10px 10px; /* Giảm margin tóm tắt bài viết */
+    line-height: 1.4; /* Điều chỉnh line-height cho dễ đọc */
+  }
+
+  .read-more-btn {
+    font-size: 14px; /* Giảm kích thước nút read more */
+    padding: 8px 16px; /* Giảm padding nút read more */
+    margin-bottom: 30px; /* Giảm margin dưới nút read more */
+    margin-left: 10px; /* Giảm margin trái nút read more */
+  }
+
+  .pagination-container {
+    margin-top: 15px; /* Giảm margin trên pagination */
+    margin-bottom: 15px; /* Giảm margin dưới pagination */
+  }
+
+  .pagination-container button {
+    padding: 8px 12px; /* Giảm padding nút pagination nếu bạn có thêm nút */
+    font-size: 14px; /* Giảm kích thước chữ nút pagination */
+  }
+}
+
 
 
 
