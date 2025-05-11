@@ -193,15 +193,6 @@ label strong {
     padding: 6px;
   }
 
-  .form-section .form-row .form-group {
-    max-width: 100%; /* Ghi đè inline style, cho phép chiếm toàn bộ chiều rộng */
-    flex-basis: 100%; /* Đảm bảo chiếm toàn bộ không gian trong flex container */
-  }
-
-  .form-section .form-row .form-group select.select2-control {
-    width: 100%; /* Đảm bảo select con chiếm hết */
-  }
-
   textarea {
     min-height: 60px;
   }
