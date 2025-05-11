@@ -381,5 +381,14 @@
         renderPage(currentPage); /* Khi tải trang xong, hiển thị đúng trang đã lưu trước đó*/
       </script>
 
+      <script>
+        function toggleMenu() {
+            const drawer = document.getElementById('drawer');
+            const overlay = document.getElementById('overlay');
+            drawer.classList.toggle('open');
+            overlay.classList.toggle('show');
+        }
+      </script>
+      
 </body>
 </html>
