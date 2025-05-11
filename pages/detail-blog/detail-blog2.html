@@ -16,28 +16,45 @@
         </video>
   
         <div class="overlay-content">
-          <div class="flex items-center justify-around m-32 contain-header">
-            <div>
-              <a class="body-text-24-bold text-color-0">VIETRA</a>
+            <div class="flex items-center justify-around m-32 contain-header">
+                <div>
+                    <a class="body-text-24-bold text-color-0">VIETRA</a>
+                </div>
+                <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+                    <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+                </div>
+
+                <!-- Overlay -->
+                <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+                <!-- Drawer Menu -->
+                <div id="drawer" class="drawer">
+                    <a href="../../index.html">Trang chủ</a>
+                    <a href="../about/about.html">Giới thiệu</a>
+                    <a href="../tours/tourmienbac.html">Tour miền Bắc</a>
+                    <a href="../tours/tourmientrung.html">Tour miền Trung</a>
+                    <a href="../tours/tourmiennam.html">Tour miền Nam</a>
+                    <a href="../tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+                    <a href="../blog/blog.html">Blog</a>
+                    <a href="../contact/contact.html">Liên hệ</a>
+                </div>
+                <nav class="contain-nav container py-12 px-32">
+                    <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
+                    <a class="body-text-16-regular text-color-0 mr-32" href="../about/about.html">Về chúng tôi</a>
+                    <div class="dropdown">
+                        <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+                        <div class="dropdown-content">
+                            <a href="../tours/tourmienbac.html">Tour miền Bắc</a>
+                            <a href="../tours/tourmientrung.html">Tour miền Trung</a>
+                            <a href="../tours/tourmiennam.html">Tour miền Nam</a>
+                            <a href="../tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+                        </div>
+                    </div>
+                    <a class="body-text-16-regular text-color-0 mr-32" href="../blog/blog.html">Blog</a>
+                    <a href="../contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+                </nav>
+
             </div>
-            <nav class="contain-nav container py-12 px-32">
-              <a
-                class="body-text-16-regular text-color-0 mr-32"
-                href="index.html"
-                >Trang Chủ</a
-              >
-              <a
-                class="body-text-16-regular text-color-0 mr-32"
-                href="about.html"
-                >Về chúng tôi</a
-              >
-              <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
-              <a class="body-text-16-regular text-color-0 mr-32"
-                 href="blog.html">Blog</a>
-              <a href="contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
-            </nav>
-  
-          </div>
         </div>
     </header>
 
@@ -235,8 +252,18 @@
           <div class="footer-column">
             <h4>Liên hệ</h4>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Đối tác</a></li>
+              <li>
+                <a>Công ty Cổ phần Vietra</a>
+              </li>
+              <li>
+                <a>Địa chỉ: 12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</a>
+              </li>
+              <li>
+                <a>Số điện thoại: 0123 456 789</a>
+              </li>
+              <li>
+                <a>Email: hvnh.edu@gmail.com</a>
+              </li>
             </ul>
           </div>
           <div class="footer-column">
@@ -249,8 +276,9 @@
             </div>
           </div>
         </div>
+
         <div class="footer-bottom">
-            <p>© Copyright Acenda 2024</p>
+          <p>© Copyright Acenda 2024</p>
         </div>
     </footer>
 </body>
