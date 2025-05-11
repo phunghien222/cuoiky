@@ -100,7 +100,7 @@
 }
 
 /* Container chung */
-.container {
+.root {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
@@ -143,7 +143,7 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
-main.container {
+main.root {
   background-color: white;
 }
 section {
