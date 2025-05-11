@@ -148,6 +148,110 @@ label strong {
     outline: none;
 }
 
+@media (max-width: 768px) {
+  .container-booktour {
+    flex-direction: column; /* Chuyển sang bố cục dọc */
+    padding: 15px;
+    margin: 20px auto;
+    width: 95%; /* Tăng chiều rộng để chiếm gần hết màn hình */
+    gap: 20px;
+  }
 
+  .form-section,
+  .payment-section {
+    flex: 1; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  h2 {
+    font-size: 20px; /* Giảm kích thước tiêu đề */
+    margin-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  label {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .form-section .form-group input[type="text"],
+  .form-section .form-group input[type="email"],
+  .form-section .form-group input[type="tel"],
+  .form-section .form-group input[type="number"],
+  .form-section .form-group input[type="date"],
+  .form-section .form-group textarea,
+  .form-section .form-group .select2-control,
+  .form-section .form-group .flatpickr-wrapper input[type="text"] {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  select.select2-control {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .form-section .form-row .form-group {
+    max-width: 100%; /* Ghi đè inline style, cho phép chiếm toàn bộ chiều rộng */
+    flex-basis: 100%; /* Đảm bảo chiếm toàn bộ không gian trong flex container */
+  }
+
+  .form-section .form-row .form-group select.select2-control {
+    width: 100%; /* Đảm bảo select con chiếm hết */
+  }
+
+  textarea {
+    min-height: 60px;
+  }
+
+  .form-section .form-row {
+    flex-direction: column; /* Chuyển các trường trên cùng dòng thành cột */
+    gap: 10px;
+  }
+
+  .form-section .form-row .form-group {
+    flex: 1; /* Mỗi trường chiếm toàn bộ chiều rộng */
+  }
+
+  .payment-buttons {
+    margin-bottom: 15px;
+  }
+
+  .payment-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .company-info,
+  .bank-info {
+    font-size: 14px;
+  }
+
+  .total-payment {
+    padding-top: 10px;
+    flex-direction: column; /* Chuyển tổng tiền và nút thanh toán thành cột */
+    align-items: flex-start; /* Canh trái các phần tử */
+  }
+
+  .total-amount {
+    margin-bottom: 10px;
+  }
+
+  .total-amount h2 {
+    font-size: 18px;
+  }
+
+  .total-amount .amount {
+    font-size: 15px;
+  }
+
+  .thanh-toan-button {
+    font-size: 1em;
+    padding: 8px 16px;
+    width: 100%; /* Nút thanh toán chiếm toàn bộ chiều rộng */
+  }
+}
 
 

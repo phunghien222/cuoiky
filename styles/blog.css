@@ -195,7 +195,7 @@
   }
 
   .pagination-container button {
-    padding: 8px 12px; /* Giảm padding nút pagination nếu bạn có thêm nút */
+    padding: 8px 12px; /* Giảm padding nút pagination */
     font-size: 14px; /* Giảm kích thước chữ nút pagination */
   }
 }
