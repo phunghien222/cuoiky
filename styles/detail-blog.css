@@ -157,3 +157,103 @@
 .comment-button:hover {
     background-color: #007C9C;
 }
+
+@media (max-width: 768px) {
+  .container-detail-blog {
+    flex-direction: column; /* Chuyển sang bố cục dọc */
+    padding: 10px;
+    margin: 10px auto;
+    gap: 20px;
+  }
+
+  .main-content {
+    flex: 1; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .sidebar {
+    flex: 1; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .post-image {
+    margin-bottom: 10px;
+  }
+
+  .post-title {
+    font-size: 24px; /* Giảm kích thước tiêu đề chính */
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  .post-content h2 {
+    font-size: 18px; /* Giảm kích thước tiêu đề phụ */
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .post-content p {
+    font-size: 14px; /* Giảm kích thước đoạn văn */
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .related-news {
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .related-news h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    padding-bottom: 3px;
+  }
+
+  .related-item {
+    flex-direction: row; /* Hiển thị ngang */
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .related-item img {
+    width: 80px; /* Kích thước ảnh nhỏ hơn */
+    height: 60px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .related-item a {
+    font-size: 14px;
+    font-weight: normal; /* Bỏ in đậm cho dễ đọc */
+  }
+
+  .comment-section {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .comment-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .comment-form {
+    grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .comment-input,
+  .comment-textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .comment-textarea {
+    min-height: 100px;
+  }
+
+  .comment-button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
