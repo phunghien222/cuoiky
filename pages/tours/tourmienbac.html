@@ -10,36 +10,54 @@
  </head>
  
  <body>
-     <header>
-       <video autoplay muted loop playsinline>
-         <source src="../../video/vietnam.mp4" type="video/mp4" />
-       </video>
-       
-       <div class="overlay-content">
-         <div class="flex items-center justify-around m-32 contain-header">
-           <div>
-             <a class="body-text-24-bold text-color-0">VIETRA</a>
-           </div>
-           <nav class="contain-nav container py-12 px-32">
-             <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html" target="_blank">Trang Chủ</a>
-             <a class="body-text-16-regular text-color-0 mr-32" href="danhmuc.html" target="_blank">Về chúng tôi</a>
-     
-             <div class="dropdown">
-              <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
-              <div class="dropdown-content">
-                <a href="tourmienbac.html">Tour miền Bắc</a>
-                <a href="tourmientrung.html">Tour miền Trung</a>
-                <a href="tourmiennam.html">Tour miền Nam</a>
-                <a href="tourtaynguyen.html">Tour Tây Nguyên</a>
-              </div>
+  <header>
+    <video autoplay muted loop playsinline>
+      <source src="../../video/vietnam.mp4" type="video/mp4" />
+      Trình duyệt không hỗ trợ video.
+    </video>
+
+    <div class="overlay-content">
+      <div class="flex items-center justify-around m-32 contain-header">
+        <div>
+          <a class="body-text-24-bold text-color-0">VIETRA</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+          <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+        <!-- Drawer Menu -->
+        <div id="drawer" class="drawer">
+          <a href="../../index.html">Trang chủ</a>
+          <a href="../../pages/about/about.html">Giới thiệu</a>
+          <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+          <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+          <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+          <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+          <a href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html">Liên hệ</a>
+        </div>
+        <nav class="contain-nav container py-12 px-32">
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="pages/about/about.html">Về chúng tôi</a>
+          <div class="dropdown">
+            <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+            <div class="dropdown-content">
+              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
             </div>
-     
-             <a class="body-text-16-regular text-color-0 mr-32" href="#">Blog</a>
-             <a class="body-text-16-regular text-color-0" href="#">Liên hệ</a>
-           </nav>
-         </div>
-       </div>
-     </header>
+          </div>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+        </nav>
+
+      </div>
+    </div>
+  </header>
    <main class="root mt-32">
      <h1 class="txt-homepage">Tour Du Lịch Miền Bắc</h1>
      <section>

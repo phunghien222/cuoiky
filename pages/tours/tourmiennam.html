@@ -21,30 +21,38 @@
         <div>
           <a class="body-text-24-bold text-color-0">VIETRA</a>
         </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+          <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+        <!-- Drawer Menu -->
+        <div id="drawer" class="drawer">
+          <a href="../../index.html">Trang chủ</a>
+          <a href="../../pages/about/about.html">Giới thiệu</a>
+          <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+          <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+          <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+          <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+          <a href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html">Liên hệ</a>
+        </div>
         <nav class="contain-nav container py-12 px-32">
-          <a
-            class="body-text-16-regular text-color-0 mr-32"
-            href="../../index.html"
-            target="_blank"
-            >Trang Chủ</a
-          >
-          <a
-            class="body-text-16-regular text-color-0 mr-32"
-            href="about.html"
-            target="_blank"
-            >Về chúng tôi</a
-          >
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="pages/about/about.html">Về chúng tôi</a>
           <div class="dropdown">
             <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
             <div class="dropdown-content">
-              <a href="tourmienbac.html">Tour miền Bắc</a>
-              <a href="tourmientrung.html">Tour miền Trung</a>
-              <a href="tourmiennam.html">Tour miền Nam</a>
-              <a href="tourtaynguyen.html">Tour Tây Nguyên</a>
+              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
             </div>
           </div>
-          <a class="body-text-16-regular text-color-0 mr-32">Blog</a>
-          <a href="contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
         </nav>
 
       </div>
