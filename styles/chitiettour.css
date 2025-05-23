@@ -22,7 +22,7 @@ body {
   filter: brightness(0.8); /* Làm tối hình để chữ nổi bật hơn */
 }
 
-.banner h1 {
+/* .banner h1 {
   position: absolute;
   bottom: 30px;
   left: 30px;
@@ -31,6 +31,18 @@ body {
   font-size: 36px;
   font-weight: 700;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+} */
+ .banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 
 
@@ -60,11 +72,10 @@ body {
   background-color: #f5faff;
 }
 
-.container {
+.root {
   display: flex;
-  max-width: 1200px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 30px 64px;
   gap: 40px;
   background-color: white;
 }
@@ -85,11 +96,11 @@ margin-bottom: 40px;
 }
 .section h2 {
   font-weight: 700;
-  color: #0d6efd;
+  color: var(--primary-700);
   margin-bottom: 30px;
   position: relative;
   padding-left: 10px;
-  border-left: 4px solid #0d6efd;
+  border-left: 4px solid var(--primary-700);
   flex: 1;
   font-size: 16px;
   line-height: 1.6;
@@ -104,15 +115,15 @@ border-radius: 10px;
 box-shadow: 0 0 10px rgba(0,0,0,0.1);
 position: sticky;
 top: 10px;
-min-width: 250px;
+/* min-width: 250px;
 max-width: 300px;
-height: 200px;
+height: 200px; */
 
 }
 
 
 .pricebox-wrapper {
-max-width: 350px;
+/* max-width: 350px; */
 margin: 0 auto;
 }
 
@@ -120,7 +131,6 @@ margin: 0 auto;
 border: 1px solid #eee;
 border-radius: 12px;
 background: #fff;
-box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 padding: 20px;
 font-family: 'Segoe UI', sans-serif;
 }
@@ -139,7 +149,7 @@ display: block;
 .pricebox-top .price {
 font-size: 28px;
 font-weight: bold;
-color: #0d6efd;
+color: var(--primary-700);
 }
 
 .pricebox-top .per {
@@ -173,7 +183,6 @@ font-weight: 500;
 
 .book-now {
 width: 100%;
-background-color: #0d6efd;
 color: white;
 border: none;
 border-radius: 8px;
@@ -184,7 +193,7 @@ transition: background 0.3s;
 }
 
 .book-now:hover {
-background-color: #d32f2f;
+background-color: var(--primary-700);
 }
 
 
@@ -218,7 +227,7 @@ scroll-behavior: smooth;
 position: relative;
 margin-left: 10px;
 padding-left: 16px;
-border-left: 2px solid #0d6efd;
+border-left: 2px solid var(--primary-700);
 background-color: white;
 }
 .timeline-item {
@@ -231,9 +240,9 @@ left: -10px;
 top: 5px;
 width: 10px;
 height: 10px;
-background-color: #0d6efd; border-radius: 50%;
+background-color: var(--primary-700); border-radius: 50%;
 border: 2px solid white;
-box-shadow: 0 0 0 2px #0d6efd;
+box-shadow: 0 0 0 2px var(--primary-700);
 }.timeline-content {
 background-color: #f8f9fa;
 padding: 10px 16px;
@@ -242,17 +251,66 @@ box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }.timeline-content h3 {
 margin-top: 0;
 font-size: 15px;
-color: #0d6efd;
+color: var(--primary-700);
 font-weight: 600;
 }          
 
+header img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
 
   
  
    
   
-  
+@media (max-width: 1200px) {
+  .root{
+    padding: 32px;
+  }
+  .banner {
+    height: 280px; /* hoặc nhỏ hơn để phù hợp với mobile */
+  }
 
+  .banner h1 {
+    font-size: 32px;
+    padding: 0 16px; /* thêm padding để tránh đụng lề */
+  }
+  .tabs a {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .root{
+    padding: 16px;
+    gap: 12px;
+    flex-direction: column-reverse;
+  }
+  .pricebox-card {
+    width: 100%;
+  }
+
+  .pricebox-wrapper {
+    width: 100%;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+  .tabs a {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
 
 
 

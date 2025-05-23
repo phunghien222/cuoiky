@@ -1,134 +1,321 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tour Cần Giờ – Khu Sinh Thái Vàm Sát</title>
-  <link rel="stylesheet" href="../../styles/chitiettour.css" />
-</head>
-<body>
-  <div class="banner">
-    <img src="../../assets/img/tours/cangio1.jpg" alt="Banner Cần Giờ" />
-    <h1>Tour Cần Giờ – Khu Sinh Thái Vàm Sát</h1>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Cần Giờ – Khu Sinh Thái Vàm Sát</title>
+    <link rel="stylesheet" href="../../styles/chitiettour.css" />
+    <link rel="stylesheet" href="../../styles/home.css" />
+    <link rel="stylesheet" href="../../styles/global.css" />
+  </head>
 
-  <div class="tabs">
-    <a href="#chitiet">Giới thiệu</a>
-    <a href="#lichtrinh">Lịch trình</a>
-    <a href="#thuvien">Thư viện ảnh</a>
-    <a href="#chinhsach">Chính sách</a>
-  </div>
+  <body>
+    <header>
+      <img src="../../assets/img/tours/cangio1.jpg" alt="Banner2" />
+      <div class="overlay-content">
+        <div class="flex items-center justify-around m-32 contain-header">
+          <div>
+            <a class="body-text-24-bold text-color-0">VIETRA</a>
+          </div>
+          <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+            <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+          </div>
 
-  <div class="container">
-    <div class="main-content">
-      <div id="chitiet" class="section">
-        <h2>Giới thiệu</h2>
-        <p>
-          Tour du lịch Cần Giờ – Khu sinh thái Vàm Sát là hành trình khám phá thiên nhiên hoang sơ nằm cách trung tâm TP.HCM chỉ khoảng 50km. Quý khách sẽ có cơ hội trải nghiệm rừng ngập mặn nguyên sinh, lên tháp Tang Bồng cao 26m ngắm toàn cảnh rừng xanh bát ngát, chèo xuồng giữa đầm dơi, thử cảm giác mạnh với câu cá sấu và thưởng thức các món hải sản tươi sống tại địa phương.
-        </p>
+          <!-- Overlay -->
+          <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+          <!-- Drawer Menu -->
+          <div id="drawer" class="drawer">
+            <a href="../../index.html">Trang chủ</a>
+            <a href="../../pages/about/about.html">Giới thiệu</a>
+            <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+            <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+            <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+            <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+            <a href="../../pages/blog/blog.html">Blog</a>
+            <a href="../../pages/contact/contact.html">Liên hệ</a>
+          </div>
+          <nav class="contain-nav container py-12 px-32">
+            <a
+              class="body-text-16-regular text-color-0 mr-32"
+              href="../../index.html"
+              >Trang Chủ</a
+            >
+            <a
+              class="body-text-16-regular text-color-0 mr-32"
+              href="../../pages/about/about.html"
+              >Về chúng tôi</a
+            >
+            <div class="dropdown">
+              <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+              <div class="dropdown-content">
+                <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+                <a href="../../pages/tours/tourmientrung.html"
+                  >Tour miền Trung</a
+                >
+                <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+                <a href="../../pages/tours/tourtaynguyen.html"
+                  >Tour Tây Nguyên</a
+                >
+              </div>
+            </div>
+            <a
+              class="body-text-16-regular text-color-0 mr-32"
+              href="../../pages/blog/blog.html"
+              >Blog</a
+            >
+            <a
+              href="../../pages/contact/contact.html"
+              class="body-text-16-regular text-color-0"
+              >Liên hệ</a
+            >
+          </nav>
+        </div>
       </div>
+      <div class="banner">
+        <h1>Tour Cần Giờ – Khu Sinh Thái Vàm Sát</h1>
+      </div>
+    </header>
 
-      <div id="lichtrinh" class="section">
-        <h2>Lịch trình</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>NGÀY 01 | TP.HCM – CẦN GIỜ – VÀM SÁT</h3>
-              <p><strong>Buổi sáng:</strong> Xe và hướng dẫn viên Vietnam Travel Group đón quý khách tại điểm hẹn. Khởi hành đi Cần Giờ. Trên đường đi, quý khách ghé tham quan chợ Hàng Dương – nơi bày bán nhiều loại hải sản tươi sống.</p>
-              <p><strong>Buổi trưa:</strong> Quý khách đến khu du lịch Vàm Sát, dùng cơm trưa tại nhà hàng ven sông với các món đặc sản địa phương.</p>
-              <p><strong>Buổi chiều:</strong> Tham quan rừng ngập mặn bằng xuồng máy, ghé thăm Đầm Dơi, câu cá sấu tại khu bảo tồn tự nhiên. Leo lên tháp Tang Bồng cao 26m để ngắm toàn cảnh rừng Cần Giờ. Sau đó quý khách trở lại TP.HCM, kết thúc chuyến tham quan.</p>
+    <div class="tabs">
+      <a href="#chitiet">Giới thiệu</a>
+      <a href="#lichtrinh">Lịch trình</a>
+      <a href="#thuvien">Thư viện ảnh</a>
+      <a href="#chinhsach">Chính sách</a>
+    </div>
+
+    <div class="root">
+      <div class="main-content">
+        <div id="chitiet" class="section">
+          <h2>Giới thiệu</h2>
+          <p>
+            Tour du lịch Cần Giờ – Khu sinh thái Vàm Sát là hành trình khám phá
+            thiên nhiên hoang sơ nằm cách trung tâm TP.HCM chỉ khoảng 50km. Quý
+            khách sẽ có cơ hội trải nghiệm rừng ngập mặn nguyên sinh, lên tháp
+            Tang Bồng cao 26m ngắm toàn cảnh rừng xanh bát ngát, chèo xuồng giữa
+            đầm dơi, thử cảm giác mạnh với câu cá sấu và thưởng thức các món hải
+            sản tươi sống tại địa phương.
+          </p>
+        </div>
+
+        <div id="lichtrinh" class="section">
+          <h2>Lịch trình</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>NGÀY 01 | TP.HCM – CẦN GIỜ – VÀM SÁT</h3>
+                <p>
+                  <strong>Buổi sáng:</strong> Xe và hướng dẫn viên Vietnam
+                  Travel Group đón quý khách tại điểm hẹn. Khởi hành đi Cần Giờ.
+                  Trên đường đi, quý khách ghé tham quan chợ Hàng Dương – nơi
+                  bày bán nhiều loại hải sản tươi sống.
+                </p>
+                <p>
+                  <strong>Buổi trưa:</strong> Quý khách đến khu du lịch Vàm Sát,
+                  dùng cơm trưa tại nhà hàng ven sông với các món đặc sản địa
+                  phương.
+                </p>
+                <p>
+                  <strong>Buổi chiều:</strong> Tham quan rừng ngập mặn bằng
+                  xuồng máy, ghé thăm Đầm Dơi, câu cá sấu tại khu bảo tồn tự
+                  nhiên. Leo lên tháp Tang Bồng cao 26m để ngắm toàn cảnh rừng
+                  Cần Giờ. Sau đó quý khách trở lại TP.HCM, kết thúc chuyến tham
+                  quan.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="thuvien" class="section">
-        <h2>Thư viện ảnh</h2>
-        <div class="gallery">
-          <img src="../../assets/img/tours/cangio1.jpg" alt="Cần Giờ 1" />
-          <img src="../../assets/img/tours/cangio2.jpg" alt="Cần Giờ 2" />
-          <img src="../../assets/img/tours/cangio3.jpg" alt="Cần Giờ 3" />
-          <img src="../../assets/img/tours/cangio4.jpg" alt="Cần Giờ 4" />
-          <img src="../../assets/img/tours/cangio5.jpg" alt="Cần Giờ 5" />
-          <img src="../../assets/img/tours/cangio6.jpg" alt="Cần Giờ 6" />
+        <div id="thuvien" class="section">
+          <h2>Thư viện ảnh</h2>
+          <div class="gallery">
+            <img src="../../assets/img/tours/cangio1.jpg" alt="Cần Giờ 1" />
+            <img src="../../assets/img/tours/cangio2.jpg" alt="Cần Giờ 2" />
+            <img src="../../assets/img/tours/cangio3.jpg" alt="Cần Giờ 3" />
+            <img src="../../assets/img/tours/cangio4.jpg" alt="Cần Giờ 4" />
+            <img src="../../assets/img/tours/cangio5.jpg" alt="Cần Giờ 5" />
+            <img src="../../assets/img/tours/cangio6.jpg" alt="Cần Giờ 6" />
+          </div>
         </div>
-      </div>
 
-      <div id="chinhsach" class="section">
-        <h2>Chính sách</h2>
-        <div class="day-title">GIÁ TOUR BAO GỒM:</div>
-        <ul>
-          <li>Xe đưa đón theo chương trình.</li>
-          <li>Hướng dẫn viên chuyên nghiệp, nhiệt tình.</li>
-          <li>Vé tham quan khu sinh thái Vàm Sát.</li>
-          <li>Thuyền tham quan rừng ngập mặn, Đầm Dơi, tháp Tang Bồng.</li>
-          <li>Bữa ăn trưa theo chương trình.</li>
-          <li>Bảo hiểm du lịch trọn tour.</li>
-          <li>Nước suối và khăn lạnh phục vụ trên xe.</li>
-        </ul>
-        <div class="day-title">KHÔNG BAO GỒM:</div>
-        <ul>
-          <li>Chi phí cá nhân, mua sắm ngoài chương trình.</li>
-          <li>VAT (nếu xuất hóa đơn +10%).</li>
-          <li>Tiền TIP cho tài xế và hướng dẫn viên (không bắt buộc).</li>
-        </ul>
-        <div class="day-title">CHÍNH SÁCH GIÁ TRẺ EM</div>
-        <ul>
-          <li>Dưới 5 tuổi: miễn phí (ngồi chung ghế và ăn chung với người lớn).</li>
-          <li>Từ 5 – 10 tuổi: 75% giá tour.</li>
-          <li>Trên 10 tuổi: tính như người lớn.</li>
-        </ul>
-        <div class="day-title">CHÍNH SÁCH HOÃN HUỶ</div>
-         <ul>
-            <li>Dời ngày khởi hành trước 15 ngày không mất phí, sau 15 ngày mất 30%. (Không tính ngày lễ và chủ nhật), chỉ được dời 1 lần.</li>
+        <div id="chinhsach" class="section">
+          <h2>Chính sách</h2>
+          <div class="day-title">GIÁ TOUR BAO GỒM:</div>
+          <ul>
+            <li>Xe đưa đón theo chương trình.</li>
+            <li>Hướng dẫn viên chuyên nghiệp, nhiệt tình.</li>
+            <li>Vé tham quan khu sinh thái Vàm Sát.</li>
+            <li>Thuyền tham quan rừng ngập mặn, Đầm Dơi, tháp Tang Bồng.</li>
+            <li>Bữa ăn trưa theo chương trình.</li>
+            <li>Bảo hiểm du lịch trọn tour.</li>
+            <li>Nước suối và khăn lạnh phục vụ trên xe.</li>
+          </ul>
+          <div class="day-title">KHÔNG BAO GỒM:</div>
+          <ul>
+            <li>Chi phí cá nhân, mua sắm ngoài chương trình.</li>
+            <li>VAT (nếu xuất hóa đơn +10%).</li>
+            <li>Tiền TIP cho tài xế và hướng dẫn viên (không bắt buộc).</li>
+          </ul>
+          <div class="day-title">CHÍNH SÁCH GIÁ TRẺ EM</div>
+          <ul>
+            <li>
+              Dưới 5 tuổi: miễn phí (ngồi chung ghế và ăn chung với người lớn).
+            </li>
+            <li>Từ 5 – 10 tuổi: 75% giá tour.</li>
+            <li>Trên 10 tuổi: tính như người lớn.</li>
+          </ul>
+          <div class="day-title">CHÍNH SÁCH HOÃN HUỶ</div>
+          <ul>
+            <li>
+              Dời ngày khởi hành trước 15 ngày không mất phí, sau 15 ngày mất
+              30%. (Không tính ngày lễ và chủ nhật), chỉ được dời 1 lần.
+            </li>
             <li>Sau khi đăng ký huỷ tour mất 15% giá tour.</li>
-            <li>Từ 15 đến trước 10 ngày trước ngày khởi hành chịu phí 30% giá tour (Không tính ngày Lễ và chủ nhật).</li>
-            <li>Từ 10 đến 8 ngày trước ngày khởi hành chịu phí 50% giá tour (Không tính ngày Lễ và chủ nhật).</li>
-            <li>Từ 5 - 7 ngày trước ngày khởi hành chịu phí 70% giá tour (Không tính ngày Lễ và chủ nhật).</li>
-         </ul>
-    
-      </div>
-    </div>
-
-    <div class="pricebox-wrapper">
-      <div class="pricebox-card">
-        <div class="pricebox-top">
-          <span class="price">1.690.000đ</span>
-          <span class="per">/người</span>
+            <li>
+              Từ 15 đến trước 10 ngày trước ngày khởi hành chịu phí 30% giá tour
+              (Không tính ngày Lễ và chủ nhật).
+            </li>
+            <li>
+              Từ 10 đến 8 ngày trước ngày khởi hành chịu phí 50% giá tour (Không
+              tính ngày Lễ và chủ nhật).
+            </li>
+            <li>
+              Từ 5 - 7 ngày trước ngày khởi hành chịu phí 70% giá tour (Không
+              tính ngày Lễ và chủ nhật).
+            </li>
+          </ul>
         </div>
+      </div>
 
-        <div class="pricebox-content">
-          <label for="people">Số người</label>
-          <input type="number" id="people" min="1" value="1" />
-
-          <label for="date">Ngày đi</label>
-          <input type="date" id="date" />
-
-          <div class="total-section">
-            <span>Tổng cộng</span>
-            <strong id="total">1.690.000đ</strong>
+      <div class="pricebox-wrapper">
+        <div class="pricebox-card">
+          <div class="pricebox-top">
+            <span class="price">1.690.000đ</span>
+            <span class="per">/người</span>
           </div>
 
-          <button class="book-now">Đặt ngay</button>
+          <div class="pricebox-content">
+            <label for="people">Số người</label>
+            <input type="number" id="people" min="1" value="1" />
+
+            <label for="date">Ngày đi</label>
+            <input type="date" id="date" />
+
+            <div class="total-section">
+              <span>Tổng cộng</span>
+              <strong id="total">1.690.000đ</strong>
+            </div>
+
+            <button class="book-now bg-primary-500">Đặt ngay</button>
+          </div>
         </div>
       </div>
+
+      <script>
+        const pricePer = 1690000;
+        const peopleInput = document.getElementById("people");
+        const total = document.getElementById("total");
+
+        function updateTotal() {
+          const people = parseInt(peopleInput.value) || 1;
+          const sum = pricePer * people;
+          total.textContent = sum.toLocaleString("vi-VN") + "đ";
+        }
+
+        peopleInput.addEventListener("input", updateTotal);
+        updateTotal();
+
+        function toggleMenu() {
+          const drawer = document.getElementById("drawer");
+          const overlay = document.getElementById("overlay");
+          drawer.classList.toggle("open");
+          overlay.classList.toggle("show");
+        }
+      </script>
     </div>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-column">
+          <h4>Hỗ trợ</h4>
+          <ul>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+                >Trung tâm hỗ trợ</a
+              >
+            </li>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+                >Bảo mật thông tin</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Vietra</h4>
+          <ul>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+                >Về chúng tôi</a
+              >
+            </li>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+                >Chính sách</a
+              >
+            </li>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html">Blog</a>
+            </li>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html">Tour</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Liên hệ</h4>
+          <ul>
+            <li>
+              <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+                >Công ty Cổ phần Vietra</a
+              >
+            </li>
+            <li>
+              <a href="../../pages/contact/contact.html"
+                >Địa chỉ: 12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</a
+              >
+            </li>
+            <li>
+              <a href="tel:0123456789">Số điện thoại: 0123 456 789</a>
+            </li>
+            <li>
+              <a href="mailto:hvnh.edu@gmail.com">Email: hvnh.edu@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Mạng xã hội</h4>
+          <div class="social-icons">
+            <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+              ><img src="../../assets/svg/ic-fb.svg" alt="Facebook"
+            /></a>
+            <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+              ><img src="../../assets/svg/ic-tw.svg" alt="Twitter"
+            /></a>
+            <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+              ><img src="../../assets/svg/ic-tt.svg" alt="TikTok"
+            /></a>
+            <a href="../../pages/detail-tour/chitiet_taynguyen.html"
+              ><img src="../../assets/svg/ic-yt.svg" alt="YouTube"
+            /></a>
+          </div>
+        </div>
+      </div>
 
-    <script>
-      const pricePer = 1690000;
-      const peopleInput = document.getElementById('people');
-      const total = document.getElementById('total');
-
-      function updateTotal() {
-        const people = parseInt(peopleInput.value) || 1;
-        const sum = pricePer * people;
-        total.textContent = sum.toLocaleString('vi-VN') + 'đ';
-      }
-
-      peopleInput.addEventListener('input', updateTotal);
-      updateTotal();
-    </script>
-  </div>
-</body>
+      <div class="footer-bottom">
+        <p>© Copyright Acenda 2024</p>
+      </div>
+    </footer>
+  </body>
 </html>

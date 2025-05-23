@@ -5,12 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hành Trình Trên Đất Phù Sa Mỹ Tho - Bến Tre</title>
   <link rel="stylesheet" href="../../styles/chitiettour.css" />
+  <link rel="stylesheet" href="../../styles/home.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
 </head>
+
 <body>
-  <div class="banner">
-    <img src="../../assets/img/tours/mytho1.jpg" alt="Banner Mỹ Tho - Bến Tre">
-    <h1>Hành Trình Trên Đất Phù Sa Mỹ Tho - Bến Tre</h1>
-  </div>
+  <header>
+    <img src="../../assets/img/tours/mytho1.jpg" alt="Banner2">
+    <div class="overlay-content">
+      <div class="flex items-center justify-around m-32 contain-header">
+        <div>
+          <a class="body-text-24-bold text-color-0">VIETRA</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+          <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+        <!-- Drawer Menu -->
+        <div id="drawer" class="drawer">
+          <a href="../../index.html">Trang chủ</a>
+          <a href="../../pages/about/about.html">Giới thiệu</a>
+          <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+          <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+          <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+          <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+          <a href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html">Liên hệ</a>
+        </div>
+        <nav class="contain-nav container py-12 px-32">
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/about/about.html">Về chúng tôi</a>
+          <div class="dropdown">
+            <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+            <div class="dropdown-content">
+              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+            </div>
+          </div>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+        </nav>
+
+      </div>
+    </div>
+    <div class="banner">
+      <h1>Hành Trình Trên Đất Phù Sa Mỹ Tho - Bến Tre</h1>
+    </div>
+  </header>
 
   <div class="tabs">
     <a href="#chitiet">Giới thiệu</a>
@@ -19,7 +65,7 @@
     <a href="#chinhsach">Chính sách</a>
   </div>
 
-  <div class="container">
+  <div class="root">
     <div class="main-content">
       <div id="chitiet" class="section">
         <h2>Giới thiệu</h2>
@@ -115,7 +161,7 @@
             <span>Tổng cộng</span>
             <strong id="total">490.000đ</strong>
           </div>
-          <button class="book-now">Đặt ngay</button>
+          <button class="book-now bg-primary-500">Đặt ngay</button>
         </div>
       </div>
     </div>
@@ -133,7 +179,67 @@
 
       peopleInput.addEventListener('input', updateTotal);
       updateTotal();
+      function toggleMenu() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
     </script>
   </div>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Bảo mật thông tin</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Vietra</h4>
+        <ul>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Về chúng tôi</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Chính sách</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Blog</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <a href="../../pages/detail-tour/chitiet_taynguyen.html">Công ty Cổ phần Vietra</a>
+          </li>
+          <li>
+            <a href="../../pages/contact/contact.html">Địa chỉ: 12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</a>
+          </li>
+          <li>
+            <a href="tel:0123456789">Số điện thoại: 0123 456 789</a>
+          </li>
+          <li>
+            <a href="mailto:hvnh.edu@gmail.com">Email: hvnh.edu@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Mạng xã hội</h4>
+        <div class="social-icons">
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-fb.svg"
+              alt="Facebook"></a>
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-tw.svg"
+              alt="Twitter"></a>
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-tt.svg"
+              alt="TikTok"></a>
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-yt.svg"
+              alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright Acenda 2024</p>
+    </div>
+  </footer>
 </body>
 </html>

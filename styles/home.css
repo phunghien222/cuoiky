@@ -20,6 +20,7 @@
     object-fit: cover;
     object-position: center;
   }
+  
 
 a {
     text-decoration: none;
@@ -580,8 +581,8 @@ border-radius: 50%;
   cursor: pointer;
   padding: 16px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 32px;
+  right: 32px;
   z-index: 1100;
 }
 

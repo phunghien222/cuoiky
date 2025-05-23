@@ -1,19 +1,63 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chi Tiết Tour Đà Lạt 4N3Đ</title>
   <link rel="stylesheet" href="../../styles/chitiettour.css" />
-
+  <link rel="stylesheet" href="../../styles/home.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
 </head>
+
 <body>
-  <div class="banner">
+  <header>
     <img src="../../assets/img/tours/bannerdalat.jpg" alt="Banner2">
+    <div class="overlay-content">
+      <div class="flex items-center justify-around m-32 contain-header">
+        <div>
+          <a class="body-text-24-bold text-color-0">VIETRA</a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+          <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+        </div>
 
-    <h1> Tour Đà Lạt 4 Ngày 3 Đêm</h1> 
-  </div>
+        <!-- Overlay -->
+        <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
 
+        <!-- Drawer Menu -->
+        <div id="drawer" class="drawer">
+          <a href="../../index.html">Trang chủ</a>
+          <a href="../../pages/about/about.html">Giới thiệu</a>
+          <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+          <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+          <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+          <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+          <a href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html">Liên hệ</a>
+        </div>
+        <nav class="contain-nav container py-12 px-32">
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/about/about.html">Về chúng tôi</a>
+          <div class="dropdown">
+            <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+            <div class="dropdown-content">
+              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+            </div>
+          </div>
+          <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+          <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+        </nav>
+
+      </div>
+    </div>
+    <div class="banner">
+      <h1> Tour Đà Lạt 4 Ngày 3 Đêm</h1>
+    </div>
+  </header>
   <div class="tabs">
     <a href="#chitiet">Giới thiệu</a>
     <a href="#lichtrinh">Lịch trình</a>
@@ -21,11 +65,15 @@
     <a href="#chinhsach">Chính sách</a>
   </div>
 
-  <div class="container">
+  <div class="root">
     <div class="main-content">
       <div id="chitiet" class="section">
         <h2>Giới thiệu</h2>
-       <p> Nằm trên cao nguyên Lâm Viên, Đà Lạt được ví như “tiểu Paris” giữa lòng Tây Nguyên với khí hậu mát mẻ quanh năm, cảnh sắc thơ mộng và những rừng thông bạt ngàn. Nơi đây không chỉ nổi tiếng với các địa danh như Hồ Xuân Hương, Thung Lũng Tình Yêu hay Đồi Chè Cầu Đất, mà còn là điểm đến lý tưởng cho những ai muốn tạm rời xa nhịp sống hối hả để tận hưởng không gian trong lành, nhẹ nhàng. Đà Lạt luôn mang đến cảm giác gần gũi, lãng mạn, là nơi lưu giữ những khoảnh khắc đẹp nhất trong hành trình khám phá của du khách.</p>
+        <p> Nằm trên cao nguyên Lâm Viên, Đà Lạt được ví như “tiểu Paris” giữa lòng Tây Nguyên với khí hậu mát mẻ quanh
+          năm, cảnh sắc thơ mộng và những rừng thông bạt ngàn. Nơi đây không chỉ nổi tiếng với các địa danh như Hồ Xuân
+          Hương, Thung Lũng Tình Yêu hay Đồi Chè Cầu Đất, mà còn là điểm đến lý tưởng cho những ai muốn tạm rời xa nhịp
+          sống hối hả để tận hưởng không gian trong lành, nhẹ nhàng. Đà Lạt luôn mang đến cảm giác gần gũi, lãng mạn, là
+          nơi lưu giữ những khoảnh khắc đẹp nhất trong hành trình khám phá của du khách.</p>
       </div>
 
       <div id="lichtrinh" class="section">
@@ -35,61 +83,103 @@
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>NGÀY 01 | TPHCM - ĐÀ LẠT</h3>
-              <p><strong>Buổi tối:</strong> Xe và Hướng dẫn viên của VIETNAM TRAVEL GROUP đón quý khách tại điểm hẹn, sắp xếp hành lý, gửi lời chào thân ái tới Quý khách. Xe khởi hành, bắt đầu hành trình Tour du lịch ĐÀ LẠT – CHUỒN CHUỒN BISTRO – NÔNG TRẠI CÚN 3 ngày 3 đêm.
-                Quý khách nghỉ đêm trên xe.</p> 
+              <p><strong>Buổi tối:</strong> Xe và Hướng dẫn viên của VIETNAM TRAVEL GROUP đón quý khách tại điểm hẹn,
+                sắp xếp hành lý, gửi lời chào thân ái tới Quý khách. Xe khởi hành, bắt đầu hành trình Tour du lịch ĐÀ
+                LẠT – CHUỒN CHUỒN BISTRO – NÔNG TRẠI CÚN 3 ngày 3 đêm.
+                Quý khách nghỉ đêm trên xe.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>NGÀY 02 | CHUỒN CHUỒN BISTRO - KDL THUỶ THUẬN - QUẢNG TRƯỜNG LÂM VIÊN</h3>
-              <p><strong>Buổi sáng:</strong>Cùng đón bình minh trong không khí se lạnh của vùng cao nguyên, Đoàn có mặt tại Chuồn Chuồn Bistro, vệ sinh cá nhân và dùng điểm tâm tại nhà hàng. Đoàn khám phá:</p>
+              <p><strong>Buổi sáng:</strong>Cùng đón bình minh trong không khí se lạnh của vùng cao nguyên, Đoàn có mặt
+                tại Chuồn Chuồn Bistro, vệ sinh cá nhân và dùng điểm tâm tại nhà hàng. Đoàn khám phá:</p>
               <ul>
-                <li>CHUỒN CHUỒN BISTRO & COFFEE:  kết hợp giữa thiên nhiên tươi mát và không gian hiện đại phong cách mới lạ, độc đáo giữa sườn đồi view đẹp xuất hiện giữa thiên nhiên Đà Lạt với lối kiến trúc hiện đại, cùng tầm nhìn ra rừng thông tuyệt đẹp sẽ mang đến cho bạn những trải nghiệm thú vị tại Đà Lạt. Nổi bật là THÁP VỌNG CẢNH nhiều tầng có view 360 độ với tầm nhìn đồi núi không đâu sánh bằng được, thêm một góc sống ảo cực chill tại đây chính là HỒ VÔ CỰC, tiếp tục làHỒ CHUỒN CHUỒN thơ mộng nằm ngay dưới chân đồi, xung quanh hồ được trồng nhiều loài hoa lung linh sắc màu, tạo nên không gian tươi mát, dễ chịu. Chắc chắn bạn sẽ có những bức ảnh đầy thơ mộng.</li>
-                <li>KHU DU LỊCH THÚY THUẬN ĐÀ LẠT – với diện tích lên đến 3.5ha năm trong một thung lũng với tầm nhìn hướng thẳng ra những ngọn đồi, những rừng thông xanh ngát và dòng suối thơ mộng uốn quanh. Tiền thân là Nhà máy chế biến cà phê lớn nhất Đông Nam Á; trên tinh thần lưu giữ vẻ hoang sơ, lãng mạn của thành phố ngàn hoa, Nhà máy đã khéo léo hòa mình vào thiên nhiên và trở thành Khu du lịch với nhiều góc sống ảo có một không hai tại Đà Lạt</li>
+                <li>CHUỒN CHUỒN BISTRO & COFFEE: kết hợp giữa thiên nhiên tươi mát và không gian hiện đại phong cách mới
+                  lạ, độc đáo giữa sườn đồi view đẹp xuất hiện giữa thiên nhiên Đà Lạt với lối kiến trúc hiện đại, cùng
+                  tầm nhìn ra rừng thông tuyệt đẹp sẽ mang đến cho bạn những trải nghiệm thú vị tại Đà Lạt. Nổi bật là
+                  THÁP VỌNG CẢNH nhiều tầng có view 360 độ với tầm nhìn đồi núi không đâu sánh bằng được, thêm một góc
+                  sống ảo cực chill tại đây chính là HỒ VÔ CỰC, tiếp tục làHỒ CHUỒN CHUỒN thơ mộng nằm ngay dưới chân
+                  đồi, xung quanh hồ được trồng nhiều loài hoa lung linh sắc màu, tạo nên không gian tươi mát, dễ chịu.
+                  Chắc chắn bạn sẽ có những bức ảnh đầy thơ mộng.</li>
+                <li>KHU DU LỊCH THÚY THUẬN ĐÀ LẠT – với diện tích lên đến 3.5ha năm trong một thung lũng với tầm nhìn
+                  hướng thẳng ra những ngọn đồi, những rừng thông xanh ngát và dòng suối thơ mộng uốn quanh. Tiền thân
+                  là Nhà máy chế biến cà phê lớn nhất Đông Nam Á; trên tinh thần lưu giữ vẻ hoang sơ, lãng mạn của thành
+                  phố ngàn hoa, Nhà máy đã khéo léo hòa mình vào thiên nhiên và trở thành Khu du lịch với nhiều góc sống
+                  ảo có một không hai tại Đà Lạt</li>
               </ul>
-              <p><strong>Buổi trưa:</strong>Dùng bữa trưa tại nhà hàng. Đoàn về lại trung tâm, nhận phòng khách sạn nghỉ ngơi.</p>
+              <p><strong>Buổi trưa:</strong>Dùng bữa trưa tại nhà hàng. Đoàn về lại trung tâm, nhận phòng khách sạn nghỉ
+                ngơi.</p>
               <p><strong>Buổi chiều:</strong>Đoàn tiếp tục tham quan các địa điểm nổi tiếng tại thành phố ngàn hoa:</p>
               <ul>
-                <li>QUẢNG TRƯỜNG LÂM VIÊN: Tọa lạc giữa "trái tim" của thành phố hoa, hướng ra hồ Xuân Hương, không chỉ mang đến không gian rộng lớn, thoáng mát với nhiều hoạt động giải trí mà Quảng Trường Lâm Viên còn ấn tượng với công trình nghệ thuật khổng lồ với khối bông hoa dã quỳ và khối nụ hoa được thiết kế bằng kính màu lạ mắt. Đừng quên lưu giữ lại cùng gia đình những bức ảnh thú vị này.</li>
-                <li>THIỀN VIỆN TRÚC LÂM: Đến nơi đây, du khách như trút bỏ hết ưu tư, phiền muộn, thiện viện mang đến một cảnh quan thanh khiết tuyệt vời. Du khách dâng hương, cầu xin an bình, may mắn.Vẻ đẹp Phật giáo hài hòa cùng thiên nhiên và muôn sắc hoa. Rất nhiều loài hoa đẹp và quý hiếm như Sim Tím, bông Gòn úc, Phù Dung…khiến khung cảnh càng thêm thơ mộng. </li>
+                <li>QUẢNG TRƯỜNG LÂM VIÊN: Tọa lạc giữa "trái tim" của thành phố hoa, hướng ra hồ Xuân Hương, không chỉ
+                  mang đến không gian rộng lớn, thoáng mát với nhiều hoạt động giải trí mà Quảng Trường Lâm Viên còn ấn
+                  tượng với công trình nghệ thuật khổng lồ với khối bông hoa dã quỳ và khối nụ hoa được thiết kế bằng
+                  kính màu lạ mắt. Đừng quên lưu giữ lại cùng gia đình những bức ảnh thú vị này.</li>
+                <li>THIỀN VIỆN TRÚC LÂM: Đến nơi đây, du khách như trút bỏ hết ưu tư, phiền muộn, thiện viện mang đến
+                  một cảnh quan thanh khiết tuyệt vời. Du khách dâng hương, cầu xin an bình, may mắn.Vẻ đẹp Phật giáo
+                  hài hòa cùng thiên nhiên và muôn sắc hoa. Rất nhiều loài hoa đẹp và quý hiếm như Sim Tím, bông Gòn úc,
+                  Phù Dung…khiến khung cảnh càng thêm thơ mộng. </li>
               </ul>
-              <p><strong>Buổi tối:</strong>Quý khách thay đổi khẩu vị tối bằng bữa tiệc BUFFET RAU hoành tráng tại nhà hàng với hầu hết các loại rau sạch tại Đà Lạt. Đặc biệt, rau được dùng không giới hạn. Cách bài trí và phục vụ tại nhà hàng cũng khiến các thực khách khó tính nhất cũng phải hài lòng.
-                Quý khách tự do vui chơi, khám phá Đà Lạt với CHỢ ĐÊM ÂM PHỦ, hãy sắm cho mình những chiếc khăn choàng và nón được đan từ những đôi bàn tay tài hoa nhưng không kém phần tỉ mỉ. Xung quanh chợ hoăc các khu phố, dễ dàng bắt gặp hình ảnh quay quần bên nhau cùng ly sữa nóng, chiếc bánh rán nóng hổi. Những món ăn dân dã mà đặc trưng rất Đà Lạt.</p>
+              <p><strong>Buổi tối:</strong>Quý khách thay đổi khẩu vị tối bằng bữa tiệc BUFFET RAU hoành tráng tại nhà
+                hàng với hầu hết các loại rau sạch tại Đà Lạt. Đặc biệt, rau được dùng không giới hạn. Cách bài trí và
+                phục vụ tại nhà hàng cũng khiến các thực khách khó tính nhất cũng phải hài lòng.
+                Quý khách tự do vui chơi, khám phá Đà Lạt với CHỢ ĐÊM ÂM PHỦ, hãy sắm cho mình những chiếc khăn choàng
+                và nón được đan từ những đôi bàn tay tài hoa nhưng không kém phần tỉ mỉ. Xung quanh chợ hoăc các khu
+                phố, dễ dàng bắt gặp hình ảnh quay quần bên nhau cùng ly sữa nóng, chiếc bánh rán nóng hổi. Những món ăn
+                dân dã mà đặc trưng rất Đà Lạt.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>NGÀY 03 | NÔNG TRẠI CÚN - NHÀ THỜ DOMAIN - CÁNH ĐỒNG HOA CẨM TÚ CẦU</h3>
-               <p><strong>Buổi sáng:</strong>Quý khách dùng điểm tâm sáng. Tiếp tục tham quan, khám phá:</p>
-               <ul>
-                <li>NÔNG TRẠI CÚN - PUPPY FARM: Đến với Puppy Farm bạn sẽ được hòa mình trong thế giới đầy thú vị của những chú cún. Với diện tích rộng lớn nên nông trại cún Puppy Farm Đà Lạt không chỉ có là nơi nuôi những chú cún dễ thương mà ở đây còn có những cánh đồng hoa rộng lớn và vườn nông sản công nghệ cao: Vườn cà chua cherry đủ màu và đủ loại, Vườn dâu Tây treo công nghệ, Vườn dưa pepino (dưa hấu nam mỹ) Vườn cây nguyên sinh nhiệt đới , vườn sen đá + xương rồng đủ loại , Đồi hoa lavender, cánh bướm, Cẩm Tú cầu...v.v Đặc biệt hái dâu tại vườn với quy mô lớn (tự túc phí hái dâu)</li>
-                <li>NHÀ THỜ DOMAINE: được xây dựng với kiến trúc Châu Âu, nằm trên ngọn đồi Mai Anh tuyệt đẹp, nhà thờ là nơi không thể thiếu trong chuyến hành trình hấp dẫn này.</li>
-               </ul>
-               <p><strong>Buổi trưa:</strong>Quý khách dùng bữa trưa tại nhà hàng. Về khách sạn nghỉ ngơi.</p>
+              <p><strong>Buổi sáng:</strong>Quý khách dùng điểm tâm sáng. Tiếp tục tham quan, khám phá:</p>
+              <ul>
+                <li>NÔNG TRẠI CÚN - PUPPY FARM: Đến với Puppy Farm bạn sẽ được hòa mình trong thế giới đầy thú vị của
+                  những chú cún. Với diện tích rộng lớn nên nông trại cún Puppy Farm Đà Lạt không chỉ có là nơi nuôi
+                  những chú cún dễ thương mà ở đây còn có những cánh đồng hoa rộng lớn và vườn nông sản công nghệ cao:
+                  Vườn cà chua cherry đủ màu và đủ loại, Vườn dâu Tây treo công nghệ, Vườn dưa pepino (dưa hấu nam mỹ)
+                  Vườn cây nguyên sinh nhiệt đới , vườn sen đá + xương rồng đủ loại , Đồi hoa lavender, cánh bướm, Cẩm
+                  Tú cầu...v.v Đặc biệt hái dâu tại vườn với quy mô lớn (tự túc phí hái dâu)</li>
+                <li>NHÀ THỜ DOMAINE: được xây dựng với kiến trúc Châu Âu, nằm trên ngọn đồi Mai Anh tuyệt đẹp, nhà thờ
+                  là nơi không thể thiếu trong chuyến hành trình hấp dẫn này.</li>
+              </ul>
+              <p><strong>Buổi trưa:</strong>Quý khách dùng bữa trưa tại nhà hàng. Về khách sạn nghỉ ngơi.</p>
               <p><strong>Buổi chiều:</strong>Quý khách tham quan danh thắng Đà Lạt:</p>
               <ul>
-                <li>GA CỔ ĐÀ LẠT: là nhà ga tàu hỏa của thành phố Đà Lạt. Đây được xem là nhà ga lâu đời nhất ở Việt Nam và Đông Dương, Qúy khách có thể trải nghiệm Với tuyến đường 7 km, tàu sẽ đưa du khách khám phá phố núi. Tuy chạy tốc độ rất chậm và đầu tàu kêu to, thế nhưng, đây là nơi hấp dẫn của nhà ga phục vụ du khách tham quan ngắm cảnh trên đường đi.</li>
-                <li>CÁNH ĐỒNG HOA CẨM TÚ CẦU có nhiều Background với décor chú trọng vẻ đẹp của tự nhiên. Ngoài hoa trọng điểm là hoa CẨM TÚ CẦU có thêm hoa hướng dương, hoa nữ hoàng xanh… phục vụ nhu cầu đa dạng của quý khách. Bên cạnh đó là những tiểu cảnh đặc sắc như cầu tình yêu, vầng trăng cổ tích và nấc thang lên thiên đường,...Quý khách cũng được check – in CẦU VÀNG phiên bản Đà Lạt tại đây</li>
+                <li>GA CỔ ĐÀ LẠT: là nhà ga tàu hỏa của thành phố Đà Lạt. Đây được xem là nhà ga lâu đời nhất ở Việt Nam
+                  và Đông Dương, Qúy khách có thể trải nghiệm Với tuyến đường 7 km, tàu sẽ đưa du khách khám phá phố
+                  núi. Tuy chạy tốc độ rất chậm và đầu tàu kêu to, thế nhưng, đây là nơi hấp dẫn của nhà ga phục vụ du
+                  khách tham quan ngắm cảnh trên đường đi.</li>
+                <li>CÁNH ĐỒNG HOA CẨM TÚ CẦU có nhiều Background với décor chú trọng vẻ đẹp của tự nhiên. Ngoài hoa
+                  trọng điểm là hoa CẨM TÚ CẦU có thêm hoa hướng dương, hoa nữ hoàng xanh… phục vụ nhu cầu đa dạng của
+                  quý khách. Bên cạnh đó là những tiểu cảnh đặc sắc như cầu tình yêu, vầng trăng cổ tích và nấc thang
+                  lên thiên đường,...Quý khách cũng được check – in CẦU VÀNG phiên bản Đà Lạt tại đây</li>
               </ul>
-              <p><strong>Buổi tối:</strong>Đoàn dùng bữa tối tại nhà hàng sau đó về lại trung tâm Tp. Đà Lạt nghỉ ngơi, dạo chợ đêm Đà lạt</p>        
+              <p><strong>Buổi tối:</strong>Đoàn dùng bữa tối tại nhà hàng sau đó về lại trung tâm Tp. Đà Lạt nghỉ ngơi,
+                dạo chợ đêm Đà lạt</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <h3>NGÀY 04 | THÁC PONGOUR - TPHCM</h3>
-               <p><strong>Buổi sáng:</strong>Quý khách dùng điểm tâm sáng và làm thủ tục trả phòng.Đoàn khởi hành về TP.HCM, HDV sẽ đưa quý khách phiêu lưu, khám phá con Thác đặc biệt:               </p>
-               <ul>
-                <li>Đoàn chinh phục thác PONGOUR(Thác Bảy Tầng). Còn được mệnh danh là Nam Thiên đệ nhất thác. Vẻ đẹp đặc biệt của dòng thác nằm ở hệ thống các bậc đá bằng phẳng, xếp thành lớp tuy không theo bất cứ một trật tự nào nhưng đã “xé” nguồn nước thành hàng trăm dòng nhỏ, tạo thành những thảm nước tung bọt trắng xóa, hùng vĩ.
-               </ul>
-               <p><strong>Buổi trưa:</strong>Đoàn dừng chân dùng bữa trưa tại BẢO LỘC. Khởi hành về TP. Hồ Chí Minh</p>
+              <p><strong>Buổi sáng:</strong>Quý khách dùng điểm tâm sáng và làm thủ tục trả phòng.Đoàn khởi hành về
+                TP.HCM, HDV sẽ đưa quý khách phiêu lưu, khám phá con Thác đặc biệt: </p>
+              <ul>
+                <li>Đoàn chinh phục thác PONGOUR(Thác Bảy Tầng). Còn được mệnh danh là Nam Thiên đệ nhất thác. Vẻ đẹp
+                  đặc biệt của dòng thác nằm ở hệ thống các bậc đá bằng phẳng, xếp thành lớp tuy không theo bất cứ một
+                  trật tự nào nhưng đã “xé” nguồn nước thành hàng trăm dòng nhỏ, tạo thành những thảm nước tung bọt
+                  trắng xóa, hùng vĩ.
+              </ul>
+              <p><strong>Buổi trưa:</strong>Đoàn dừng chân dùng bữa trưa tại BẢO LỘC. Khởi hành về TP. Hồ Chí Minh</p>
               <p><strong>Buổi chiều:</strong>Về đến nơi, chia tay và hẹn gặp lại Quý khách.</p>
             </div>
           </div>
+        </div>
       </div>
-    </div>
 
       <div id="thuvien" class="section">
         <h2>Thư viện ảnh</h2>
@@ -102,7 +192,7 @@
           <img src="../../assets/img/tours/dalat6.jpg" alt="Đà Lạt 6">
 
         </div>
-        
+
       </div>
 
 
@@ -114,7 +204,7 @@
           <li>Vé thắng cảnh vào cổng các điểm du lịch theo chương trình.</li>
           <li>Nước và khăn trên xe ôtô: 01 chai nước 500ml + 01 khăn lạnh/người/ngày</li>
           <li>Hướng dẫn viên chuyên nghiệp, nhiệt tình, chu đáo.</li>
-          <li>Ăn trong chương trình: 
+          <li>Ăn trong chương trình:
             Bữa sáng tại khách sạn, nhà hàng
             Bữa chính với các món đặc sản địa phương: 150.000đ/xuất</li>
           <li>Lưu trú tại khách sạn tiêu chuẩn 3 sao ở trung tâm, 2 người/phòng. Lẻ ngủ 3 người/phòng.</li>
@@ -129,22 +219,25 @@
         </ul>
         <div class="day-title">CHÍNH SÁCH GIÁ TRẺ EM</div>
         <ul>
-          <li>Trẻ em dưới 06 tuổi miễn phí dịch vụ ( không quá 10% tổng số người lớn), hỗ trợ bảo hiểm du lịch, 01 chỗ ngồi trên xe, tàu, nước uống…
+          <li>Trẻ em dưới 06 tuổi miễn phí dịch vụ ( không quá 10% tổng số người lớn), hỗ trợ bảo hiểm du lịch, 01 chỗ
+            ngồi trên xe, tàu, nước uống…
           </li>
-          <li>Trẻ em từ 06 – 10 tuối: 75% giá tour ( có suất ăn riêng như người lớn) được hưởng: 1 chỗ trên xe, thuyền, vé tham quan và ngủ chung giường với ba mẹ.
+          <li>Trẻ em từ 06 – 10 tuối: 75% giá tour ( có suất ăn riêng như người lớn) được hưởng: 1 chỗ trên xe, thuyền,
+            vé tham quan và ngủ chung giường với ba mẹ.
           </li>
           <li>Trẻ em 11 tuổi trở lên tính như người lớn.
           </li>
         </ul>
         <div class="day-title">CHÍNH SÁCH HOÃN HUỶ</div>
-         <ul>
-            <li>Dời ngày khởi hành trước 15 ngày không mất phí, sau 15 ngày mất 30%. (Không tính ngày lễ và chủ nhật), chỉ được dời 1 lần.</li>
-            <li>Sau khi đăng ký huỷ tour mất 15% giá tour.</li>
-            <li>Từ 15 đến trước 10 ngày trước ngày khởi hành chịu phí 30% giá tour (Không tính ngày Lễ và chủ nhật).</li>
-            <li>Từ 10 đến 8 ngày trước ngày khởi hành chịu phí 50% giá tour (Không tính ngày Lễ và chủ nhật).</li>
-            <li>Từ 5 - 7 ngày trước ngày khởi hành chịu phí 70% giá tour (Không tính ngày Lễ và chủ nhật).</li>
-         </ul>
-    </div>
+        <ul>
+          <li>Dời ngày khởi hành trước 15 ngày không mất phí, sau 15 ngày mất 30%. (Không tính ngày lễ và chủ nhật), chỉ
+            được dời 1 lần.</li>
+          <li>Sau khi đăng ký huỷ tour mất 15% giá tour.</li>
+          <li>Từ 15 đến trước 10 ngày trước ngày khởi hành chịu phí 30% giá tour (Không tính ngày Lễ và chủ nhật).</li>
+          <li>Từ 10 đến 8 ngày trước ngày khởi hành chịu phí 50% giá tour (Không tính ngày Lễ và chủ nhật).</li>
+          <li>Từ 5 - 7 ngày trước ngày khởi hành chịu phí 70% giá tour (Không tính ngày Lễ và chủ nhật).</li>
+        </ul>
+      </div>
     </div>
 
     <div class="pricebox-wrapper">
@@ -153,40 +246,98 @@
           <span class="price">2.500.000đ</span>
           <span class="per">/người</span>
         </div>
-    
+
         <div class="pricebox-content">
           <label for="people">Số người</label>
           <input type="number" id="people" min="1" value="1" />
-    
+
           <label for="date">Ngày đi</label>
           <input type="date" id="date" />
-    
+
           <div class="total-section">
             <span>Tổng cộng</span>
             <strong id="total">2.500.000đ</strong>
           </div>
-    
-          <button class="book-now">Đặt ngay</button>
+
+          <button class="book-now bg-primary-500">Đặt ngay</button>
         </div>
       </div>
     </div>
-    
-    <script>
-      const pricePer = 2500000;
-      const peopleInput = document.getElementById('people');
-      const total = document.getElementById('total');
-    
-      function updateTotal() {
-        const people = parseInt(peopleInput.value) || 1;
-        const sum = pricePer * people;
-        total.textContent = sum.toLocaleString('vi-VN') + 'đ';
-      }
-    
-      peopleInput.addEventListener('input', updateTotal);
-      updateTotal();
-    </script>
-    
-        
   </div>
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h4>Hỗ trợ</h4>
+        <ul>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Trung tâm hỗ trợ</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Bảo mật thông tin</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Vietra</h4>
+        <ul>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Về chúng tôi</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Chính sách</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Blog</a></li>
+          <li><a href="../../pages/detail-tour/chitiet_taynguyen.html">Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Liên hệ</h4>
+        <ul>
+          <li>
+            <a href="../../pages/detail-tour/chitiet_taynguyen.html">Công ty Cổ phần Vietra</a>
+          </li>
+          <li>
+            <a href="../../pages/contact/contact.html">Địa chỉ: 12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</a>
+          </li>
+          <li>
+            <a href="tel:0123456789">Số điện thoại: 0123 456 789</a>
+          </li>
+          <li>
+            <a href="mailto:hvnh.edu@gmail.com">Email: hvnh.edu@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Mạng xã hội</h4>
+        <div class="social-icons">
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-fb.svg"
+              alt="Facebook"></a>
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-tw.svg"
+              alt="Twitter"></a>
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-tt.svg"
+              alt="TikTok"></a>
+          <a href="../../pages/detail-tour/chitiet_taynguyen.html"><img src="../../assets/svg/ic-yt.svg"
+              alt="YouTube"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright Acenda 2024</p>
+    </div>
+  </footer>
+  <script>
+    const pricePer = 2500000;
+    const peopleInput = document.getElementById('people');
+    const total = document.getElementById('total');
+
+    function updateTotal() {
+      const people = parseInt(peopleInput.value) || 1;
+      const sum = pricePer * people;
+      total.textContent = sum.toLocaleString('vi-VN') + 'đ';
+    }
+
+    peopleInput.addEventListener('input', updateTotal);
+    updateTotal();
+    function toggleMenu() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('overlay');
+      drawer.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
 </body>
+
 </html>
