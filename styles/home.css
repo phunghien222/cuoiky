@@ -83,10 +83,10 @@ a {
 .scroll-wrapper {
   overflow-x: auto;
   white-space: nowrap;
-  width: 100%;
-  margin: 72px 0px 64px 0px;
-  -ms-overflow-style: none;  /* IE và Edge */
-  scrollbar-width: none;     /* Firefox */
+  width: fit-content; /* hoặc một chiều rộng cố định như 80% */
+  margin: 72px auto 64px auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .scroll-container::-webkit-scrollbar {
   display: none;             /* Chrome, Safari và Opera */
