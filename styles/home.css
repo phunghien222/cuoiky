@@ -83,13 +83,21 @@ a {
 .scroll-wrapper {
   overflow-x: auto;
   white-space: nowrap;
-  width: fit-content; /* hoặc một chiều rộng cố định như 80% */
-  margin: 72px auto 64px auto;
+  width: 100%;
+  margin: 72px 0px 64px 0px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  display: flex;
+  justify-content: center;  /* Giúp nội dung nằm giữa */
 }
-.scroll-container::-webkit-scrollbar {
-  display: none;             /* Chrome, Safari và Opera */
+
+.scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  display: inline-flex;  /* Giữ các item ngang hàng */
+  gap: 16px;              /* nếu cần khoảng cách giữa các item */
 }
 
 .item {
@@ -625,6 +633,8 @@ border-radius: 50%;
 .overlay.show {
   display: block;
 }
+
+
 
 @media (min-width: 1200px){
   .contain-rate{
