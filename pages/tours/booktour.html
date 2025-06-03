@@ -1,70 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đặt tour</title>
-    <link rel="stylesheet" href="../../styles/booktour.css">
+    <link rel="stylesheet" href="../../styles/booktour.css" />
     <link rel="stylesheet" href="../../styles/home.css" />
     <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
+
 <body>
     <header>
-        <video autoplay muted loop playsinline>
-          <source src="../../video/vietnam.mp4" type="video/mp4" />
-          Trình duyệt không hỗ trợ video.
-        </video>
-    
+        <img src="../../assets/img/tours.png" alt="Banner2" />
+        <div class="dark-overlay"></div>
         <div class="overlay-content">
-          <div class="flex items-center justify-around m-32 contain-header">
-            <div>
-              <a class="body-text-24-bold text-color-0">VIETRA</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
-              <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
-            </div>
-    
-            <!-- Overlay -->
-            <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
-    
-            <!-- Drawer Menu -->
-            <div id="drawer" class="drawer">
-              <a href="../../index.html">Trang chủ</a>
-              <a href="../../pages/about/about.html">Giới thiệu</a>
-              <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
-              <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
-              <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
-              <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
-              <a href="../../pages/blog/blog.html">Blog</a>
-              <a href="../../pages/contact/contact.html">Liên hệ</a>
-            </div>
-            <nav class="contain-nav container py-12 px-32">
-              <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
-              <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/about/about.html">Về chúng tôi</a>
-              <div class="dropdown">
-                <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
-                <div class="dropdown-content">
-                  <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
-                  <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
-                  <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
-                  <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+            <div class="flex items-center justify-around m-32 contain-header">
+                <div>
+                    <a class="body-text-24-bold text-color-0">VIETRA</a>
                 </div>
-              </div>
-              <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
-              <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
-            </nav>
-    
-          </div>
+                <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+                    <img src="../../assets/svg/ic-menu.svg" alt="Menu" />
+                </div>
+
+                <!-- Overlay -->
+                <div id="overlay" class="overlay" onclick="toggleDrawer()"></div>
+
+                <!-- Drawer Menu -->
+                <div id="drawer" class="drawer">
+                    <a href="../../index.html">Trang chủ</a>
+                    <a href="../../pages/about/about.html">Giới thiệu</a>
+                    <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+                    <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+                    <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+                    <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+                    <a href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact/contact.html">Liên hệ</a>
+                </div>
+                <nav class="contain-nav container py-12 px-32">
+                    <a class="body-text-16-regular text-color-0 mr-32" href="../../index.html">Trang Chủ</a>
+                    <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/about/about.html">Về chúng
+                        tôi</a>
+                    <div class="dropdown">
+                        <a class="body-text-16-regular text-color-0 mr-32">Tour</a>
+                        <div class="dropdown-content">
+                            <a href="../../pages/tours/tourmienbac.html">Tour miền Bắc</a>
+                            <a href="../../pages/tours/tourmientrung.html">Tour miền Trung</a>
+                            <a href="../../pages/tours/tourmiennam.html">Tour miền Nam</a>
+                            <a href="../../pages/tours/tourtaynguyen.html">Tour Tây Nguyên</a>
+                        </div>
+                    </div>
+                    <a class="body-text-16-regular text-color-0 mr-32" href="../../pages/blog/blog.html">Blog</a>
+                    <a href="../../pages/contact/contact.html" class="body-text-16-regular text-color-0">Liên hệ</a>
+                </nav>
+            </div>
         </div>
-      </header>
+        <div class="banner">
+            <div class="btn_more">
+                <h1>VIETRA - VÀ NHỮNG TRẢI NGHIỆM TUYỆT VỜI</h1>
+                <div class="btn_inner">
+                    <a>Đặt tour</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <div class="container-booktour">
         <div class="form-section">
-            <h2>🏝️ Đặt tour</h2>
+
+            <div class="body-text-24-bold theme-header">Đặt tour</div>
+
+
             <div class="form-group">
-                <label for="loai-tour"><strong>*</strong> Chọn loại tour</label>
+                <label for="loai-tour"> Chọn loại tour</label>
                 <select id="loai-tour" class="select2-control">
                     <option value="">-- Chọn loại tour --</option>
                     <option value="mienbac">Tour miền Bắc</option>
@@ -74,77 +84,151 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="chon-tour"><strong>*</strong> Chọn tour</label>
+                <label for="chon-tour"> Chọn tour</label>
                 <select id="chon-tour" class="select2-control">
                     <option value="">-- Chọn tour --</option>
-                    <option value="mb1" data-region="mienbac" data-price="4390000">HÀ NỘI - SAPA 4 NGÀY 3 ĐÊM</option>
-                    <option value="mb2" data-region="mienbac" data-price="5390000">HÀ NỘI - NINH BÌNH - HẠ LONG 3 NGÀY 2 ĐÊM</option>
-                    <option value="mb3" data-region="mienbac" data-price="5000000">HÀ NỘI - HẠ LONG 3 NGÀY 2 ĐÊM</option>
-                    <option value="mb4" data-region="mienbac" data-price="5400000">HÀ NỘI - HÀ GIANG 5 NGÀY 4 ĐÊM</option>
-                    <option value="mb5" data-region="mienbac" data-price="2690000">HÀ NỘI - MỘC CHÂU - ĐIỆN BIÊN  3 NGÀY 2 ĐÊM</option>
-                    <option value="mb6" data-region="mienbac" data-price="2590000">HÀ NỘI - MÙ CANG CHẢI - TÀ XÙA  3 NGÀY 2 ĐÊM</option>
-                    <option value="mb7" data-region="mienbac" data-price="4590000">HÀ NỘI - CAO BẰNG - BẮC KẠN  4 NGÀY 3 ĐÊM</option>
-                    <option value="mb8" data-region="mienbac" data-price="6990000">HÀ NỘI - NINH BÌNH - HẠ LONG - YÊN TỬ  4 NGÀY 3 ĐÊM</option>
-                    <option value="mb9" data-region="mienbac" data-price="3490000">HÀ NỘI - CÁT BÀ - VỊNH LAN HẠ  3 NGÀY 2 ĐÊM</option>
-                    <option value="tn1" data-region="taynguyen" data-price="2500000">HÀNH TRÌNH KHÁM PHÁ ĐÀ LẠT 4 NGÀY 3 ĐÊM</option>
-                    <option value="tn2" data-region="taynguyen" data-price="3590000">HÀNH TRÌNH KHÁM PHÁ TÂY NGUYÊN 4 NGÀY 3 ĐÊM</option>
-                    <option value="tn3" data-region="taynguyen" data-price="3990000">HÀNH TRÌNH KHÁM PHÁ BUÔN MA THUỘT 4 NGÀY 3 ĐÊM</option>
-                    <option value="tn4" data-region="taynguyen" data-price="2890000">HÀNH TRÌNH KHÁM PHÁ TÀ ĐÙNG - THÀNH PHỐ CÀ PHÊ 3 NGÀY 2 ĐÊM</option>
-                    <option value="tn5" data-region="taynguyen" data-price="2690000">HÀNH TRÌNH KHÁM PHÁ DAK LAK 4 NGÀY 3 ĐÊM</option>
-                    <option value="tn6" data-region="taynguyen" data-price="7790000">BUÔN MA THUỘT - MĂNG ĐEN - KON TUM - PLEIKU  5 NGÀY 4 ĐÊM</option>
-                    <option value="tn7" data-region="taynguyen" data-price="4590000">CẦN THƠ - ĐÀ LẠT - THÁC PRENN 4 NGÀY 3 ĐÊM</option>
-                    <option value="tn8" data-region="taynguyen" data-price="490000">HÀNH TRÌNH KHÁM PHÁ THỦ PHỦ CÀ PHÊ 1 NGÀY</option>
-                    <option value="tn9" data-region="taynguyen" data-price="4890000">QUẢNG NGÃI - MĂNG ĐEN  5 NGÀY 4 ĐÊM</option>
-                    <option value="mt1" data-region="mientrung" data-price="3990000">HÀNH TRÌNH KIẾN TẠO MIỀN TRUNG: ĐÀ NẴNG - SƠN TRÀ - HỘI AN</option>
-                    <option value="mt2" data-region="mientrung" data-price="4990000">ĐÀ NẴNG - HỘI AN - HUẾ</option>
-                    <option value="mt3" data-region="mientrung" data-price="4990000">TOUR NHA TRANG - BIỂN XANH VẪY GỌI 3N2Đ</option>
-                    <option value="mt4" data-region="mientrung" data-price="2490000">PHAN THIẾT - MŨI NÉ - ĐỒI CÁT BAY - LÀNG CHÀI XƯA (2 NGÀY)</option>
-                    <option value="mt5" data-region="mientrung" data-price="3690000">NHA TRANG - HÒN NGỌC BIỂN ĐÔNG</option>
-                    <option value="mt6" data-region="mientrung" data-price="3490000">NHA TRANG - VỊNH SAN HÔ 3N3Đ</option>
-                    <option value="mt7" data-region="mientrung" data-price="3990000">ĐÀ NẴNG - SƠN TRÀ - HỘI AN - SUỐI KHOÁNG NÓNG THẦN TÀI - CÙ LAO</option>
-                    <option value="mt8" data-region="mientrung" data-price="4990000">QUY NHƠN - PHÚ YÊN - ĐẢO KỲ CO - EO GIÓ (3N2Đ)</option>
-                    <option value="mt9" data-region="mientrung" data-price="4990000">DU LỊCH QUY NHƠN - PHÚ YÊN (4N3Đ)</option>
-                    <option value="mn1" data-region="miennam" data-price="490000">HÀNH TRÌNH TRÊN ĐẤT PHÙ SA: MỸ THO - BẾN TRE</option>
-                    <option value="mn2" data-region="miennam" data-price="3990000">TOUR PHÚ QUỐC 4 NGÀY 3 ĐÊM - THIÊN ĐƯỜNG ĐẢO NGỌC CỦA BIỂN</option>
-                    <option value="mn3" data-region="miennam" data-price="3990000">KHÁM PHÁ LỤC TỈNH MIỀN TÂY: MỸ THO - BẾN TRE - CHÂU ĐỐC - CẦN THƠ - CÀ MAU - BẠC LIÊU - SÓC TRĂNG</option>
-                    <option value="mn4" data-region="miennam" data-price="5990000">HÀ NỘI - ĐỒNG THÁP - AN GIANG - CÀ MAU - BẠC LIÊU - CẦN GIỜ - TIỀN GIANG</option>
-                    <option value="mn5" data-region="miennam" data-price="1490000">KHÁM PHÁ ĐỊA ĐẠO CỦ CHI & VÙNG ĐỒNG BẰNG SÔNG CỬU LONG</option>
-                    <option value="mn6" data-region="miennam" data-price="3190000">CHƯƠNG TRÌNH THAM QUAN HÀNH TRÌNH CÔN ĐẢO TÂM LINH</option>
-                    <option value="mn7" data-region="miennam" data-price="2490000">HÀNH TRÌNH TRÊN ĐẤT PHÙ SA: ĐỒNG THÁP</option>
-                    <option value="mn8" data-region="miennam" data-price="968000">CHINH PHỤC HỒ TRÀM</option>
-                    <option value="mn9" data-region="miennam" data-price="1690000">CẦN GIỜ - KHU SINH THÁI VÀM SÁT</option>
+                    <option value="mb1" data-region="mienbac" data-price="4390000">
+                        HÀ NỘI - SAPA 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="mb2" data-region="mienbac" data-price="5390000">
+                        HÀ NỘI - NINH BÌNH - HẠ LONG 3 NGÀY 2 ĐÊM
+                    </option>
+                    <option value="mb3" data-region="mienbac" data-price="5000000">
+                        HÀ NỘI - HẠ LONG 3 NGÀY 2 ĐÊM
+                    </option>
+                    <option value="mb4" data-region="mienbac" data-price="5400000">
+                        HÀ NỘI - HÀ GIANG 5 NGÀY 4 ĐÊM
+                    </option>
+                    <option value="mb5" data-region="mienbac" data-price="2690000">
+                        HÀ NỘI - MỘC CHÂU - ĐIỆN BIÊN 3 NGÀY 2 ĐÊM
+                    </option>
+                    <option value="mb6" data-region="mienbac" data-price="2590000">
+                        HÀ NỘI - MÙ CANG CHẢI - TÀ XÙA 3 NGÀY 2 ĐÊM
+                    </option>
+                    <option value="mb7" data-region="mienbac" data-price="4590000">
+                        HÀ NỘI - CAO BẰNG - BẮC KẠN 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="mb8" data-region="mienbac" data-price="6990000">
+                        HÀ NỘI - NINH BÌNH - HẠ LONG - YÊN TỬ 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="mb9" data-region="mienbac" data-price="3490000">
+                        HÀ NỘI - CÁT BÀ - VỊNH LAN HẠ 3 NGÀY 2 ĐÊM
+                    </option>
+                    <option value="tn1" data-region="taynguyen" data-price="2500000">
+                        HÀNH TRÌNH KHÁM PHÁ ĐÀ LẠT 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="tn2" data-region="taynguyen" data-price="3590000">
+                        HÀNH TRÌNH KHÁM PHÁ TÂY NGUYÊN 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="tn3" data-region="taynguyen" data-price="3990000">
+                        HÀNH TRÌNH KHÁM PHÁ BUÔN MA THUỘT 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="tn4" data-region="taynguyen" data-price="2890000">
+                        HÀNH TRÌNH KHÁM PHÁ TÀ ĐÙNG - THÀNH PHỐ CÀ PHÊ 3 NGÀY 2 ĐÊM
+                    </option>
+                    <option value="tn5" data-region="taynguyen" data-price="2690000">
+                        HÀNH TRÌNH KHÁM PHÁ DAK LAK 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="tn6" data-region="taynguyen" data-price="7790000">
+                        BUÔN MA THUỘT - MĂNG ĐEN - KON TUM - PLEIKU 5 NGÀY 4 ĐÊM
+                    </option>
+                    <option value="tn7" data-region="taynguyen" data-price="4590000">
+                        CẦN THƠ - ĐÀ LẠT - THÁC PRENN 4 NGÀY 3 ĐÊM
+                    </option>
+                    <option value="tn8" data-region="taynguyen" data-price="490000">
+                        HÀNH TRÌNH KHÁM PHÁ THỦ PHỦ CÀ PHÊ 1 NGÀY
+                    </option>
+                    <option value="tn9" data-region="taynguyen" data-price="4890000">
+                        QUẢNG NGÃI - MĂNG ĐEN 5 NGÀY 4 ĐÊM
+                    </option>
+                    <option value="mt1" data-region="mientrung" data-price="3990000">
+                        HÀNH TRÌNH KIẾN TẠO MIỀN TRUNG: ĐÀ NẴNG - SƠN TRÀ - HỘI AN
+                    </option>
+                    <option value="mt2" data-region="mientrung" data-price="4990000">
+                        ĐÀ NẴNG - HỘI AN - HUẾ
+                    </option>
+                    <option value="mt3" data-region="mientrung" data-price="4990000">
+                        TOUR NHA TRANG - BIỂN XANH VẪY GỌI 3N2Đ
+                    </option>
+                    <option value="mt4" data-region="mientrung" data-price="2490000">
+                        PHAN THIẾT - MŨI NÉ - ĐỒI CÁT BAY - LÀNG CHÀI XƯA (2 NGÀY)
+                    </option>
+                    <option value="mt5" data-region="mientrung" data-price="3690000">
+                        NHA TRANG - HÒN NGỌC BIỂN ĐÔNG
+                    </option>
+                    <option value="mt6" data-region="mientrung" data-price="3490000">
+                        NHA TRANG - VỊNH SAN HÔ 3N3Đ
+                    </option>
+                    <option value="mt7" data-region="mientrung" data-price="3990000">
+                        ĐÀ NẴNG - SƠN TRÀ - HỘI AN - SUỐI KHOÁNG NÓNG THẦN TÀI - CÙ LAO
+                    </option>
+                    <option value="mt8" data-region="mientrung" data-price="4990000">
+                        QUY NHƠN - PHÚ YÊN - ĐẢO KỲ CO - EO GIÓ (3N2Đ)
+                    </option>
+                    <option value="mt9" data-region="mientrung" data-price="4990000">
+                        DU LỊCH QUY NHƠN - PHÚ YÊN (4N3Đ)
+                    </option>
+                    <option value="mn1" data-region="miennam" data-price="490000">
+                        HÀNH TRÌNH TRÊN ĐẤT PHÙ SA: MỸ THO - BẾN TRE
+                    </option>
+                    <option value="mn2" data-region="miennam" data-price="3990000">
+                        TOUR PHÚ QUỐC 4 NGÀY 3 ĐÊM - THIÊN ĐƯỜNG ĐẢO NGỌC CỦA BIỂN
+                    </option>
+                    <option value="mn3" data-region="miennam" data-price="3990000">
+                        KHÁM PHÁ LỤC TỈNH MIỀN TÂY: MỸ THO - BẾN TRE - CHÂU ĐỐC - CẦN THƠ
+                        - CÀ MAU - BẠC LIÊU - SÓC TRĂNG
+                    </option>
+                    <option value="mn4" data-region="miennam" data-price="5990000">
+                        HÀ NỘI - ĐỒNG THÁP - AN GIANG - CÀ MAU - BẠC LIÊU - CẦN GIỜ - TIỀN
+                        GIANG
+                    </option>
+                    <option value="mn5" data-region="miennam" data-price="1490000">
+                        KHÁM PHÁ ĐỊA ĐẠO CỦ CHI & VÙNG ĐỒNG BẰNG SÔNG CỬU LONG
+                    </option>
+                    <option value="mn6" data-region="miennam" data-price="3190000">
+                        CHƯƠNG TRÌNH THAM QUAN HÀNH TRÌNH CÔN ĐẢO TÂM LINH
+                    </option>
+                    <option value="mn7" data-region="miennam" data-price="2490000">
+                        HÀNH TRÌNH TRÊN ĐẤT PHÙ SA: ĐỒNG THÁP
+                    </option>
+                    <option value="mn8" data-region="miennam" data-price="968000">
+                        CHINH PHỤC HỒ TRÀM
+                    </option>
+                    <option value="mn9" data-region="miennam" data-price="1690000">
+                        CẦN GIỜ - KHU SINH THÁI VÀM SÁT
+                    </option>
                 </select>
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label for="people"><strong>*</strong> Số người tham gia</label>
-                    <input type="number" id="people" value="1" min="1" placeholder="Số người tham gia">
+                    <label for="people"> Số người tham gia</label>
+                    <input type="number" id="people" value="1" min="1" placeholder="Số người tham gia" />
                 </div>
                 <div class="form-group">
-                    <label for="ngay-khoi-hanh"><strong>*</strong> Ngày khởi hành</label>
+                    <label for="ngay-khoi-hanh"> Ngày khởi hành</label>
                     <input type="date" id="date" placeholder="dd/mm/yyyy" />
                 </div>
             </div>
-            <h2>👤 Thông tin khách hàng</h2>
+            <div class="body-text-24-bold theme-header"> Thông tin khách hàng</div>
             <div class="form-group">
-                <label for="ho-ten"><strong>*</strong> Họ và tên</label>
-                <input type="text" id="ho-ten" placeholder="Họ và tên">
+                <label for="ho-ten"> Họ và tên</label>
+                <input type="text" id="ho-ten" placeholder="Họ và tên" />
             </div>
             <div class="form-group">
-                <label for="email"><strong>*</strong> Email</label>
-                <input type="email" id="email" placeholder="Email">
+                <label for="email"> Email</label>
+                <input type="email" id="email" placeholder="Email" />
             </div>
             <div class="form-group">
-                <label for="dien-thoai"><strong>*</strong> Điện thoại</label>
-                <input type="tel" id="dien-thoai" placeholder="Điện thoại">
+                <label for="dien-thoai"> Điện thoại</label>
+                <input type="tel" id="dien-thoai" placeholder="Điện thoại" />
             </div>
             <div class="form-group">
-                <label for="dia-chi"><strong>*</strong> Địa chỉ</label>
-                <input type="text" id="dia-chi" placeholder="Địa chỉ">
+                <label for="dia-chi"> Địa chỉ</label>
+                <input type="text" id="dia-chi" placeholder="Địa chỉ" />
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label for="tinh-thanh"><strong>*</strong> Chọn tỉnh/thành</label>
+                    <label for="tinh-thanh"> Chọn tỉnh/thành</label>
                     <select id="tinh-thanh" class="select2-control">
                         <option value="">-- Chọn tỉnh/thành --</option>
                         <option value="ha-noi">Hà Nội</option>
@@ -160,67 +244,155 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="quan-huyen"><strong>*</strong> Chọn quận/huyện</label>
+                    <label for="quan-huyen"> Chọn quận/huyện</label>
                     <select id="quan-huyen" class="select2-control">
                         <option value="">-- Chọn quận/huyện --</option>
-                        <option value="hoan-kiem" data-parent="ha-noi">Quận Hoàn Kiếm</option>
+                        <option value="hoan-kiem" data-parent="ha-noi">
+                            Quận Hoàn Kiếm
+                        </option>
                         <option value="ba-dinh" data-parent="ha-noi">Quận Ba Đình</option>
-                        <option value="hai-chau" data-parent="da-nang">Quận Hải Châu</option>
-                        <option value="hoa-vang" data-parent="da-nang">Huyện Hòa Vang</option>
-                        <option value="ngo-quyen" data-parent="hai-phong">Quận Ngô Quyền</option>
-                        <option value="thuy-nguyen" data-parent="hai-phong">Huyện Thủy Nguyên</option>
-                        <option value="ninh-kieu" data-parent="can-tho">Quận Ninh Kiều</option>
-                        <option value="cai-rang" data-parent="can-tho">Quận Cái Răng</option>
-                        <option value="hue" data-parent="thua-thien-hue">Thành phố Huế</option>
-                        <option value="huong-tra" data-parent="thua-thien-hue">Huyện Hương Trà (nay là thị xã Hương Trà)</option>
-                        <option value="nha-trang" data-parent="khanh-hoa">Thành phố Nha Trang</option>
-                        <option value="dien-khanh" data-parent="khanh-hoa">Huyện Diên Khánh</option>
-                        <option value="da-lat" data-parent="lam-dong">Thành phố Đà Lạt</option>
-                        <option value="duc-trong" data-parent="lam-dong">Huyện Đức Trọng</option>
-                        <option value="thu-dau-mot" data-parent="binh-duong">Thành phố Thủ Dầu Một</option>
-                        <option value="di-an" data-parent="binh-duong">Thành phố Dĩ An</option>
-                        <option value="bien-hoa" data-parent="dong-nai">Thành phố Biên Hòa</option>
-                        <option value="long-thanh" data-parent="dong-nai">Huyện Long Thành</option>
-                        <option value="ninhbinh" data-parent="ninh-binh">Thành phố Ninh Bình</option>
-                        <option value="gia-vien" data-parent="ninh-binh">Huyện Gia Viễn</option>
+                        <option value="hai-chau" data-parent="da-nang">
+                            Quận Hải Châu
+                        </option>
+                        <option value="hoa-vang" data-parent="da-nang">
+                            Huyện Hòa Vang
+                        </option>
+                        <option value="ngo-quyen" data-parent="hai-phong">
+                            Quận Ngô Quyền
+                        </option>
+                        <option value="thuy-nguyen" data-parent="hai-phong">
+                            Huyện Thủy Nguyên
+                        </option>
+                        <option value="ninh-kieu" data-parent="can-tho">
+                            Quận Ninh Kiều
+                        </option>
+                        <option value="cai-rang" data-parent="can-tho">
+                            Quận Cái Răng
+                        </option>
+                        <option value="hue" data-parent="thua-thien-hue">
+                            Thành phố Huế
+                        </option>
+                        <option value="huong-tra" data-parent="thua-thien-hue">
+                            Huyện Hương Trà (nay là thị xã Hương Trà)
+                        </option>
+                        <option value="nha-trang" data-parent="khanh-hoa">
+                            Thành phố Nha Trang
+                        </option>
+                        <option value="dien-khanh" data-parent="khanh-hoa">
+                            Huyện Diên Khánh
+                        </option>
+                        <option value="da-lat" data-parent="lam-dong">
+                            Thành phố Đà Lạt
+                        </option>
+                        <option value="duc-trong" data-parent="lam-dong">
+                            Huyện Đức Trọng
+                        </option>
+                        <option value="thu-dau-mot" data-parent="binh-duong">
+                            Thành phố Thủ Dầu Một
+                        </option>
+                        <option value="di-an" data-parent="binh-duong">
+                            Thành phố Dĩ An
+                        </option>
+                        <option value="bien-hoa" data-parent="dong-nai">
+                            Thành phố Biên Hòa
+                        </option>
+                        <option value="long-thanh" data-parent="dong-nai">
+                            Huyện Long Thành
+                        </option>
+                        <option value="ninhbinh" data-parent="ninh-binh">
+                            Thành phố Ninh Bình
+                        </option>
+                        <option value="gia-vien" data-parent="ninh-binh">
+                            Huyện Gia Viễn
+                        </option>
                     </select>
                 </div>
             </div>
             <div class="form-row">
-            <div class="form-group" style="flex: 1; max-width: 49.2%;">
-                <label for="phuong-xa"><strong>*</strong> Chọn phường/xã</label>
-                <select id="phuong-xa" class="select2-control">
-                    <option value="">-- Chọn phường/xã --</option>
-                    <option value="hang-bac" data-parent="hoan-kiem">Phường Hàng Bạc</option>
-                    <option value="ly-thai-to" data-parent="hoan-kiem">Phường Lý Thái Tổ</option> 
-                    <option value="quan-thanh" data-parent="ba-dinh">Phường Quán Thánh</option>
-                    <option value="dien-bien" data-parent="ba-dinh">Phường Điện Biên</option> 
-                    <option value="binh-hien" data-parent="hai-chau">Phường Bình Hiên</option>
-                    <option value="hoa-cuong-bac" data-parent="hai-chau">Phường Hòa Cường Bắc</option> 
-                    <option value="hoa-chau" data-parent="hoa-vang">Xã Hòa Châu</option>
-                    <option value="hoa-phuoc" data-parent="hoa-vang">Xã Hòa Phước</option> 
-                    <option value="lach-tray" data-parent="ngo-quyen">Phường Lạch Tray</option>
-                    <option value="gia-vien" data-parent="ngo-quyen">Phường Gia Viên</option> 
-                    <option value="thuy-duong" data-parent="thuy-nguyen">Xã Thủy Đường</option>
-                    <option value="trung-ha" data-parent="thuy-nguyen">Xã Trung Hà</option> 
-                    <option value="an-hoi" data-parent="ninh-kieu">Phường An Hội</option>
-                    <option value="tan-an" data-parent="ninh-kieu">Phường Tân An</option> 
-                    <option value="le-binh" data-parent="cai-rang">Phường Lê Bình</option>
-                    <option value="ba-lang" data-parent="cai-rang">Phường Ba Láng</option> 
-                    <option value="phu-hoi" data-parent="hue">Phường Phú Hội</option>
-                    <option value="tu-ha" data-parent="huong-tra">Phường Tứ Hạ</option> 
-                    <option value="vinh-nguyen" data-parent="nha-trang">Phường Vĩnh Nguyên</option>
-                    <option value="dien-toan" data-parent="dien-khanh">Xã Diên Toàn</option> 
-                    <option value="phuong1" data-parent="da-lat">Phường 1</option>
-                    <option value="lien-nghia" data-parent="duc-trong">Thị trấn Liên Nghĩa</option> 
-                    <option value="phu-cuong" data-parent="thu-dau-mot">Phường Phú Cường</option>
-                    <option value="dong-hoa" data-parent="di-an">Phường Đông Hòa</option> 
-                    <option value="thong-nhat" data-parent="bien-hoa">Phường Thống Nhất</option>
-                    <option value="an-phuoc" data-parent="long-thanh">Xã An Phước</option> 
-                    <option value="bich-dao" data-parent="ninhbinh">Phường Bích Đào</option>
-                    <option value="ttme" data-parent="gia-vien">Thị trấn Me</option> 
-                </select>
-            </div>
+                <div class="form-group" style="flex: 1; max-width: 49.2%">
+                    <label for="phuong-xa"> Chọn phường/xã</label>
+                    <select id="phuong-xa" class="select2-control">
+                        <option value="">-- Chọn phường/xã --</option>
+                        <option value="hang-bac" data-parent="hoan-kiem">
+                            Phường Hàng Bạc
+                        </option>
+                        <option value="ly-thai-to" data-parent="hoan-kiem">
+                            Phường Lý Thái Tổ
+                        </option>
+                        <option value="quan-thanh" data-parent="ba-dinh">
+                            Phường Quán Thánh
+                        </option>
+                        <option value="dien-bien" data-parent="ba-dinh">
+                            Phường Điện Biên
+                        </option>
+                        <option value="binh-hien" data-parent="hai-chau">
+                            Phường Bình Hiên
+                        </option>
+                        <option value="hoa-cuong-bac" data-parent="hai-chau">
+                            Phường Hòa Cường Bắc
+                        </option>
+                        <option value="hoa-chau" data-parent="hoa-vang">
+                            Xã Hòa Châu
+                        </option>
+                        <option value="hoa-phuoc" data-parent="hoa-vang">
+                            Xã Hòa Phước
+                        </option>
+                        <option value="lach-tray" data-parent="ngo-quyen">
+                            Phường Lạch Tray
+                        </option>
+                        <option value="gia-vien" data-parent="ngo-quyen">
+                            Phường Gia Viên
+                        </option>
+                        <option value="thuy-duong" data-parent="thuy-nguyen">
+                            Xã Thủy Đường
+                        </option>
+                        <option value="trung-ha" data-parent="thuy-nguyen">
+                            Xã Trung Hà
+                        </option>
+                        <option value="an-hoi" data-parent="ninh-kieu">
+                            Phường An Hội
+                        </option>
+                        <option value="tan-an" data-parent="ninh-kieu">
+                            Phường Tân An
+                        </option>
+                        <option value="le-binh" data-parent="cai-rang">
+                            Phường Lê Bình
+                        </option>
+                        <option value="ba-lang" data-parent="cai-rang">
+                            Phường Ba Láng
+                        </option>
+                        <option value="phu-hoi" data-parent="hue">Phường Phú Hội</option>
+                        <option value="tu-ha" data-parent="huong-tra">
+                            Phường Tứ Hạ
+                        </option>
+                        <option value="vinh-nguyen" data-parent="nha-trang">
+                            Phường Vĩnh Nguyên
+                        </option>
+                        <option value="dien-toan" data-parent="dien-khanh">
+                            Xã Diên Toàn
+                        </option>
+                        <option value="phuong1" data-parent="da-lat">Phường 1</option>
+                        <option value="lien-nghia" data-parent="duc-trong">
+                            Thị trấn Liên Nghĩa
+                        </option>
+                        <option value="phu-cuong" data-parent="thu-dau-mot">
+                            Phường Phú Cường
+                        </option>
+                        <option value="dong-hoa" data-parent="di-an">
+                            Phường Đông Hòa
+                        </option>
+                        <option value="thong-nhat" data-parent="bien-hoa">
+                            Phường Thống Nhất
+                        </option>
+                        <option value="an-phuoc" data-parent="long-thanh">
+                            Xã An Phước
+                        </option>
+                        <option value="bich-dao" data-parent="ninhbinh">
+                            Phường Bích Đào
+                        </option>
+                        <option value="ttme" data-parent="gia-vien">Thị trấn Me</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label for="ghi-chu">Ghi chú</label>
@@ -229,7 +401,7 @@
         </div>
 
         <div class="payment-section">
-            <h2>📝 Hình thức thanh toán</h2>
+            <div class="body-text-24-bold theme-header">Hình thức thanh toán</div>
             <div class="payment-buttons">
                 <button type="button" class="payment-button company-payment">
                     <label>
@@ -250,7 +422,10 @@
                                 <p>Chủ tài khoản: <b>PHUNG THUY HIEN</b></p>
                                 <p>Số tài khoản: <b>0071001899415</b></p>
                                 <p>Ngân hàng: <b>VIETCOMBANK</b></p>
-                                <p>Quý khách thực hiện thanh toán vui lòng gửi theo thông tin: <b>"Họ và tên - vietra.vn"</b></p>
+                                <p>
+                                    Quý khách thực hiện thanh toán vui lòng gửi theo thông tin:
+                                    <b>"Họ và tên - vietra.vn"</b>
+                                </p>
                             </div>
                         </span>
                     </label>
@@ -268,164 +443,249 @@
 
     <footer class="footer">
         <div class="footer-top">
-          <div class="footer-column">
-            <h4>Hỗ trợ</h4>
-            <ul>
-              <li><a href="#">Trung tâm hỗ trợ</a></li>
-              <li><a href="#">Bảo mật thông tin</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Vietra</h4>
-            <ul>
-              <li><a href="#">Về chúng tôi</a></li>
-              <li><a href="#">Chính sách</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Tour</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Liên hệ</h4>
-            <ul>
-              <li>
-                <a href="#">Công ty Cổ phần Vietra</a>
-              </li>
-              <li>
-                <a href="pages/contact/contact.html">Địa chỉ: 12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</a>
-              </li>
-              <li>
-                <a href="tel:0123456789">Số điện thoại: 0123 456 789</a>
-              </li>
-              <li>
-                <a href="mailto:hvnh.edu@gmail.com">Email: hvnh.edu@gmail.com</a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h4>Mạng xã hội</h4>
-            <div class="social-icons">
-              <a href="#"><img src="../../assets/svg/ic-fb.svg" alt="Facebook"></a>
-              <a href="#"><img src="../../assets/svg/ic-tw.svg" alt="Twitter"></a>
-              <a href="#"><img src="../../assets/svg/ic-tt.svg" alt="TikTok"></a>
-              <a href="#"><img src="../../assets/svg/ic-yt.svg" alt="YouTube"></a>
+            <div class="footer-column">
+                <h4>Hỗ trợ</h4>
+                <ul>
+                    <li><a href="#">Trung tâm hỗ trợ</a></li>
+                    <li><a href="#">Bảo mật thông tin</a></li>
+                </ul>
             </div>
-          </div>
+            <div class="footer-column">
+                <h4>Vietra</h4>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Chính sách</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tour</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Liên hệ</h4>
+                <ul>
+                    <li>
+                        <a href="#">Công ty Cổ phần Vietra</a>
+                    </li>
+                    <li>
+                        <a href="pages/contact/contact.html">Địa chỉ: 12 P. Chùa Bộc, Quang Trung, Đống Đa, Hà Nội</a>
+                    </li>
+                    <li>
+                        <a href="tel:0123456789">Số điện thoại: 0123 456 789</a>
+                    </li>
+                    <li>
+                        <a href="mailto:hvnh.edu@gmail.com">Email: hvnh.edu@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Mạng xã hội</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="../../assets/svg/ic-fb.svg" alt="Facebook" /></a>
+                    <a href="#"><img src="../../assets/svg/ic-tw.svg" alt="Twitter" /></a>
+                    <a href="#"><img src="../../assets/svg/ic-tt.svg" alt="TikTok" /></a>
+                    <a href="#"><img src="../../assets/svg/ic-yt.svg" alt="YouTube" /></a>
+                </div>
+            </div>
         </div>
-    
+
         <div class="footer-bottom">
-          <p>© Copyright Acenda 2024</p>
+            <p>© Copyright Acenda 2024</p>
         </div>
-      </footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <script>
-        document.getElementById('loai-tour').addEventListener('change', function () {
-            const selectedRegion = this.value; //giá trị loại tour ng dùng vừa chọn
-            const tourSelect = document.getElementById('chon-tour');
-            const options = tourSelect.querySelectorAll('option');
 
-            // Lặp qua tất cả option trong dropdown chọn tour
-            options.forEach(option => {
-                const region = option.getAttribute('data-region');
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const idType = urlParams.get('idType');  // loại tour
+            const idTour = urlParams.get('idTour');  // tour cụ thể
 
-                // Hiển thị option nếu thuộc vùng đã chọn hoặc là option mặc định
-                if (!region || selectedRegion === '' || region === selectedRegion) {
-                    option.style.display = 'block';
+            const loaiTourSelect = document.getElementById('loai-tour');
+            const chonTourSelect = document.getElementById('chon-tour');
+            const peopleInput = document.getElementById('people');
+            const amountDisplay = document.querySelector('.total-payment .amount');
+
+            function filterToursByType(type) {
+                Array.from(chonTourSelect.options).forEach(option => {
+                    if (!type || option.getAttribute('data-type') === type) {
+                        option.style.display = '';
+                    } else {
+                        option.style.display = 'none';
+                    }
+                });
+            }
+
+            function tinhTongTien() {
+                const selectedOption = chonTourSelect.options[chonTourSelect.selectedIndex];
+                const price = selectedOption ? parseFloat(selectedOption.getAttribute('data-price')) : 0;
+                const soNguoi = peopleInput ? (parseInt(peopleInput.value) || 1) : 1;
+
+                if (price && !isNaN(price)) {
+                    const tongTien = price * soNguoi;
+                    amountDisplay.textContent = tongTien.toLocaleString('vi-VN') + ' đ';
                 } else {
-                    option.style.display = 'none';
+                    amountDisplay.textContent = 'Vui lòng chọn tour hợp lệ';
                 }
+            }
+
+            if (idType && loaiTourSelect) {
+                loaiTourSelect.value = idType;
+                filterToursByType(idType);
+            } else {
+                filterToursByType(null);
+            }
+
+            if (idTour && chonTourSelect) {
+                chonTourSelect.value = idTour;
+            }
+
+            tinhTongTien();
+
+            if (typeof $ !== 'undefined' && typeof $.fn.select2 === 'function') {
+                $('#loai-tour').val(idType).trigger('change');
+                $('#chon-tour').val(idTour).trigger('change');
+            }
+
+            loaiTourSelect.addEventListener('change', function () {
+                filterToursByType(loaiTourSelect.value);
+                chonTourSelect.value = '';
+                if (typeof $ !== 'undefined' && typeof $.fn.select2 === 'function') {
+                    $('#chon-tour').val('').trigger('change');
+                }
+                tinhTongTien();
             });
 
-            // Reset lại chọn tour
-            tourSelect.value = ""; /* sau khi người dùng chọn một vùng miền,  
-                                    dropdown chọn tour sẽ được reset về trạng thái chưa chọn*/
+            chonTourSelect.addEventListener('change', tinhTongTien);
+
+            if (peopleInput) {
+                peopleInput.addEventListener('input', tinhTongTien);
+            }
         });
+
+
+        document
+            .getElementById("loai-tour")
+            .addEventListener("change", function () {
+                const selectedRegion = this.value; //giá trị loại tour ng dùng vừa chọn
+                const tourSelect = document.getElementById("chon-tour");
+                const options = tourSelect.querySelectorAll("option");
+
+                // Lặp qua tất cả option trong dropdown chọn tour
+                options.forEach((option) => {
+                    const region = option.getAttribute("data-region");
+
+                    // Hiển thị option nếu thuộc vùng đã chọn hoặc là option mặc định
+                    if (!region || selectedRegion === "" || region === selectedRegion) {
+                        option.style.display = "block";
+                    } else {
+                        option.style.display = "none";
+                    }
+                });
+
+                // Reset lại chọn tour
+                tourSelect.value = ""; /* sau khi người dùng chọn một vùng miền,  
+                                    dropdown chọn tour sẽ được reset về trạng thái chưa chọn*/
+            });
     </script>
 
     <script>
-        flatpickr("#date", { /* đổi định dạng mặc định của flatpickr*/
-            dateFormat: "d/m/Y"
+        flatpickr("#date", {
+        /* đổi định dạng mặc định của flatpickr*/ dateFormat: "d/m/Y",
         });
     </script>
 
     <script>
         function formatCurrency(amount) {
-            return amount.toLocaleString('vi-VN') + ' đ';
+            return amount.toLocaleString("vi-VN") + " đ";
         }
 
         function updateTotalAmount() {
-            const tourSelect = document.getElementById('chon-tour');
-            const selectedOption = tourSelect.options[tourSelect.selectedIndex]; /* <option> đang được chọn*/
-            const pricePerPerson = parseInt(selectedOption.getAttribute('data-price')) || 0; /* Nếu parseInt không thành công thì mặc định là 0*/
+            const tourSelect = document.getElementById("chon-tour");
+            const selectedOption =
+                tourSelect.options[
+                tourSelect.selectedIndex
+                ]; /* <option> đang được chọn*/
+            const pricePerPerson =
+                parseInt(selectedOption.getAttribute("data-price")) ||
+                0; /* Nếu parseInt không thành công thì mặc định là 0*/
 
-            const numberOfPeople = parseInt(document.getElementById('people').value) || 0; /* .value lấy giá trị (chuỗi) mà người dùng đã nhập */
+            const numberOfPeople =
+                parseInt(document.getElementById("people").value) ||
+                0; /* .value lấy giá trị (chuỗi) mà người dùng đã nhập */
 
             const total = pricePerPerson * numberOfPeople;
-            document.querySelector('.amount').textContent = formatCurrency(total);
+            document.querySelector(".amount").textContent = formatCurrency(total);
             /* nội dung văn bản của phần tử có class 'amount' sẽ được cập nhật thành tổng số tiền đã được định dạng*/
         }
 
         // Cập nhật khi người dùng chọn tour hoặc nhập số người
-        document.getElementById('chon-tour').addEventListener('change', updateTotalAmount);
-        document.getElementById('people').addEventListener('input', updateTotalAmount);
+        document
+            .getElementById("chon-tour")
+            .addEventListener("change", updateTotalAmount);
+        document
+            .getElementById("people")
+            .addEventListener("input", updateTotalAmount);
     </script>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function () { /* Trang tải xong toàn bộ HTML, đoạn mã bên trong bắt đầu chạy*/
-      // Lấy các phần tử <select>, gán các biến đại diện cho 3 dropdown
-      const tinhSelect = document.getElementById('tinh-thanh');
-      const quanSelect = document.getElementById('quan-huyen');
-      const phuongSelect = document.getElementById('phuong-xa');
-    
-      // Lưu lại toàn bộ option ban đầu, chuyển sang mảng
-      const allQuanOptions = Array.from(quanSelect.options);
-      const allPhuongOptions = Array.from(phuongSelect.options);
-    
-      // Khi chọn tỉnh/thành
-      tinhSelect.addEventListener('change', function () {
-        const selectedTinh = this.value; //Gán selectedTinh là tỉnh đang được chọn
-        quanSelect.innerHTML = ''; // Dọn sạch dropdown quận/huyện
-        quanSelect.appendChild(allQuanOptions[0]); // Thêm lại option đầu mặc định
-    
-        allQuanOptions.forEach(option => { //Duyệt qua tất cả các quận/huyện
-          if (option.dataset.parent === selectedTinh) {
-            quanSelect.appendChild(option); //Chỉ hiển thị những cái có data-parent thuộc tỉnh đã chọn
-          }
+        document.addEventListener("DOMContentLoaded", function () {
+            /* Trang tải xong toàn bộ HTML, đoạn mã bên trong bắt đầu chạy*/ // Lấy các phần tử <select>, gán các biến đại diện cho 3 dropdown
+            const tinhSelect = document.getElementById("tinh-thanh");
+            const quanSelect = document.getElementById("quan-huyen");
+            const phuongSelect = document.getElementById("phuong-xa");
+
+            // Lưu lại toàn bộ option ban đầu, chuyển sang mảng
+            const allQuanOptions = Array.from(quanSelect.options);
+            const allPhuongOptions = Array.from(phuongSelect.options);
+
+            // Khi chọn tỉnh/thành
+            tinhSelect.addEventListener("change", function () {
+                const selectedTinh = this.value; //Gán selectedTinh là tỉnh đang được chọn
+                quanSelect.innerHTML = ""; // Dọn sạch dropdown quận/huyện
+                quanSelect.appendChild(allQuanOptions[0]); // Thêm lại option đầu mặc định
+
+                allQuanOptions.forEach((option) => {
+                    //Duyệt qua tất cả các quận/huyện
+                    if (option.dataset.parent === selectedTinh) {
+                        quanSelect.appendChild(option); //Chỉ hiển thị những cái có data-parent thuộc tỉnh đã chọn
+                    }
+                });
+
+                // Reset quận và phường
+                quanSelect.value = "";
+                phuongSelect.innerHTML = "";
+                phuongSelect.appendChild(allPhuongOptions[0]);
+            });
+
+            // Khi chọn quận/huyện
+            quanSelect.addEventListener("change", function () {
+                const selectedQuan = this.value;
+                phuongSelect.innerHTML = "";
+                phuongSelect.appendChild(allPhuongOptions[0]);
+
+                allPhuongOptions.forEach((option) => {
+                    if (option.dataset.parent === selectedQuan) {
+                        phuongSelect.appendChild(option);
+                    }
+                });
+
+                phuongSelect.value = ""; //Reset giá trị chọn ở dropdown phường
+            });
         });
-    
-        // Reset quận và phường
-        quanSelect.value = '';
-        phuongSelect.innerHTML = '';
-        phuongSelect.appendChild(allPhuongOptions[0]);
-      });
-    
-      // Khi chọn quận/huyện
-      quanSelect.addEventListener('change', function () {
-        const selectedQuan = this.value;
-        phuongSelect.innerHTML = '';
-        phuongSelect.appendChild(allPhuongOptions[0]);
-    
-        allPhuongOptions.forEach(option => {
-          if (option.dataset.parent === selectedQuan) {
-            phuongSelect.appendChild(option);
-          }
-        });
-    
-        phuongSelect.value = ''; //Reset giá trị chọn ở dropdown phường
-      });
-    });
     </script>
 
     <script>
-        document.querySelectorAll('.payment-button').forEach(button => {
-            button.addEventListener('click', () => {
+        document.querySelectorAll(".payment-button").forEach((button) => {
+            button.addEventListener("click", () => {
                 // Xóa chọn cũ
-                document.querySelectorAll('.payment-button').forEach(btn => btn.classList.remove('selected'));
+                document
+                    .querySelectorAll(".payment-button")
+                    .forEach((btn) => btn.classList.remove("selected"));
                 // Chọn mới
-                button.classList.add('selected');
+                button.classList.add("selected");
             });
         });
     </script>
@@ -435,51 +695,73 @@
             let selectedPaymentMethod = null;
 
             // Gán sự kiện click cho nút chọn phương thức thanh toán
-            document.querySelector('.company-payment').addEventListener('click', function () {
-                selectedPaymentMethod = 'company';
-                this.classList.add('selected');
-                document.querySelector('.online-payment').classList.remove('selected');
-            });
-
-            document.querySelector('.online-payment').addEventListener('click', function () {
-                selectedPaymentMethod = 'online';
-                this.classList.add('selected');
-                document.querySelector('.company-payment').classList.remove('selected');
-            });
-
-            // Gán sự kiện click cho nút "Thanh toán"
-            document.querySelector('.thanh-toan-button').addEventListener('click', function () {
-                // Danh sách các trường bắt buộc cần kiểm tra
-                const requiredFields = [
-                    'loai-tour', 'chon-tour', 'people', 'date',
-                    'ho-ten', 'email', 'dien-thoai', 'dia-chi',
-                    'tinh-thanh', 'quan-huyen', 'phuong-xa'
-                ];
-
-                let isValid = true;
-
-                // Kiểm tra từng trường xem có giá trị không
-                requiredFields.forEach(id => {
-                    const field = document.getElementById(id);
-                    if (!field.value.trim()) {
-                        isValid = false;
-                    }
+            document
+                .querySelector(".company-payment")
+                .addEventListener("click", function () {
+                    selectedPaymentMethod = "company";
+                    this.classList.add("selected");
+                    document
+                        .querySelector(".online-payment")
+                        .classList.remove("selected");
                 });
 
-                // Kiểm tra phương thức thanh toán đã được chọn chưa
-                if (!selectedPaymentMethod) {
-                    isValid = false;
-                }
+            document
+                .querySelector(".online-payment")
+                .addEventListener("click", function () {
+                    selectedPaymentMethod = "online";
+                    this.classList.add("selected");
+                    document
+                        .querySelector(".company-payment")
+                        .classList.remove("selected");
+                });
 
-                if (isValid) {
-                    alert("🎉 VIETRA xin chào!\n" +
-                          "✅ Chúng tôi rất vui mừng thông báo quý khách đã đặt tour thành công.\n" +
-                          "📞 Đội ngũ VIETRA sẽ liên hệ và cung cấp thông tin chi tiết về hành trình trong thời gian sớm nhất.\n" +
-                          "😊 Rất hân hạnh được đồng hành cùng quý khách!");
-                } else {
-                    alert("⚠️ Để hoàn tất đặt tour, xin vui lòng điền đầy đủ thông tin và lựa chọn phương thức thanh toán phù hợp.");
-                }
-            });
+            // Gán sự kiện click cho nút "Thanh toán"
+            document
+                .querySelector(".thanh-toan-button")
+                .addEventListener("click", function () {
+                    // Danh sách các trường bắt buộc cần kiểm tra
+                    const requiredFields = [
+                        "loai-tour",
+                        "chon-tour",
+                        "people",
+                        "date",
+                        "ho-ten",
+                        "email",
+                        "dien-thoai",
+                        "dia-chi",
+                        "tinh-thanh",
+                        "quan-huyen",
+                        "phuong-xa",
+                    ];
+
+                    let isValid = true;
+
+                    // Kiểm tra từng trường xem có giá trị không
+                    requiredFields.forEach((id) => {
+                        const field = document.getElementById(id);
+                        if (!field.value.trim()) {
+                            isValid = false;
+                        }
+                    });
+
+                    // Kiểm tra phương thức thanh toán đã được chọn chưa
+                    if (!selectedPaymentMethod) {
+                        isValid = false;
+                    }
+
+                    if (isValid) {
+                        alert(
+                            "🎉 VIETRA xin chào!\n" +
+                            "✅ Chúng tôi rất vui mừng thông báo quý khách đã đặt tour thành công.\n" +
+                            "📞 Đội ngũ VIETRA sẽ liên hệ và cung cấp thông tin chi tiết về hành trình trong thời gian sớm nhất.\n" +
+                            "😊 Rất hân hạnh được đồng hành cùng quý khách!"
+                        );
+                    } else {
+                        alert(
+                            "⚠️ Để hoàn tất đặt tour, xin vui lòng điền đầy đủ thông tin và lựa chọn phương thức thanh toán phù hợp."
+                        );
+                    }
+                });
         });
     </script>
 
@@ -521,12 +803,12 @@
 
     <script>
         function toggleMenu() {
-            const drawer = document.getElementById('drawer');
-            const overlay = document.getElementById('overlay');
-            drawer.classList.toggle('open');
-            overlay.classList.toggle('show');
+            const drawer = document.getElementById("drawer");
+            const overlay = document.getElementById("overlay");
+            drawer.classList.toggle("open");
+            overlay.classList.toggle("show");
         }
     </script>
-
 </body>
+
 </html>

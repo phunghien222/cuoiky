@@ -183,10 +183,10 @@
   }
 
   .read-more-btn {
-    font-size: 14px; /* Giảm kích thước nút read more */
-    padding: 8px 16px; /* Giảm padding nút read more */
-    margin-bottom: 30px; /* Giảm margin dưới nút read more */
-    margin-left: 10px; /* Giảm margin trái nút read more */
+    font-size: 14px; /* Giảm kích thước nút Xem thêm */
+    padding: 8px 16px; /* Giảm padding nút Xem thêm */
+    margin-bottom: 30px; /* Giảm margin dưới nút Xem thêm */
+    margin-left: 10px; /* Giảm margin trái nút Xem thêm */
   }
 
   .pagination-container {
