@@ -277,7 +277,6 @@ label strong {
   font-weight: 500;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
   text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  }
  .btn_inner{
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
@@ -288,7 +287,6 @@ label strong {
   margin-top: 24px;
  }
 .btn_inner a {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #fff;
 }
 .btn_more{
