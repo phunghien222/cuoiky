@@ -502,11 +502,26 @@
             const urlParams = new URLSearchParams(window.location.search);
             const idType = urlParams.get('idType');  // loại tour
             const idTour = urlParams.get('idTour');  // tour cụ thể
+            const urlPeople = urlParams.get('people');
+            const urlDate = urlParams.get('date');
 
             const loaiTourSelect = document.getElementById('loai-tour');
             const chonTourSelect = document.getElementById('chon-tour');
             const peopleInput = document.getElementById('people');
             const amountDisplay = document.querySelector('.total-payment .amount');
+            const dateTravel = document.getElementById('date');
+
+            function formatDate(dateStr) {
+                const [year, month, day] = dateStr.split("-");
+                return `${day}/${month}/${year}`;
+            }
+
+            // Khởi tạo flatpickr và set giá trị nếu có từ URL
+            flatpickr("#date", {
+                dateFormat: "d/m/Y",
+                defaultDate: urlDate ? formatDate(urlDate) : null,
+            });
+            peopleInput.value = urlPeople
 
             function filterToursByType(type) {
                 Array.from(chonTourSelect.options).forEach(option => {

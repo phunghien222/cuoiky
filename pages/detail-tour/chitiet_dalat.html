@@ -259,7 +259,8 @@
             <strong id="total">2.500.000đ</strong>
           </div>
 
-          <button class="book-now bg-primary-500" onclick="window.location.href='../../pages/tours/booktour.html?idType=taynguyen&idTour=tn1'">Đặt ngay</button>
+          <button class="book-now bg-primary-500" id="bookBtn">Đặt
+            ngay</button>
         </div>
       </div>
     </div>
@@ -319,6 +320,22 @@
     </div>
   </footer>
   <script>
+    document.getElementById('bookBtn').addEventListener('click', function () {
+      const people = document.getElementById('people').value;
+      const date = document.getElementById('date').value;
+      const selectedDate = new Date(date);
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // Đặt giờ về 00:00 để so sánh chính xác theo ngày
+
+      if (selectedDate < today) {
+        alert('Ngày đi không được nhỏ hơn ngày hiện tại');
+        return;
+      }
+      // Gắn dữ liệu vào URL
+      const url = `../../pages/tours/booktour.html?idType=taynguyen&idTour=tn1&people=${people}&date=${date}`;
+      window.location.href = url;
+    });
+
     const pricePer = 2500000;
     const peopleInput = document.getElementById('people');
     const total = document.getElementById('total');
