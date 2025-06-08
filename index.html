@@ -810,28 +810,32 @@
   </footer>
 
   <script>
+    //  Xử lý sự kiện click cho nút menu ở chế độ điện thoại 
      function toggleMenu() {
       const drawer = document.getElementById('drawer');
       const overlay = document.getElementById('overlay');
       drawer.classList.toggle('open');
       overlay.classList.toggle('show');
     }
-    const track = document.getElementById("carouselTrack");
-    const trackRate = document.getElementById("carouselRate");
+
+    // Xử lý cho chuyển slide trong phần đánh giá và tin tức 
+    const track = document.getElementById("carouselTrack"); //tin tức
+    const trackRate = document.getElementById("carouselRate"); // đánh giá
     const dots = document.querySelectorAll(".dot");
     const _dotsRate = document.querySelectorAll(".dot-rate")
 
     const slides = document.querySelectorAll(".carousel-slide");
     const slidesRate = document.querySelectorAll(".slide-rate");
 
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+    const prevBtn = document.getElementById("prevBtn"); //Nút tiến lên trước tin tức
+    const nextBtn = document.getElementById("nextBtn"); //Nút lùi về phía sau tin tức
 
-    const prevRate = document.getElementById("prevRate");
-    const nextRate = document.getElementById("nextRate")
+    const prevRate = document.getElementById("prevRate");//Nút tiến lên trước đánh giá
+    const nextRate = document.getElementById("nextRate")//Nút lùi về sau phần đánh giá
 
     let currentIndex = 0;
 
+    //Xử lý hiệu ứng di chuyển slice
     function goToSlide(index, isRate = false) {
       const dotArr = isRate ? _dotsRate : dots
       const trackSelect = isRate ? trackRate : track
@@ -843,34 +847,40 @@
       currentIndex = index;
     }
 
+    // thêm sự kiện cho các nút chấm của tin tức
     dots.forEach(dot => {
       dot.addEventListener("click", () => {
         goToSlide(Number(dot.dataset.index));
       });
     });
 
+    //Thêm sự kiến cho các nút chấm của đánh giá
     _dotsRate.forEach(dotRate => {
       dotRate.addEventListener("click", () => {
         goToSlide(Number(dot.dataset.index), true);
       });
     });
 
+    // Lắng nghe sự kiện nút tiến lên trước tin tức
     prevBtn.addEventListener("click", () => {
       const newIndex = (currentIndex - 1 + slides.length) % slides.length;
       goToSlide(newIndex);
     });
 
+    // Lắng nghe sự kiện nút lùi về phía sau tin tức
     nextBtn.addEventListener("click", () => {
       const newIndex = (currentIndex + 1) % slides.length;
       goToSlide(newIndex);
     });
 
+    //Lắng nghe sự kiện nút tiến lên trước đánh giá
     prevRate.addEventListener("click", () => {
       console.log('click')
       const newIndex = (currentIndex - 1 + slidesRate.length) % slidesRate.length;
       goToSlide(newIndex, true);
     });
 
+    //Lắng nghe sự kiện nút lùi về phía sau đánh giá
     nextRate.addEventListener("click", () => {
       const newIndex = (currentIndex + 1) % slidesRate.length;
       goToSlide(newIndex, true);
